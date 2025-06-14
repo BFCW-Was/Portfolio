@@ -20,11 +20,6 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'static',
-    prerender: {
-      routes: [
-        '/', '/about', '/projects', '/contact', '/testing'
-      ]
-    }
   },
 
   // Internacionalización
