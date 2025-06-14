@@ -1,10 +1,28 @@
 <p align="center">
-  <img height="100" src="PENDING" alt="Logo" />
+  <img height="50" src="http://bfcw-was.github.io/Portfolio/images/logos/MyPortfolio.png" alt="Personal Logo" />
 </p>
-<p align="center">
-  <a href="https://github.com/BFCW-Was">GitHub</a> •
-  <a href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/">LinkedIn</a>
+<p align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <a href="https://github.com/BFCW-Was" style="color: #138583;">
+    <em>GitHub</em>
+  </a>
+  <a style="color: #13030B">
+    •
+  </a>
+  <a href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" style="color: #138583;">
+    <em>LinkedIn</em>
+  </a>
 </p>
+
+<div style="text-align: center;">
+
+  [![Portfolio](https://img.shields.io/badge/Project-v0.0.0-138583?&labelColor=13030B)](https://github.com/BFCW-Was/mi-proyecto) ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-138583.svg?&labelColor=13030B)
+  
+  [![Nuxt3](https://img.shields.io/badge/Nuxt3-v3.17.5-00DC82?logo=nuxt&logoColor=white&labelColor=13030B)](https://nuxtjs.org) [![Vuetify](https://img.shields.io/badge/Vuetify-v3.8.8-1867C0?logo=vuetify&logoColor=white&labelColor=13030B)](https://vuetifyjs.com)
+  [![npm](https://img.shields.io/badge/npm-v11.4.1-CB3837?logo=npm&logoColor=white&labelColor=13030B)](https://www.npmjs.com) [![Node.js](https://img.shields.io/badge/Node.js-v24.1.0-5FA04E?logo=node.js&logoColor=white&labelColor=13030B)](https://nodejs.org) [![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3?logo=eslint&logoColor=white&labelColor=13030B)](https://eslint.org)  
+
+</div>
+
+-----
 
 ## ❤️‍🔥 ¡Welcome to my Personal Portfolio!
 This project serves as my personal portfolio, crafted using one of my favourite technologies — **Vue 3**, powered by the **Nuxt 3** framework.  

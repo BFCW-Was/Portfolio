@@ -1,5 +1,5 @@
 <template>
     <main>
-        <h1>Proyects</h1>
+        <h1>Copyright</h1>
     </main>
 </template>
