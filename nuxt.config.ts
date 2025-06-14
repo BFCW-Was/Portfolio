@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   // Configuración para Github Pages
   ssr: false,
   app: {
-    baseURL: '/portafolio/',
+    baseURL: '/Portfolio/',
   },
 
   // Internacionalización
