@@ -1,34 +1,43 @@
+# Name
 name: Build and Deploy
+# Workflow's Trigger -> Push to 'master' branch
 on: 
   push:
     branches:
-      - main
+      - master
+# Enviroment Variables
+env:
+  NODE_VERSION: 24.1.0
+# Permissions
 permissions:
   contents: write
+# Jobs Definition
 jobs:
   build-and-deploy:
+    # Avoids unnecessary parallel runs if there are multiple commits:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [24]
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Install & Generate
-      run: |
-        npm ci
-        npm run generate
-      env:
-        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist
+      # Step 1: Clone the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Step 2: Node.js version configuration
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          NODE_VERSION: ${{ env.NODE_VERSION }}
+      # Step 3: Installs the dependencies
+      - name: Install Dependencies
+        run: npm ci
+      # Step 4: Generate static site -> /dist
+      - name: Generate Static Site
+        run: npm run generate
+        env:
+          NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }} # Defined in repository variables
+      # Step 5: Publish static site -> Push to 'gh-pages' branch
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
