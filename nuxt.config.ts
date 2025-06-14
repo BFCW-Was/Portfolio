@@ -18,12 +18,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/Portfolio/',
   },
-  nitro: {
-    preset: 'static',
-    prerender: {
-      routes: ['/'],
-    },
-  },
 
   // Internacionalización
   i18n: {
