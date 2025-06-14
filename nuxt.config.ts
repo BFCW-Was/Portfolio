@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     baseURL: '/Portfolio/',
   },
   nitro: {
+    preset: 'static',
     prerender: {
       routes: ['/'],
     },

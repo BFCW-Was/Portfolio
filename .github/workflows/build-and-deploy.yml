@@ -35,6 +35,9 @@ jobs:
         run: npm run generate
         env:
           NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }} # Defined in repository variables
+      # Step 4.1: Do not ignore files that starts with '_' -> _nuxt
+      - name: Add .nojekyll file
+        run: touch dist/.nojekyll
       # Step 5: Publish static site -> Push to 'gh-pages' branch
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
