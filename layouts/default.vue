@@ -7,5 +7,6 @@
         <NuxtRouteAnnouncer />
         <NuxtPage />
         <!-- <Footer /> -->
+        <p>Copyright © 2025 Bastián Contreras Wasilkowski. All rights reserved.</p>
     </v-app>
 </template>
