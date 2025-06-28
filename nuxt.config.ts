@@ -19,6 +19,17 @@ export default defineNuxtConfig({
     baseURL: '/Portfolio/',
   },
 
+  // SCSS:
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/styles/global/_variables.scss" as *;'
+        }
+      }
+    }
+  },
+
   // Internacionalización
   i18n: {
     locales: [

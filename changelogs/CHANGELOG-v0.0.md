@@ -4,13 +4,24 @@
     - Instalación de módulos de Nuxt3.
     - Instalación de librerías.
     - Estructuración del proyecto.
-    - Actualización de README.
+    - Creación inicial de README.
 - Generación de base del proyecto.
     - Configuración de Nuxt3.
-    - Configuración de Vuetify3.
     - Configuración de ESLint.
-    - Configuración de layouts.
-    - Configuración de internacionalización (i18n).
+    - Configuración base de Vuetify3.
+    - Configuración base de layout.
+    - Configuración base de internacionalización (i18n).
     - Creación de páginas base.
-- Generación de estilos base del proyecto con Vuetify:
-    - Definición de colores, textos y estilos base para modos claro y oscuro.
+- Despliegue de proyecto via GitHub Pages.
+## 0.0.1 (0%): Nuevo Comienzo
+- Solución de errores en despliegue a GitHub Pages:
+    - Corrección de configuración build-and-deploy (github workflows).
+    - Pruebas de corrección en configuración nuxt.config.ts:
+        - Actualización de 'baseURL' [solucionado].
+        - Prueba de sitio estático con Nitro [eliminado].
+        - Prueba de prerenderización de rutas [eliminado].
+    - Corrección para NO ignorar archivos que comiencen por guión bajo al ejecutar 'nuxt generate' [solucionado].
+- Otras actualizaciones:
+    - Actualización contenido de README.
+    - Adición de Logotipo personal (pendientes isotipo e imagotipo).
+    - Actualización de señal de Copyright.
