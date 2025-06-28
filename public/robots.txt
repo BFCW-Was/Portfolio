@@ -1,2 +1,2 @@
 User-Agent: *
-Disallow: / # Leave empty to start redirecting
+Disallow: / # Leave empty to start redirecting (WIP)
