@@ -1,0 +1,1 @@
+import{_ as r,x as t,z as n,y as o}from"./0NlvtZLM.js";const s={};function a(c,e){return o(),t("main",null,e[0]||(e[0]=[n("h1",null,"Copyright",-1)]))}const _=r(s,[["render",a]]);export{_ as default};

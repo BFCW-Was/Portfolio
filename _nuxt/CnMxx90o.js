@@ -1,0 +1,1 @@
+import{ah as n,ai as s,a4 as r,aj as i,ak as o}from"./0NlvtZLM.js";function u(t){var e;const a=t||n();return((e=a==null?void 0:a.ssrContext)==null?void 0:e.head)||(a==null?void 0:a.runWithContext(()=>{if(s())return r(i)}))}function d(t,a={}){const e=u(a.nuxt);if(e)return o(t,{head:e,...a})}export{u as i,d as u};
