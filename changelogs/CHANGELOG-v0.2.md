@@ -1,5 +1,5 @@
 # **Versiones:**
-## 0.2.0 (0%): Primeros Pasos
+## 0.2.0 (10%): Primeros Pasos
 - Creación de componentes visuales clave:
     - Creación de mockups en Figma.
     - Creación de encapsulamiento de las páginas.

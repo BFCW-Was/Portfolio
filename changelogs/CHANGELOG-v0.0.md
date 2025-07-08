@@ -1,5 +1,5 @@
 # **Versiones:**
-## 0.0.0 (0%): Nuevo Comienzo
+## 0.0.0 (100%): Nuevo Comienzo
 - Creación del Proyecto en Nuxt3:
     - Instalación de módulos de Nuxt3.
     - Instalación de librerías.
@@ -13,7 +13,7 @@
     - Configuración base de internacionalización (i18n).
     - Creación de páginas base.
 - Despliegue de proyecto via GitHub Pages.
-## 0.0.1 (0%): Nuevo Comienzo
+## 0.0.1 (100%): Corrección de Errores Base
 - Solución de errores en despliegue a GitHub Pages:
     - Corrección de configuración build-and-deploy (github workflows).
     - Pruebas de corrección en configuración nuxt.config.ts:
