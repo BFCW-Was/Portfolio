@@ -1,0 +1,1 @@
+import{aj as n,ak as s,a7 as r,al as o,am as i}from"./A-gAojeo.js";function u(t){var e;const a=t||n();return((e=a==null?void 0:a.ssrContext)==null?void 0:e.head)||(a==null?void 0:a.runWithContext(()=>{if(s())return r(o)}))}function d(t,a={}){const e=u(a.nuxt);if(e)return i(t,{head:e,...a})}export{u as i,d as u};
