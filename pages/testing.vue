@@ -13,19 +13,25 @@
             <v-btn color="primary" @click='isVisibleVuetify3Themes = !isVisibleVuetify3Themes'>
                 {{ isVisibleVuetify3Themes ? 'Ocultar' : 'Mostrar' }} Temas
             </v-btn>
+            <v-btn color="primary" @click='isVisibleComponentes = !isVisibleComponentes'>
+                {{ isVisibleComponentes ? 'Ocultar' : 'Mostrar' }} Componentes
+            </v-btn>
         </div>
         <!-- #################### TEXTOS #################### -->
         <div v-if='isVisibleTextos'>
             <h1>Textos</h1>
+            <hr>
         </div>
         <!-- #################### BOTONES #################### -->
         <div v-if='isVisibleBotones'>
             <h1>Botones</h1>
+            <hr>
         </div>
         <!-- #################### IMÁGENES #################### -->
         <div v-if='isVisibleImagenes'>
             <h1>Imagenes</h1>
             <nuxt-img src="/images/logos/MyPortfolio.png" alt="Logo" />
+            <hr>
         </div>
         <!-- #################### BOTONES #################### -->
         <div v-if='isVisibleVuetify3Themes'>
@@ -82,15 +88,50 @@
                     </v-col>
                 </v-row>
             </v-container>
+            <hr>
         </div>
+        <!-- #################### COMPONENTES #################### -->
+        <div v-if='isVisibleComponentes'>
+            <h1>Componentes</h1>
+            <SnippetsClipboardTooltip text="Test Text" class="ma-4">
+                <v-btn aria-label="Test Label">
+                    <v-icon class="mr-3">fa-solid fa-flask-vial</v-icon>
+                    <span>Test Span</span>
+                </v-btn>
+            </SnippetsClipboardTooltip>
+            <hr>
+            <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
+                <template #body>
+                    <div class="text-onBackground">
+                        <p>Este es un div de ejemplo.</p>
+                        <v-btn size="extra-small" class="text-body2" color="primary" @click="nextColorIC">
+                            Cambiar Color
+                        </v-btn>
+                    </div>
+                </template>
+            </SnippetsInformationCard>
+            <hr>
+        </div>
+        <!-- ##### -->
     </main>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
+// Definición de Variables para Visibilidad:
 const isVisibleTextos = ref(false);
 const isVisibleBotones = ref(false);
 const isVisibleImagenes = ref(false);
+const isVisibleComponentes = ref(false);
 const isVisibleVuetify3Themes = ref(true);
+
+// Cambio de color InformationCard:
+const colorsIC = ['burgundy', 'sepia', 'gray', 'cyan', 'fire', 'mustard'];
+const colorIndexIC = ref(0);
+const currentColorIC = computed(() => colorsIC[colorIndexIC.value]);
+
+function nextColorIC() {
+  colorIndexIC.value = (colorIndexIC.value + 1) % colorsIC.length;
+}
 </script>
