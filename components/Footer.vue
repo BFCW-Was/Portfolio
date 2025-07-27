@@ -19,8 +19,9 @@
         <!-- Copyright Section -->
         <p class="copyright">
             Copyright © 2025 by
-            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>.
-            Licensed under <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
+            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>
+            . Licensed under
+            <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
         </p>
     </footer>
 </template>
@@ -32,7 +33,7 @@ import { useTheme } from 'vuetify';
 // ##### Theme Changing
 const theme = useTheme();
 const setTheme = (name) => {
-  theme.global.name.value = name;
+    theme.global.name.value = name;
 };
 const isActiveTheme = (name) => theme.global.name.value === name;
 </script>
@@ -49,7 +50,7 @@ const isActiveTheme = (name) => theme.global.name.value === name;
         display: flex;
         gap: 8px;
     }
-    
+
     .color-palette {
         position: fixed;
         bottom: 20px;
@@ -57,7 +58,7 @@ const isActiveTheme = (name) => theme.global.name.value === name;
         display: flex;
         gap: 8px;
     }
-    
+
     .copyright {
         position: fixed;
         bottom: 20px;

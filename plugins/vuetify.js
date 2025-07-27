@@ -139,14 +139,15 @@ export default defineNuxtPlugin((nuxtApp) => {
                         onSurface: personalizedColors.white90,
                         onError: personalizedColors.white100,
                     },
-                }
-            }
+                },
+            },
         },
         icons: {
             defaultSet: 'fa',
             aliases,
             sets: {
-                fa, mdi,
+                fa,
+                mdi,
             },
         },
     });

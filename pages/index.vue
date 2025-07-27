@@ -2,7 +2,7 @@
     <main>
         <h1>Bastián Contreras Wasilkowski</h1>
         <h3>Este portfolio aún está en desarrollo 😁</h3>
-        <br>
+        <br />
         <div>
             <h4>Aún así, si deseas contactarme puedes hablarme por correo o mis redes sociales:</h4>
             <v-row class="ms-4 mt-2 ga-2">
