@@ -101,7 +101,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                     dark: true,
                     colors: {
                         // Principales
-                        background: personalizedColors.black70,
+                        background: personalizedColors.black90,
                         surface: personalizedColors.black90,
                         primary: personalizedColors.cyan70,
                         secondary: personalizedColors.cyan90,

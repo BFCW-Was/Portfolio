@@ -1,12 +1,10 @@
 .background-frame {
     border-style: solid;
     border-width: 1px;
-    margin: 2.5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 95%;
-    height: 88%;
+    margin: 5dvh 2.5dvw;
+    padding: 2dvh 2dvw;
+    max-height: 90dvh;
+    max-width: 95dvw;
     box-sizing: border-box;
+    overflow-y: auto;
 }
