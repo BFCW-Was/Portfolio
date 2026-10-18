@@ -9,13 +9,27 @@ export default defineNuxtConfig({
         baseURL: '/Portfolio/',
         // SEO
         head: {
-            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/images/logos/MyPortfolio.png' }],
+            link: [{ rel: 'icon', type: 'image/png', href: '/images/logos/MyPortfolio.png' }],
+        },
+    },
+
+    // Variables de Entorno
+    runtimeConfig: {
+        // Server Only (not exposed to the browser)
+        // NONE
+
+        // Public (exposed to the browser)
+        public: {
+            appVersion: '',
         },
     },
 
     // Diseño
     css: ['~/assets/css/main.css'],
     colorMode: { preference: 'dark', fallback: 'dark' },
+
+    // Imánenes
+    image: { provider: 'none' },
 
     // Internacionalización
     i18n: {

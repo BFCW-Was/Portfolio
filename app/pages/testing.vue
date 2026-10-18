@@ -20,7 +20,7 @@
         <!-- #################### IMÁGENES #################### -->
         <div v-if="isVisibleImagenes">
             <h1>Imagenes</h1>
-            <NuxtImg src="/images/logos/MyPortfolio.png" alt="Logo" />
+            <NuxtImg :src="usePublicAsset('/images/logos/MyPortfolio.png')" alt="Logo" />
             <hr />
         </div>
         <!-- #################### BOTONES #################### -->
@@ -88,6 +88,8 @@
 </template>
 
 <script setup lang="ts">
+import { usePublicAsset } from '~/composables/use_public_assets';
+
 // Definición de Variables para Visibilidad:
 const isVisibleTextos = ref(false);
 const isVisibleBotones = ref(false);

@@ -1,6 +1,10 @@
 <template>
     <main>
-        <h1 class="text-3xl font-bold">Bastián Contreras Wasilkowski</h1>
+        <div class="flex items-center gap-3">
+            <h1 class="text-3xl font-bold">Bastián Contreras Wasilkowski</h1>
+            |
+            <NuxtImg :src="usePublicAsset('/images/logos/MyPortfolio.png')" alt="Logo" class="h-10 w-10 object-contain" />
+        </div>
         <h3 class="text-lg font-semibold">Este portfolio aún está en desarrollo 😁</h3>
         <br />
         <div>
@@ -27,3 +31,7 @@
         </div>
     </main>
 </template>
+
+<script setup lang="ts">
+import { usePublicAsset } from '~/composables/use_public_assets';
+</script>
