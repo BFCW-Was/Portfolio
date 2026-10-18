@@ -33,7 +33,7 @@
 - Display de versión del portfolio en el footer.
 - Display de logo en index.
 
-## 0.3.6 (75%): Corrección de Tema Sepia + Ajustes Footer
+## 0.3.6 (100%): Corrección de Tema Sepia + Ajustes Footer
 
 - Cambio de nombre a "theme-sepia" para no chocar con clases de Tailwind.
 - Mantención de colores de contraste (color principal, success, error, etc).
