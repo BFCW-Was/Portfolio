@@ -26,7 +26,7 @@
 
 ## ❤️‍🔥 ¡Welcome to my Personal Portfolio!
 
-This project serves as my personal portfolio, crafted using one of my favourite technologies — **Vue 3**, powered by the **Nuxt 3** framework.  
+This project serves as my personal portfolio, crafted using one of my favourite technologies — **Vue 3**, powered by the **Nuxt 3** framework.
 It showcases my experience in front-end development, responsive design, routing logic, API integration, and dynamic theming, including both light and dark modes. I also share some of my past experiences in various projects, covering both front-end and back-end development.
 
 ---
@@ -52,7 +52,8 @@ Interested in collaborating, want to reach out for work opportunities, or just u
 - **[ESLint](https://eslint.org/)**: Ensures consistent code style and enforces best practices.
 - **[Vuetify 3](https://vuetifyjs.com/)**: Material Design component framework for Vue with powerful theming options.
 - **[i18n](https://i18n.nuxtjs.org/)**: Enables multilingual support and localisation.
-- **[SEMVER](https://semver.org/lang/es/)**: Semantic Versioning to manage project versions in a predictable and standardised way.
+- **[SEMVER](https://semver.org/)**: Semantic Versioning to manage project versions in a predictable and standardised way.
+- **[ConventionalCommits](https://www.conventionalcommits.org/)**: Conventional Commits for clear and structured commit messages.
 - I might use [Search Engine Optimisation](https://nuxt.com/docs/getting-started/seo-meta), [Axios](https://axios-http.com/docs/example), [Pinia](https://pinia.vuejs.org/core-concepts/), [Tabulator](https://tabulator.info/), [ApexCharts](https://apexcharts.com/vue-chart-demos/), [DayJS](https://day.js.org/en/) and many others. If I'm not using them yet, I like them nonetheless, so here's a shout-out!
 
 ---

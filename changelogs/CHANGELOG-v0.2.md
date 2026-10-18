@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.2.0 (100%): Primeros Pasos
+## 0.2.0 (100%): Componentes Base de Diseño
 
 - Creación de componentes visuales clave:
     - Creación de mockups en Figma.
@@ -16,3 +16,7 @@
     - Configuración de Prettier.
     - Mejoras en ESLint.
 - Nueva funcionalidad de rotación de theme en footer.
+
+## 0.2.1 (100%): Conventional Commits
+
+- Configuración y uso de Conventional Commits.
