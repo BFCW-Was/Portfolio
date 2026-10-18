@@ -31,3 +31,4 @@
 - Desactivación de optimización de imágenes (image.provider: 'none').
 - Subida de archivo .env.template con variables de entorno a GitHub.
 - Display de versión del portfolio en el footer.
+- Display de logo en index.
