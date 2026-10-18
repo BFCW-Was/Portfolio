@@ -2,7 +2,7 @@
     <footer class="flex items-center justify-between gap-4 px-5 py-2.5">
         <!-- Copyright Section -->
         <p class="text-xs">
-            Copyright © {{ new Date().getFullYear() }} by
+            v{{ appVersion }} | Copyright © {{ new Date().getFullYear() }} by
             <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>. Licensed under
             <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
         </p>
@@ -52,6 +52,9 @@
 </template>
 
 <script setup lang="ts">
+const config = useRuntimeConfig();
+const appVersion = config.public.appVersion;
+
 // ##### Types
 type ThemeName = 'light' | 'dark' | 'sepia';
 
