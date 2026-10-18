@@ -67,37 +67,6 @@
         <!-- #################### COMPONENTES #################### -->
         <div v-if="isVisibleComponentes">
             <h1>Componentes</h1>
-            <!-- Timeline.vue -->
-            <SnippetsTimeline>
-                <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <SnippetsTimelineStep :number="2" title="Title 2" description="Another step" />
-                <SnippetsTimelineStep :number="3" title="Title 3" description="Last step" />
-            </SnippetsTimeline>
-            <hr />
-            <SnippetsTimeline2
-                :steps="[
-                    { title: 'Title 1', description: 'Lorem ipsum...', buttonText: 'See Examples' },
-                    { title: 'Title 2', description: 'Another step' },
-                    { title: 'Title 3', description: 'Final step', buttonText: 'Finish' },
-                ]"
-            />
-            <hr />
-            <!-- Title Card.vue -->
-            <SnippetsTitleCard title="Temporal Title" variant="top-left" />
-            <SnippetsTitleCard title="Temporal Title" variant="top-right" />
-            <SnippetsTitleCard title="Temporal Title" variant="bottom-left" />
-            <SnippetsTitleCard title="Temporal Title" variant="bottom-right" />
-            <hr />
-            <!-- Thumbnail.vue -->
-            <SnippetsThumbnail image="/img/thumbnail1.jpg" title="TITLE" theme="THEME" year="2025" />
-            <hr />
-            <!-- Panel.vue -->
-            <SnippetsPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." avatar="/img/people/john.jpg" />
-            <hr />
-            <!-- ItemSelector.vue -->
-            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" class="m-4" />
-            <div>Seleccionado: {{ selectedItem }}</div>
-            <hr />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
@@ -107,25 +76,6 @@
                     </div>
                 </template>
             </SnippetsInformationCard>
-            <hr />
-            <!-- PolygonalIcon.vue -->
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" class="m-4" />
-            <hr />
-            <!-- DownloadButton.vue -->
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-pdf" variant="outlined" class="m-4" />
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-audio" variant="gradient" class="m-4" />
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-invoice" variant="filled" class="m-4" />
-            <hr />
-            <!-- IdentificationPlate.vue -->
-            <SnippetsIdentificationPlate variant="outlined" text="Test Texto" class="m-4" />
-            <SnippetsIdentificationPlate variant="gradient" text="Test Texto" class="m-4" />
-            <SnippetsIdentificationPlate variant="filled" text="Test Texto" class="m-4" />
             <hr />
             <!-- ClipboardTooltip.vue -->
             <SnippetsClipboardTooltip text="Test Text" class="m-4">
