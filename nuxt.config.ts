@@ -9,13 +9,16 @@ export default defineNuxtConfig({
         baseURL: '/Portfolio/',
         // SEO
         head: {
-            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/images/logos/MyPortfolio.png' }],
+            link: [{ rel: 'icon', type: 'image/png', href: '/images/logos/MyPortfolio.png' }],
         },
     },
 
     // Diseño
     css: ['~/assets/css/main.css'],
     colorMode: { preference: 'dark', fallback: 'dark' },
+
+    // Imánenes
+    image: { provider: 'none' },
 
     // Internacionalización
     i18n: {
