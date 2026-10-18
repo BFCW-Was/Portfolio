@@ -14,7 +14,7 @@ export default withNuxt(betterTailwindcss.configs['correctness-error'], {
         'no-console': 'warn',
         'prefer-const': 'warn',
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': 'off',
         // Vue
         'vue/no-v-html': 'error',
         'vue/multi-word-component-names': 'off',

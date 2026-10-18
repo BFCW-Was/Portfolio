@@ -11,7 +11,7 @@
 
 - Actualización de todas las librerías via NPM.
 
-## 0.3.2 (0%): Formato
+## 0.3.2 (100%): Formato
 
 - Ajustes de formato en Prettier y .editorconfig: 300 a 200 en printWidth.
 - Aplicación masiva de lint y formateo de código con Prettier y ESLint.

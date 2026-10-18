@@ -2,7 +2,8 @@
     <footer class="flex items-center justify-between gap-4 px-5 py-2.5">
         <!-- Copyright Section -->
         <p class="text-xs">
-            Copyright © {{ new Date().getFullYear() }} by <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>. Licensed under
+            Copyright © {{ new Date().getFullYear() }} by
+            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>. Licensed under
             <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
         </p>
 
@@ -10,14 +11,41 @@
             <!-- Language Selector -->
             <div class="flex gap-2">
                 <UDropdownMenu :items="langItems">
-                    <UButton variant="outline" size="xs" color="neutral" :icon="currentLang.icon" :label="currentLang.code.toUpperCase()" :ui="{ leadingIcon: 'rounded-sm' }" trailingIcon="i-lucide-chevron-down" />
+                    <UButton
+                        variant="outline"
+                        size="xs"
+                        color="neutral"
+                        :icon="currentLang.icon"
+                        :label="currentLang.code.toUpperCase()"
+                        :ui="{ leadingIcon: 'rounded-sm' }"
+                        trailingIcon="i-lucide-chevron-down"
+                    />
                 </UDropdownMenu>
             </div>
 
             <!-- Theme Mode Selector -->
             <div class="flex gap-2">
-                <UButton v-for="mode in themes" :key="mode.name" variant="outline" size="xs" square :icon="mode.icon" :color="isActiveTheme(mode.name) ? 'primary' : 'neutral'" :title="mode.title" @click="setTheme(mode.name)" />
-                <UButton variant="outline" size="xs" square color="neutral" icon="i-fa6-solid-arrows-spin" title="Cycle Between My Themes." :style="{ transform: `rotate(${rotationAngle}deg)`, transition: 'transform 0.3s ease' }" @click="cycleTheme()" />
+                <UButton
+                    v-for="mode in themes"
+                    :key="mode.name"
+                    variant="outline"
+                    size="xs"
+                    square
+                    :icon="mode.icon"
+                    :color="isActiveTheme(mode.name) ? 'primary' : 'neutral'"
+                    :title="mode.title"
+                    @click="setTheme(mode.name)"
+                />
+                <UButton
+                    variant="outline"
+                    size="xs"
+                    square
+                    color="neutral"
+                    icon="i-fa6-solid-arrows-spin"
+                    title="Cycle Between My Themes."
+                    :style="{ transform: `rotate(${rotationAngle}deg)`, transition: 'transform 0.3s ease' }"
+                    @click="cycleTheme()"
+                />
             </div>
         </div>
     </footer>

@@ -11,7 +11,16 @@
                     <UButton aria-label="Copiar correo" color="neutral" variant="subtle" icon="i-fa6-solid-envelope" label="Email" />
                 </SnippetsClipboardTooltip>
                 <!-- Linkedin -->
-                <UButton to="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" color="neutral" variant="subtle" icon="i-fa6-brands-linkedin" label="Linkedin" />
+                <UButton
+                    to="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Linkedin"
+                    color="neutral"
+                    variant="subtle"
+                    icon="i-fa6-brands-linkedin"
+                    label="Linkedin"
+                />
                 <!-- GitHub -->
                 <UButton to="https://github.com/BFCW-Was" target="_blank" rel="noopener noreferrer" aria-label="Github" color="neutral" variant="subtle" icon="i-fa6-brands-github" label="Github" />
             </div>
