@@ -1,27 +1,29 @@
 <template>
-    <div :class="['custom-card-info', colorClass]" class="bg-background">
+    <div :class="['custom-card-info', colorClass]" class="bg-default">
         <!-- Header clickeable con slot -->
-        <div class="card-header d-flex align-center" style="cursor: pointer" @click="toggleExpand()">
-            <v-icon class="transition-transform" :class="{ 'rotate-90': isExpanded }"> fa-solid fa-caret-right </v-icon>
+        <div class="card-header flex items-center" style="cursor: pointer" @click="toggleExpand()">
+            <UIcon name="i-fa6-solid-caret-right" class="transition-transform" :class="{ 'rotate-90': isExpanded }" />
             <slot name="header">
-                <div class="d-flex flex-column justify-center">
-                    <span class="text-subtitle-1 font-weight-bold">{{ title }}</span>
+                <div class="flex flex-col justify-center">
+                    <span class="text-subtitle-1 font-bold">{{ title }}</span>
                     <span v-if="subtitle" class="text-caption">{{ subtitle }}</span>
                 </div>
             </slot>
         </div>
         <!-- Contenido con transición suave -->
-        <v-expand-transition>
-            <div v-show="isExpanded" class="text-onBackground">
-                <slot name="body" />
-                <div v-if="footnote" class="footnote">* {{ footnote }}</div>
+        <div class="expand-wrapper" :class="{ expanded: isExpanded }" :inert="!isExpanded || undefined">
+            <div class="expand-inner">
+                <div class="text-default">
+                    <slot name="body" />
+                    <div v-if="footnote" class="footnote">* {{ footnote }}</div>
+                </div>
             </div>
-        </v-expand-transition>
+        </div>
     </div>
 </template>
 
 <script setup>
-import { ref, computed, defineProps } from 'vue';
+import { computed, defineProps, ref } from 'vue';
 
 // Define props
 const props = defineProps({
@@ -56,7 +58,7 @@ function toggleExpand() {
     margin: 16px;
     padding: 8px 24px;
     border-radius: 4px;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     gap: 8px;
 
     .card-header {
@@ -73,22 +75,37 @@ function toggleExpand() {
         }
     }
 
+    expand-wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &.expanded {
+            grid-template-rows: 1fr;
+        }
+
+        .expand-inner {
+            overflow: hidden;
+            min-height: 0;
+        }
+    }
+
     // Nota al pie:
     .footnote {
         margin: 4px;
         margin-left: 12px;
         font-size: 0.5rem;
-        color: $white-20;
+        color: var(--color-bfcw-white-20);
     }
 
     // Clases dinámicas por color
     $colors: (
-        'burgundy': $burgundy-90,
-        'sepia': $sepia-90,
-        'gray': $white-20,
-        'cyan': $cyan-90,
-        'fire': $fire-90,
-        'mustard': $mustard-90,
+        'burgundy': var(--color-bfcw-burgundy-90),
+        'sepia': var(--color-bfcw-sepia-90),
+        'gray': var(--color-bfcw-white-20),
+        'cyan': var(--color-bfcw-cyan-90),
+        'fire': var(--color-bfcw-fire-90),
+        'mustard': var(--color-bfcw-mustard-90),
     );
 
     @each $name, $color in $colors {

@@ -1,23 +1,21 @@
-@use '~/assets/styles/global/_variables.scss' as *;
-
-.v-theme--light {
+.light {
     .splash-screen {
-        background-color: $white-70;
-        color: $black-90;
+        background-color: var(--color-bfcw-white-70);
+        color: var(--color-bfcw-black-90);
     }
 }
 
-.v-theme--dark {
+.dark {
     .splash-screen {
-        background-color: $black-70;
-        color: $white-90;
+        background-color: var(--color-bfcw-black-70);
+        color: var(--color-bfcw-white-90);
     }
 }
 
-.v-theme--sepia {
+.sepia {
     .splash-screen {
-        background-color: $sepia-100;
-        color: $white-90;
+        background-color: var(--color-bfcw-sepia-100);
+        color: var(--color-bfcw-white-90);
     }
 }
 

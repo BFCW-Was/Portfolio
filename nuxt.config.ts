@@ -1,28 +1,21 @@
-import { defineNuxtConfig } from 'nuxt/config';
-
 export default defineNuxtConfig({
-    compatibilityDate: '2025-05-15',
+    modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image', '@nuxtjs/i18n'],
     devtools: { enabled: true },
+    eslint: { config: { stylistic: false } },
+    compatibilityDate: '2026-06-30',
 
-    // Módulos
-    modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/fonts', '@nuxt/icon', '@nuxtjs/i18n'],
-
-    // Configuración para Github Pages
-    ssr: false,
     app: {
+        // GitHub Pages
         baseURL: '/Portfolio/',
-    },
-
-    // SCSS:
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "~/assets/styles/global/_variables.scss" as *;',
-                },
-            },
+        // SEO
+        head: {
+            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/images/logos/MyPortfolio.png' }],
         },
     },
+
+    // Diseño
+    css: ['~/assets/css/main.css'],
+    colorMode: { preference: 'dark', fallback: 'dark' },
 
     // Internacionalización
     i18n: {

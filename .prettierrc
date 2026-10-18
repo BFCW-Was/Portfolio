@@ -7,5 +7,7 @@
     "trailingComma": "es5",
     "bracketSpacing": true,
     "arrowParens": "always",
-    "embeddedLanguageFormatting": "auto"
+    "embeddedLanguageFormatting": "auto",
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindStylesheet": "./app/assets/css/main.css"
 }

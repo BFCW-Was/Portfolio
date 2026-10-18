@@ -1,60 +1,75 @@
 <template>
-    <!-- <Body /> -->
-    <v-app>
-        <v-fade-transition class="w-100 h-100">
-            <!-- <Splash /> -->
-            <div v-if="showSplash === true" class="splash-screen">
-                <h1 class="main-title">Bastián Contreras</h1>
-                <p class="subtitle">{{ subtitles[currentIndex] }}</p>
-            </div>
-            <div v-if="showSplash === false">
-                <!-- <NavBar /> o <SideBar /> -->
-                <NavBar />
-                <!-- <MainContent /> -->
-                <v-main class="background-frame">
-                    <NuxtRouteAnnouncer />
-                    <NuxtPage/>
-                </v-main>
-                <!-- <Footer /> -->
-                <Footer />
-            </div>
-        </v-fade-transition>
-    </v-app>
+    <Transition name="fade">
+        <!-- <Splash /> -->
+        <div v-if="showSplash === true" key="splash" class="splash-screen">
+            <h1 class="main-title">Bastián Contreras</h1>
+            <p class="subtitle">{{ subtitles[currentIndex] }}</p>
+        </div>
+        <div v-else-if="showSplash === false" key="content" class="app-shell">
+            <!-- <NavBar /> o <SideBar /> -->
+            <NavBar />
+            <!-- <MainContent /> -->
+            <main class="background-frame">
+                <slot />
+            </main>
+            <!-- <Footer /> -->
+            <Footer />
+        </div>
+    </Transition>
 </template>
 
-<script setup>
-// ##### Imports
-import { ref, onMounted } from 'vue';
-
+<script setup lang="ts">
 // ##### Splash
-const showSplash = ref(null);
+const SUBTITLE_INTERVAL = 1000;
 const subtitles = ['FullStack Developer', 'Games Enthusiast', 'Tech Consultant'];
+
+const showSplash = ref<boolean | null>(null);
 const currentIndex = ref(0);
 
+let splashInterval: ReturnType<typeof setInterval> | undefined;
+let splashTimeout: ReturnType<typeof setTimeout> | undefined;
+
 const switchSubtitle = () => {
-    const sessionSplash = sessionStorage.getItem('seenSplash') === 'true';
-    if (sessionSplash) {
+    if (sessionStorage.getItem('seenSplash') === 'true') {
         showSplash.value = false;
         return;
     }
-    else {
-        showSplash.value = true;
-        const splashInterval = setInterval(() => {
-            currentIndex.value = (currentIndex.value + 1) % subtitles.length;
-        }, 1000);
-    
-        setTimeout(() => {
+
+    showSplash.value = true;
+    splashInterval = setInterval(() => {
+        currentIndex.value = (currentIndex.value + 1) % subtitles.length;
+    }, SUBTITLE_INTERVAL);
+
+    splashTimeout = setTimeout(
+        () => {
             showSplash.value = false;
             sessionStorage.setItem('seenSplash', 'true');
             clearInterval(splashInterval);
-        }, ((subtitles.length - 1) * 1000) + 500);
-    }
+        },
+        (subtitles.length - 1) * SUBTITLE_INTERVAL + 500
+    );
 };
+
 onMounted(switchSubtitle);
+
+onBeforeUnmount(() => {
+    clearInterval(splashInterval);
+    clearTimeout(splashTimeout);
+});
 </script>
 
 <style lang="scss">
-@use "~/assets/styles/global/_typography.scss";
-@use "~/assets/styles/components/background_frame.scss";
-@use "~/assets/styles/components/splash_introduction.scss";
+@use '~/assets/scss/background_frame.scss';
+@use '~/assets/scss/splash_introduction.scss';
+
+// Reemplazo de v-fade-transition
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
 </style>

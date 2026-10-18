@@ -1,15 +1,14 @@
 <template>
     <div class="clipboard-wrapper" @click="copyToClipboard" @mousemove="updateMousePosition">
         <slot>Copiar</slot>
-        <teleport to="body">
-            <div v-if="showTooltip" class="clipboard-tooltip bg-primary text-onPrimary" :style="tooltipPosition">¡Copiado!</div>
-        </teleport>
+        <Teleport to="body">
+            <div v-if="showTooltip" class="clipboard-tooltip text-onPrimary bg-primary" :style="tooltipPosition">¡Copiado!</div>
+        </Teleport>
     </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-
+import { computed, ref } from 'vue';
 const props = defineProps({
     text: {
         type: String,

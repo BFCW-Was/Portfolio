@@ -1,3 +1,8 @@
 <template>
-    <NuxtLayout />
+    <UApp>
+        <NuxtRouteAnnouncer />
+        <NuxtLayout>
+            <NuxtPage />
+        </NuxtLayout>
+    </UApp>
 </template>

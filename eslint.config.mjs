@@ -1,6 +1,8 @@
+import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
+import { getDefaultAttributes } from 'eslint-plugin-better-tailwindcss/api/defaults';
 import withNuxt from './.nuxt/eslint.config.mjs';
 
-export default withNuxt({
+export default withNuxt(betterTailwindcss.configs['correctness-error'], {
     ignores: ['**/*__test.*'],
     name: 'portfolio/strict',
     rules: {
@@ -24,5 +26,13 @@ export default withNuxt({
         'vue/no-unused-components': 'warn',
         'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
         'vue/no-child-content': 'warn',
+        // Tailwind CSS:
+        'better-tailwindcss/no-unknown-classes': 'off',
+    },
+    settings: {
+        'better-tailwindcss': {
+            entryPoint: 'app/assets/css/main.css',
+            attributes: [...getDefaultAttributes(), ['^v-bind:ui$', [{ match: 'objectValues' }]]],
+        },
     },
 });
