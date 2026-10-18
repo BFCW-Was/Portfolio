@@ -13,6 +13,17 @@ export default defineNuxtConfig({
         },
     },
 
+    // Variables de Entorno
+    runtimeConfig: {
+        // Server Only (not exposed to the browser)
+        // NONE
+
+        // Public (exposed to the browser)
+        public: {
+            appVersion: '',
+        },
+    },
+
     // Diseño
     css: ['~/assets/css/main.css'],
     colorMode: { preference: 'dark', fallback: 'dark' },

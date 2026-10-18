@@ -25,7 +25,7 @@
 
 - Ajustes de tipografía y colores en el index.
 
-## 0.3.5 (50%): Visualización de Imágenes + Variables de Entorno
+## 0.3.5 (100%): Visualización de Imágenes + Variables de Entorno
 
 - Implementación de usePublicAsset para la visualización de imágenes.
 - Desactivación de optimización de imágenes (image.provider: 'none').
