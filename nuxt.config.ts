@@ -26,13 +26,11 @@ export default defineNuxtConfig({
 
     // Internacionalización
     i18n: {
-        locales: [
-            { code: 'es', name: 'Español', file: 'es.json' },
-            { code: 'en', name: 'English', file: 'en.json' },
-        ],
         defaultLocale: 'es',
-        lazy: true,
-        langDir: 'locales/',
-        bundle: { optimizeTranslationDirective: false },
+        strategy: 'prefix_except_default',
+        locales: [
+            { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
+            { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+        ],
     },
 });

@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.3.0 (0%): Actualización Proyecto + Alteración de Core
+## 0.3.0 (50%): Actualización Proyecto + Alteración de Core
 
 - Actualización de Nuxt3 a Nuxt4.
 - Actualización de todas las librerías via NPM.
