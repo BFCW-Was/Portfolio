@@ -1,7 +1,7 @@
 <template>
     <main>
-        <h1>Bastián Contreras Wasilkowski</h1>
-        <h3>Este portfolio aún está en desarrollo 😁</h3>
+        <h1 class="text-3xl font-bold">Bastián Contreras Wasilkowski</h1>
+        <h3 class="text-lg font-semibold">Este portfolio aún está en desarrollo 😁</h3>
         <br />
         <div>
             <h4>Aún así, si deseas contactarme puedes hablarme por correo o mis redes sociales:</h4>

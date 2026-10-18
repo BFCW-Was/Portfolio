@@ -20,3 +20,7 @@
 
 - Creación de archivo de licencia CC BY-NC-ND 4.0.
 - Actualización de README.md con enlace a la licencia y corrección de enlace a Portfolio.
+
+## 0.3.4 (100%): Ajustes Visuales Menores
+
+- Ajustes de tipografía y colores en el index.
