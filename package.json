@@ -1,5 +1,5 @@
 {
-    "name": "nuxt-app",
+    "name": "Portfolio",
     "private": true,
     "type": "module",
     "scripts": {
@@ -13,23 +13,28 @@
     },
     "dependencies": {
         "@mdi/font": "^7.4.47",
-        "@nuxt/eslint": "^1.4.1",
-        "@nuxt/fonts": "^0.11.4",
+        "@nuxt/fonts": "^1.0.1",
         "@nuxt/icon": "^1.13.0",
-        "@nuxt/image": "^1.10.0",
-        "@nuxtjs/i18n": "^9.5.5",
-        "eslint": "^9.28.0",
-        "nuxt": "^3.17.5",
+        "@nuxt/image": "^2.1.0",
+        "@nuxtjs/i18n": "^10.6.0",
+        "nuxt": "^4.6.1",
         "vue": "^3.5.16",
         "vue-router": "^4.5.1"
     },
     "devDependencies": {
+        "@nuxt/eslint": "^1.17.0",
+        "eslint": "^10.12.0",
         "@fortawesome/fontawesome-free": "^6.7.2",
-        "eslint-plugin-vue": "^10.3.0",
-        "prettier": "3.6.2",
-        "sass": "^1.89.2",
+        "prettier": "^3.9.10",
+        "sass": "^1.105.1",
         "sass-loader": "^13.3.3",
         "vite-plugin-vuetify": "^2.1.1",
         "vuetify": "^3.8.8"
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true,
+        "@parcel/watcher@2.6.0": true,
+        "unrs-resolver@1.12.2": true,
+        "vue-demi@0.14.10": true
     }
 }
