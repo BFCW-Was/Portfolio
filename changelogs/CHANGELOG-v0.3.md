@@ -7,6 +7,11 @@
 - Port de Vuetify3 a TailwindCSS + Nuxt UI.
 - Port de JS a TS.
 
-## 0.3.1 (0%): Ajustes de Formato
+## 0.3.1 (100%): Actualización de Librerías
 
-- Ajustes de Formato en Prettier: 300 a 200 en printWidth.
+- Actualización de todas las librerías via NPM.
+
+## 0.3.2 (0%): Formato
+
+- Ajustes de formato en Prettier y .editorconfig: 300 a 200 en printWidth.
+- Aplicación masiva de lint y formateo de código con Prettier y ESLint.
