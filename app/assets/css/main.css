@@ -2,7 +2,7 @@
 @import '@nuxt/ui';
 
 /* Sepia cuenta como tema oscuro para las variantes dark: */
-@custom-variant dark (&:where(.dark, .dark *, .sepia, .sepia *));
+@custom-variant dark (&:where(.dark, .dark *, .theme-sepia, .theme-sepia *));
 
 /* "static" es necesario: sin él Tailwind no emite las variables que solo usas desde SCSS */
 @theme static {
@@ -97,16 +97,16 @@
 }
 
 /* ##### Sepia ##### */
-.sepia {
+.theme-sepia {
     --ui-bg: var(--color-bfcw-sepia-100);
     --ui-bg-muted: var(--color-bfcw-sepia-90);
     --ui-bg-elevated: var(--color-bfcw-sepia-90);
     --ui-text: var(--color-bfcw-white-90);
     --ui-text-inverted: var(--color-bfcw-white-90);
-    --ui-primary: var(--color-bfcw-sepia-30);
-    --ui-secondary: var(--color-bfcw-sepia-50);
+    --ui-primary: var(--color-bfcw-cyan-70);
+    --ui-secondary: var(--color-bfcw-cyan-90);
     --ui-success: var(--color-bfcw-mustard-70);
-    --ui-info: var(--color-bfcw-mustard-100);
+    --ui-info: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
-    --ui-error: var(--color-bfcw-fire-70);
+    --ui-error: var(--color-bfcw-fire-100);
 }

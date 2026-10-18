@@ -2,9 +2,12 @@
     <footer class="flex items-center justify-between gap-4 px-5 py-2.5">
         <!-- Copyright Section -->
         <p class="text-xs">
-            v{{ appVersion }} | Copyright © {{ new Date().getFullYear() }} by
-            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">Bastián Contreras Wasilkowski</a>. Licensed under
-            <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+            v{{ appVersion }} | © {{ new Date().getFullYear() }} by
+            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">
+                <span class="hidden min-[50rem]:inline">Bastián Contreras Wasilkowski</span>
+                <span class="min-[50rem]:hidden">BFCW</span>.
+            </a>
+            Licensed under <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
         </p>
 
         <div class="flex items-center gap-2">
@@ -55,9 +58,6 @@
 const config = useRuntimeConfig();
 const appVersion = config.public.appVersion;
 
-// ##### Types
-type ThemeName = 'light' | 'dark' | 'sepia';
-
 // ##### Locales
 const { locale, locales, setLocale } = useI18n();
 
@@ -77,10 +77,12 @@ const langItems = computed(() =>
 );
 
 // ##### Themes
+type ThemeName = 'light' | 'dark' | 'theme-sepia';
+
 const themes: { name: ThemeName; icon: string; title: string }[] = [
-    { name: 'light', icon: 'i-fa6-solid-sun', title: "⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun." },
-    { name: 'dark', icon: 'i-fa6-solid-moon', title: 'Dark Theme 😃' },
-    { name: 'sepia', icon: 'i-fa6-solid-book', title: 'Sepia Theme 🚬🗿. Always a pleasure have a cool alternative like this.' },
+    { name: 'light', icon: 'i-fa6-solid-sun', title: "Light Theme -😫 | ⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun." },
+    { name: 'dark', icon: 'i-fa6-solid-moon', title: 'Dark Theme 😃 | Its the default theme, no need to thank me.' },
+    { name: 'theme-sepia', icon: 'i-fa6-solid-book', title: 'Sepia Theme 🚬🗿 | Always a pleasure have a cool alternative like this.' },
 ];
 
 // ##### Theme Changing
