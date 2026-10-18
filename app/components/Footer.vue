@@ -55,9 +55,6 @@
 const config = useRuntimeConfig();
 const appVersion = config.public.appVersion;
 
-// ##### Types
-type ThemeName = 'light' | 'dark' | 'sepia';
-
 // ##### Locales
 const { locale, locales, setLocale } = useI18n();
 
@@ -77,10 +74,12 @@ const langItems = computed(() =>
 );
 
 // ##### Themes
+type ThemeName = 'light' | 'dark' | 'theme-sepia';
+
 const themes: { name: ThemeName; icon: string; title: string }[] = [
-    { name: 'light', icon: 'i-fa6-solid-sun', title: "⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun." },
-    { name: 'dark', icon: 'i-fa6-solid-moon', title: 'Dark Theme 😃' },
-    { name: 'sepia', icon: 'i-fa6-solid-book', title: 'Sepia Theme 🚬🗿. Always a pleasure have a cool alternative like this.' },
+    { name: 'light', icon: 'i-fa6-solid-sun', title: "Light Theme -😫 | ⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun." },
+    { name: 'dark', icon: 'i-fa6-solid-moon', title: 'Dark Theme 😃 | Its the default theme, no need to thank me.' },
+    { name: 'theme-sepia', icon: 'i-fa6-solid-book', title: 'Sepia Theme 🚬🗿 | Always a pleasure have a cool alternative like this.' },
 ];
 
 // ##### Theme Changing
