@@ -15,7 +15,7 @@
 
 <div style="text-align: center;">
 
-[![Portfolio](https://img.shields.io/badge/Project-v0.0.0-138583?&labelColor=13030B)](https://github.com/BFCW-Was/mi-proyecto) ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-138583.svg?&labelColor=13030B)
+[![Portfolio](https://img.shields.io/badge/Project-v0.3.2-138583?&labelColor=13030B)](https://github.com/BFCW-Was/Portfolio) [![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-138583.svg?&labelColor=13030B)](https://github.com/BFCW-Was/Portfolio/blob/master/LICENCE.md)
 
 [![Nuxt4](https://img.shields.io/badge/Nuxt4-v4.6.1-00DC82?logo=nuxt&logoColor=white&labelColor=13030B)](https://nuxtjs.org) [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.3.3-06B6D4?logo=tailwindcss&logoColor=white&labelColor=13030B)](https://tailwindcss.com)
 [![npm](https://img.shields.io/badge/npm-v12.2.0-CB3837?logo=npm&logoColor=white&labelColor=13030B)](https://www.npmjs.com) [![Node.js](https://img.shields.io/badge/Node.js-v24.19.0-5FA04E?logo=node.js&logoColor=white&labelColor=13030B)](https://nodejs.org) [![ESLint](https://img.shields.io/badge/ESLint-v10.12.0-4B32C3?logo=eslint&logoColor=white&labelColor=13030B)](https://eslint.org)
