@@ -87,9 +87,7 @@
     </main>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-
+<script setup lang="ts">
 // Definición de Variables para Visibilidad:
 const isVisibleTextos = ref(false);
 const isVisibleBotones = ref(false);
@@ -97,7 +95,7 @@ const isVisibleImagenes = ref(false);
 const isVisibleComponentes = ref(true);
 const isVisibleThemes = ref(false);
 
-// Cambio de color InformationCard:
+// Cambio de Estilo InformationCard:
 const colorsIC = ['burgundy', 'sepia', 'gray', 'cyan', 'fire', 'mustard'];
 const colorIndexIC = ref(0);
 const currentColorIC = computed(() => colorsIC[colorIndexIC.value]);
@@ -105,4 +103,24 @@ const currentColorIC = computed(() => colorsIC[colorIndexIC.value]);
 function nextColorIC() {
     colorIndexIC.value = (colorIndexIC.value + 1) % colorsIC.length;
 }
+
+// Definición de Variables locales:
+const selectedItem = ref(0);
+
+type ItemVariant = 'normal' | 'red' | 'cyan' | 'yellow' | 'green';
+
+interface SelectorItem {
+    label: string;
+    variant: ItemVariant;
+}
+
+const items: SelectorItem[] = [
+    { label: 'ITEM1', variant: 'normal' },
+    { label: 'ITEM2', variant: 'red' },
+    { label: 'ITEM3', variant: 'cyan' },
+    { label: 'ITEM4', variant: 'yellow' },
+    { label: 'ITEM5', variant: 'green' },
+    { label: 'ITEM6', variant: 'normal' },
+    { label: 'ITEM7', variant: 'normal' },
+];
 </script>

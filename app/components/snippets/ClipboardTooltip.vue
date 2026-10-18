@@ -7,8 +7,7 @@
     </div>
 </template>
 
-<script setup>
-import { computed, ref } from 'vue';
+<script setup lang="ts">
 const props = defineProps({
     text: {
         type: String,
@@ -20,7 +19,7 @@ const mouseX = ref(0);
 const mouseY = ref(0);
 const showTooltip = ref(false);
 
-const updateMousePosition = (e) => {
+const updateMousePosition = (e: { clientX: number; clientY: number }) => {
     mouseX.value = e.clientX;
     mouseY.value = e.clientY;
 };

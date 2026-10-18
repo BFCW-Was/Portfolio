@@ -69,7 +69,9 @@ This portfolio is designed to work with free hosting via _GitHub Pages_.
 - `npm install`: Installs all required project dependencies.
 - `npm update`: Updates all packages to the latest compatible versions.
 - `npm run dev`: Launches the local development server.
-- `npm run lint`: Lints the code according to ESLint rules and configuration.
 - `npm run build`: Compiles the project for production deployment.
+- `npm run lint`: Lints the code according to ESLint rules and configuration.
+- `npm run format`: Formats the code according to Prettier rules and configuration.
+- `npm run fix`: Formats and lints the code according to ESLint and Prettier rules and configuration.
 
 Thanks for reading! 💫

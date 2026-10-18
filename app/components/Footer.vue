@@ -23,8 +23,9 @@
     </footer>
 </template>
 
-<script setup>
-// ##### Imports
+<script setup lang="ts">
+// ##### Types
+type ThemeName = 'light' | 'dark' | 'sepia';
 
 // ##### Locales
 const { locale, locales, setLocale } = useI18n();
@@ -32,7 +33,7 @@ const { locale, locales, setLocale } = useI18n();
 const languages = [
     { code: 'es', label: 'Español', icon: 'i-flag-cl-4x3' },
     { code: 'en', label: 'English', icon: 'i-flag-gb-4x3' },
-];
+] as const;
 
 const currentLang = computed(() => languages.find((l) => l.code === locale.value) ?? languages[0]);
 
@@ -45,40 +46,24 @@ const langItems = computed(() =>
 );
 
 // ##### Themes
-const themes = [
-    {
-        name: 'light',
-        icon: 'i-fa6-solid-sun',
-        title: "⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun.",
-    },
-    {
-        name: 'dark',
-        icon: 'i-fa6-solid-moon',
-        title: 'Dark Theme 😃',
-    },
-    {
-        name: 'sepia',
-        icon: 'i-fa6-solid-book',
-        title: 'Sepia Theme 🚬🗿. Always a pleasure have a cool alternative like this.',
-    },
+const themes: { name: ThemeName; icon: string; title: string }[] = [
+    { name: 'light', icon: 'i-fa6-solid-sun', title: "⚠️ Dont Use This ⚠️ - It will burn your eyes. That's why it's a sun." },
+    { name: 'dark', icon: 'i-fa6-solid-moon', title: 'Dark Theme 😃' },
+    { name: 'sepia', icon: 'i-fa6-solid-book', title: 'Sepia Theme 🚬🗿. Always a pleasure have a cool alternative like this.' },
 ];
 
 // ##### Theme Changing
 const colorMode = useColorMode();
-
-const setTheme = (name) => {
+const setTheme = (name: ThemeName) => {
     colorMode.preference = name;
 };
-
-const isActiveTheme = (name) => colorMode.preference === name;
+const isActiveTheme = (name: ThemeName) => colorMode.preference === name;
 
 // ##### Icon Rotation
 const rotationAngle = ref(0);
-
 function cycleTheme() {
     const index = themes.findIndex((mode) => mode.name === colorMode.preference);
-
-    setTheme(themes[(index + 1) % themes.length].name);
+    setTheme(themes[(index + 1) % themes.length]!.name);
     rotationAngle.value += 90;
 }
 </script>

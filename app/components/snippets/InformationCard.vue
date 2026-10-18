@@ -22,19 +22,29 @@
     </div>
 </template>
 
-<script setup>
-import { computed, defineProps, ref } from 'vue';
-
+<script setup lang="ts">
 // Define props
 const props = defineProps({
-    title: { type: String, required: true },
-    subtitle: { type: String, default: '' },
-    footnote: { type: String, default: '' },
-    expandable: { type: Boolean, default: true },
+    title: {
+        type: String,
+        required: true,
+    },
+    subtitle: {
+        type: String,
+        default: '',
+    },
+    footnote: {
+        type: String,
+        default: '',
+    },
+    expandable: {
+        type: Boolean,
+        default: true,
+    },
     color: {
         type: String,
         default: 'cyan',
-        validator: (val) => ['burgundy', 'sepia', 'gray', 'cyan', 'fire', 'mustard'].includes(val),
+        validator: (v: string) => ['burgundy', 'sepia', 'gray', 'cyan', 'fire', 'mustard'].includes(v),
     },
 });
 
