@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* Sepia cuenta como tema oscuro para las variantes dark: */
+@custom-variant dark (&:where(.dark, .dark *, .sepia, .sepia *));
+
+/* "static" es necesario: sin él Tailwind no emite las variables que solo usas desde SCSS */
+@theme static {
+    --font-sans: 'M PLUS Rounded 1c', sans-serif;
+
+    /* Prefijo bfcw- para no pisar colores base de Tailwind */
+    --color-bfcw-black-100: #090508;
+    --color-bfcw-black-90: #0e040a;
+    --color-bfcw-black-70: #13030b;
+    --color-bfcw-black-50: #18020c;
+    --color-bfcw-black-30: #211c1e;
+    --color-bfcw-black-20: #2b2427;
+
+    --color-bfcw-white-100: #fefefe;
+    --color-bfcw-white-90: #f2f2f2;
+    --color-bfcw-white-70: #e1e1e1;
+    --color-bfcw-white-50: #d0d0d0;
+    --color-bfcw-white-30: #aeadad;
+    --color-bfcw-white-20: #8c8a8b;
+
+    --color-bfcw-sepia-100: #251e12;
+    --color-bfcw-sepia-90: #312517;
+    --color-bfcw-sepia-70: #4e3c27;
+    --color-bfcw-sepia-50: #81694a;
+    --color-bfcw-sepia-30: #b4976d;
+    --color-bfcw-sepia-20: #c7b191;
+
+    --color-bfcw-cyan-100: #0d5e5c;
+    --color-bfcw-cyan-90: #138583;
+    --color-bfcw-cyan-70: #30aba5;
+    --color-bfcw-cyan-50: #46d5b3;
+    --color-bfcw-cyan-30: #77e8cd;
+    --color-bfcw-cyan-20: #9df1dd;
+
+    --color-bfcw-fire-100: #762d23;
+    --color-bfcw-fire-90: #9d3c2f;
+    --color-bfcw-fire-70: #a45044;
+    --color-bfcw-fire-50: #b06d63;
+    --color-bfcw-fire-30: #bc8a82;
+    --color-bfcw-fire-20: #d0b3ae;
+
+    --color-bfcw-mustard-100: #ebbc00;
+    --color-bfcw-mustard-90: #e8c70a;
+    --color-bfcw-mustard-70: #e6cf01;
+    --color-bfcw-mustard-50: #efdd3e;
+    --color-bfcw-mustard-30: #f4e775;
+    --color-bfcw-mustard-20: #e2dbab;
+
+    --color-bfcw-burgundy-100: #27060f;
+    --color-bfcw-burgundy-90: #42132a;
+    --color-bfcw-burgundy-70: #53172f;
+    --color-bfcw-burgundy-50: #7c375b;
+    --color-bfcw-burgundy-30: #d792ac;
+    --color-bfcw-burgundy-20: #f7c9cc;
+
+    --color-bfcw-indigo-100: #3a1b76;
+    --color-bfcw-indigo-90: #472688;
+    --color-bfcw-indigo-70: #53309a;
+    --color-bfcw-indigo-50: #6040a0;
+    --color-bfcw-indigo-30: #6b50a1;
+    --color-bfcw-indigo-20: #846fb2;
+}
+
+/* ##### Light ##### */
+:root {
+    --ui-bg: var(--color-bfcw-white-70);
+    --ui-bg-muted: var(--color-bfcw-white-90);
+    --ui-bg-elevated: var(--color-bfcw-white-90);
+    --ui-text: var(--color-bfcw-black-90);
+    --ui-text-inverted: var(--color-bfcw-black-90);
+    --ui-primary: var(--color-bfcw-cyan-70);
+    --ui-secondary: var(--color-bfcw-cyan-90);
+    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-info: var(--color-bfcw-cyan-50);
+    --ui-warning: var(--color-bfcw-mustard-90);
+    --ui-error: var(--color-bfcw-fire-100);
+}
+
+/* ##### Dark ##### */
+.dark {
+    --ui-bg: var(--color-bfcw-black-90);
+    --ui-bg-muted: var(--color-bfcw-black-70);
+    --ui-bg-elevated: var(--color-bfcw-black-70);
+    --ui-text: var(--color-bfcw-white-90);
+    --ui-text-inverted: var(--color-bfcw-white-90);
+    --ui-primary: var(--color-bfcw-cyan-70);
+    --ui-secondary: var(--color-bfcw-cyan-90);
+    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-info: var(--color-bfcw-cyan-50);
+    --ui-warning: var(--color-bfcw-mustard-90);
+    --ui-error: var(--color-bfcw-fire-100);
+}
+
+/* ##### Sepia ##### */
+.sepia {
+    --ui-bg: var(--color-bfcw-sepia-100);
+    --ui-bg-muted: var(--color-bfcw-sepia-90);
+    --ui-bg-elevated: var(--color-bfcw-sepia-90);
+    --ui-text: var(--color-bfcw-white-90);
+    --ui-text-inverted: var(--color-bfcw-white-90);
+    --ui-primary: var(--color-bfcw-sepia-30);
+    --ui-secondary: var(--color-bfcw-sepia-50);
+    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-info: var(--color-bfcw-mustard-100);
+    --ui-warning: var(--color-bfcw-mustard-90);
+    --ui-error: var(--color-bfcw-fire-70);
+}

@@ -1,0 +1,26 @@
+# **Versiones:**
+
+## 0.3.0 (100%): Actualización Proyecto + Alteración de Core
+
+- Actualización de Nuxt3 a Nuxt4.
+- Actualización de todas las librerías via NPM.
+- Port de Vuetify3 a TailwindCSS + Nuxt UI.
+- Port de JS a TS.
+
+## 0.3.1 (100%): Actualización de Librerías
+
+- Actualización de todas las librerías via NPM.
+
+## 0.3.2 (100%): Formato
+
+- Ajustes de formato en Prettier y .editorconfig: 300 a 200 en printWidth.
+- Aplicación masiva de lint y formateo de código con Prettier y ESLint.
+
+## 0.3.3 (100%): LICENCIA & README
+
+- Creación de archivo de licencia CC BY-NC-ND 4.0.
+- Actualización de README.md con enlace a la licencia y corrección de enlace a Portfolio.
+
+## 0.3.4 (100%): Ajustes Visuales Menores
+
+- Ajustes de tipografía y colores en el index.

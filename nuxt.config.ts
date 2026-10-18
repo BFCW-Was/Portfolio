@@ -1,44 +1,29 @@
-import { defineNuxtConfig } from 'nuxt/config';
-
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
+    modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image', '@nuxtjs/i18n'],
+    devtools: { enabled: true },
+    eslint: { config: { stylistic: false } },
+    compatibilityDate: '2026-06-30',
 
-  // Módulos
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxtjs/i18n'
-  ],
+    app: {
+        // GitHub Pages
+        baseURL: '/Portfolio/',
+        // SEO
+        head: {
+            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/images/logos/MyPortfolio.png' }],
+        },
+    },
 
-  // Configuración para Github Pages
-  ssr: false,
-  app: {
-    baseURL: '/Portfolio/',
-  },
+    // Diseño
+    css: ['~/assets/css/main.css'],
+    colorMode: { preference: 'dark', fallback: 'dark' },
 
-  // SCSS:
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "~/assets/styles/global/_variables.scss" as *;'
-        }
-      }
-    }
-  },
-
-  // Internacionalización
-  i18n: {
-    locales: [
-      { code: 'es', name: 'Español', file: 'es.json' },
-      { code: 'en', name: 'English', file: 'en.json' }
-    ],
-    defaultLocale: 'es',
-    lazy: true,
-    langDir: 'locales/',
-    bundle: { optimizeTranslationDirective: false },
-  }
+    // Internacionalización
+    i18n: {
+        defaultLocale: 'es',
+        strategy: 'prefix_except_default',
+        locales: [
+            { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
+            { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+        ],
+    },
 });
