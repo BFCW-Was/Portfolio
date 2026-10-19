@@ -38,3 +38,10 @@
 - Cambio de nombre a "theme-sepia" para no chocar con clases de Tailwind.
 - Mantención de colores de contraste (color principal, success, error, etc).
 - Ajustes en el footer para mejor visualización en móvil.
+
+## 0.3.7 (100%): Mantención de Build & Deployment (GitHub Pages)
+
+- Actualización de workflow de build y deploy con nuevas versiones de actions (/checkout@v7 y /setup-node@v7)
+- Adición de variable de entorno NUXT_APP_VERSION.
+- Adición de almacenado de caché de NPM.
+- Mejores comentarios en el workflow.
