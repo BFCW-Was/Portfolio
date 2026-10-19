@@ -1,46 +1,53 @@
 # Name
 name: Build and Deploy
+
 # Workflow's Trigger -> Push to 'master' branch
 on:
     push:
         branches:
             - master
-# Enviroment Variables
+
+# Global Environment Variables
 env:
     NODE_VERSION: 24.19.0
-# Permissions
+
+# Global Permissions
 permissions:
     contents: write
+
 # Jobs Definition
 jobs:
     build-and-deploy:
-        # Avoids unnecessary parallel runs if there are multiple commits:
-        concurrency: ci-${{ github.ref }}
+        concurrency: ci-${{ github.ref }} # Avoids unnecessary parallel runs if there are multiple commits:
         runs-on: ubuntu-latest
 
         steps:
             # Step 1: Clone the repository
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
             # Step 2: Node.js version configuration
             - name: Use Node.js ${{ env.NODE_VERSION }}
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v7
               with:
                   node-version: ${{ env.NODE_VERSION }}
+                  cache: npm
             # Step 3: Installs the dependencies
             - name: Install Dependencies
               run: npm ci
-            # Step 4: Generate static site -> /dist
+            # Step 4: Generate static site
             - name: Generate Static Site
               run: npm run generate
+              # Local Environment Variables
               env:
-                  NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }} # Defined in repository variables
+                  NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }}
+                  NUXT_APP_VERSION: ${{ vars.NUXT_APP_VERSION }}
             # Step 4.1: Do not ignore files that starts with '_' -> _nuxt
             - name: Add .nojekyll file
-              run: touch dist/.nojekyll
+              run: touch .output/public/.nojekyll
             # Step 5: Publish static site -> Push to 'gh-pages' branch
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages
-                  folder: dist
+                  folder: .output/public
+                  single-commit: true
