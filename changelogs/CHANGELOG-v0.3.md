@@ -42,6 +42,6 @@
 ## 0.3.7 (100%): Mantención de Build & Deployment (GitHub Pages)
 
 - Actualización de workflow de build y deploy con nuevas versiones de actions (/checkout@v7 y /setup-node@v7)
-- Adición de variable de entorno NUXT_APP_VERSION.
+- Adición de variable de entorno NUXT_PUBLIC_APP_VERSION.
 - Adición de almacenado de caché de NPM.
 - Mejores comentarios en el workflow.
