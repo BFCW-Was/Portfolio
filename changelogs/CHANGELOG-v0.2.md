@@ -1,6 +1,8 @@
 # **Versiones:**
 
-## 0.2.0 (100%): Componentes Base de Diseño
+## 0.2.0 (100%): Componentes Base de Diseño | 2026-10-17
+
+### Added
 
 - Creación de componentes visuales clave:
     - Creación de mockups en Figma.
@@ -8,6 +10,10 @@
         - Creación de footer.
         - Creación de navbar flotante.
     - Creación de encapsulamiento de las páginas.
+- Nueva funcionalidad de rotación de theme en footer.
+
+### Changed
+
 - Mejoras visuales:
     - Nueva mejora de Background Frame.
     - Actualizaciones en SCSS para no usar REM, solo PX.
@@ -15,8 +21,9 @@
 - Mejoras de formato:
     - Configuración de Prettier.
     - Mejoras en ESLint.
-- Nueva funcionalidad de rotación de theme en footer.
 
-## 0.2.1 (100%): Conventional Commits
+## 0.2.1 (100%): Conventional Commits | 2026-10-17
+
+### Added
 
 - Configuración y uso de Conventional Commits.
