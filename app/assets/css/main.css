@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
@@ -6,9 +7,18 @@
 
 /* "static" es necesario: sin él Tailwind no emite las variables que solo usas desde SCSS */
 @theme static {
-    --font-sans: 'M PLUS Rounded 1c', sans-serif;
+    /* ### Base Fonts ### */
+    --font-base: 'Tomorrow', sans-serif;
+    --font-titles: 'Expletus Sans', sans-serif;
 
-    /* Prefijo bfcw- para no pisar colores base de Tailwind */
+    /* ### Dislexic Mode Font ### */
+    --font-dislexic: 'Lexend', sans-serif;
+
+    /* ### Code Font ### */
+    --font-code: 'Chakra Petch', sans-serif;
+
+    /* ### Color Palletes ### */
+    /* Black */
     --color-bfcw-black-100: #090508;
     --color-bfcw-black-90: #0e040a;
     --color-bfcw-black-70: #13030b;
@@ -16,6 +26,7 @@
     --color-bfcw-black-30: #211c1e;
     --color-bfcw-black-20: #2b2427;
 
+    /* White */
     --color-bfcw-white-100: #fefefe;
     --color-bfcw-white-90: #f2f2f2;
     --color-bfcw-white-70: #e1e1e1;
@@ -23,6 +34,7 @@
     --color-bfcw-white-30: #aeadad;
     --color-bfcw-white-20: #8c8a8b;
 
+    /* Sepia */
     --color-bfcw-sepia-100: #251e12;
     --color-bfcw-sepia-90: #312517;
     --color-bfcw-sepia-70: #4e3c27;
@@ -30,6 +42,7 @@
     --color-bfcw-sepia-30: #b4976d;
     --color-bfcw-sepia-20: #c7b191;
 
+    /* Cyan */
     --color-bfcw-cyan-100: #0d5e5c;
     --color-bfcw-cyan-90: #138583;
     --color-bfcw-cyan-70: #30aba5;
@@ -37,6 +50,7 @@
     --color-bfcw-cyan-30: #77e8cd;
     --color-bfcw-cyan-20: #9df1dd;
 
+    /* Fire */
     --color-bfcw-fire-100: #762d23;
     --color-bfcw-fire-90: #9d3c2f;
     --color-bfcw-fire-70: #a45044;
@@ -44,6 +58,7 @@
     --color-bfcw-fire-30: #bc8a82;
     --color-bfcw-fire-20: #d0b3ae;
 
+    /* Mustard */
     --color-bfcw-mustard-100: #ebbc00;
     --color-bfcw-mustard-90: #e8c70a;
     --color-bfcw-mustard-70: #e6cf01;
@@ -51,6 +66,7 @@
     --color-bfcw-mustard-30: #f4e775;
     --color-bfcw-mustard-20: #e2dbab;
 
+    /* Burgundy */
     --color-bfcw-burgundy-100: #27060f;
     --color-bfcw-burgundy-90: #42132a;
     --color-bfcw-burgundy-70: #53172f;
@@ -58,6 +74,7 @@
     --color-bfcw-burgundy-30: #d792ac;
     --color-bfcw-burgundy-20: #f7c9cc;
 
+    /* Indigo */
     --color-bfcw-indigo-100: #3a1b76;
     --color-bfcw-indigo-90: #472688;
     --color-bfcw-indigo-70: #53309a;
@@ -66,7 +83,8 @@
     --color-bfcw-indigo-20: #846fb2;
 }
 
-/* ##### Light ##### */
+/* ### Themes ### */
+/* Light */
 :root {
     --ui-bg: var(--color-bfcw-white-70);
     --ui-bg-muted: var(--color-bfcw-white-90);
@@ -81,7 +99,7 @@
     --ui-error: var(--color-bfcw-fire-100);
 }
 
-/* ##### Dark ##### */
+/* Dark */
 .dark {
     --ui-bg: var(--color-bfcw-black-90);
     --ui-bg-muted: var(--color-bfcw-black-70);
@@ -96,7 +114,7 @@
     --ui-error: var(--color-bfcw-fire-100);
 }
 
-/* ##### Sepia ##### */
+/* Sepia */
 .theme-sepia {
     --ui-bg: var(--color-bfcw-sepia-100);
     --ui-bg-muted: var(--color-bfcw-sepia-90);
@@ -109,4 +127,66 @@
     --ui-info: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
+}
+
+/* ### Global Styles ### */
+@layer base {
+    body {
+        font-family: var(--font-base);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-titles);
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    h6 {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    code {
+        font-family: var(--font-code);
+    }
+
+    dislexic {
+        font-family: var(--font-dislexic);
+    }
+
+    mark {
+        background-color: var(--ui-primary);
+        color: var(--ui-text-inverted);
+        border-radius: 0.1rem;
+        padding: 0.1em 0.2em;
+    }
 }
