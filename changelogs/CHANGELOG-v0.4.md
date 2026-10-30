@@ -4,14 +4,15 @@
 
 ### Added
 
-- Adición de Language Selector
+- Implementación de Language Selector.
 - Implementación de Footer diseñado en Figma.
 - Implementación de Navbar flotante diseñada en Figma.
-- Implementación de componentes visuales basicos diseñados en Figma (cards, buttons, selectors, timelines, etc).
 - Implementación de componente InkBlob para efectos de fondo.
+- Implementación de componentes visuales basicos diseñados en Figma (cards, buttons, selectors, timelines, etc).
 
 ### Changed
 
-- Mejora en borde general de la web y responsividad con elementos circundantes.
+- Finalización de Theme Mode Selector.
 - Cambio de font de la web y selección de fonts alternativas (títulos, dislexia y código).
-- Mejora en Theme Mode Selector.
+- Mejora en borde general de la web y responsividad con elementos circundantes.
+- Cambio de logo de la web.
