@@ -1,33 +1,47 @@
 <template>
-    <footer class="flex items-center justify-between gap-4 px-5 py-2.5">
+    <footer
+        class="bg-background fixed right-0 bottom-0 left-0 flex flex-col items-center justify-between gap-2 p-2 text-[11px] min-[36rem]:flex-row min-[36rem]:gap-4"
+        :style="{ marginInline: 'clamp(1.25rem, 2dvw, 1.75rem)' }"
+    >
         <!-- Copyright Section -->
-        <p class="text-xs">
-            v{{ appVersion }} | © {{ new Date().getFullYear() }} by
-            <a class="text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">
-                <span class="hidden min-[50rem]:inline">Bastián Contreras Wasilkowski</span>
-                <span class="min-[50rem]:hidden">BFCW</span>.
+        <p class="w-full truncate text-center min-[36rem]:w-auto min-[36rem]:text-left">
+            v{{ appVersion }} | © {{ new Date().getFullYear() }}
+            <span class="hidden min-[36rem]:inline">by </span>
+            <a class="font-medium text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">
+                <span class="hidden min-[36rem]:inline">Bastián Contreras Wasilkowski</span>
+                <span class="min-[36rem]:hidden">BFCW</span>.
             </a>
-            Licensed under <a class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
         </p>
 
-        <div class="flex items-center gap-2">
+        <!-- Controles de Idioma y Theme -->
+        <div class="flex w-full shrink-0 items-center justify-center gap-4 min-[36rem]:w-auto">
             <!-- Language Selector -->
-            <div class="flex gap-2">
-                <UDropdownMenu :items="langItems">
+            <div class="flex gap-1">
+                <UDropdownMenu
+                    v-model:open="isOpenLocales"
+                    :items="langItems"
+                    size="xs"
+                    :ui="{
+                        content: 'px-3 py-0 min-w-0',
+                        item: 'text-[11px]',
+                        itemLeadingIcon: 'size-4',
+                    }"
+                >
                     <UButton
                         variant="outline"
                         size="xs"
                         color="neutral"
+                        class="text-[11px]"
                         :icon="currentLang.icon"
                         :label="currentLang.code.toUpperCase()"
                         :ui="{ leadingIcon: 'rounded-sm' }"
-                        trailingIcon="i-lucide-chevron-down"
+                        :trailingIcon="isOpenLocales ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
                     />
                 </UDropdownMenu>
             </div>
 
             <!-- Theme Mode Selector -->
-            <div class="flex gap-2">
+            <div class="flex gap-1">
                 <UButton
                     v-for="mode in themes"
                     :key="mode.name"
@@ -60,6 +74,7 @@ const appVersion = config.public.appVersion;
 
 // ##### Locales
 const { locale, locales, setLocale } = useI18n();
+const isOpenLocales = ref(false);
 
 const languages = [
     { code: 'es', label: 'Español', icon: 'i-flag-cl-4x3' },

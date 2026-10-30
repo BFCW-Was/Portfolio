@@ -1,13 +1,20 @@
 .app-shell {
     position: relative;
     min-height: 100dvh;
+    --footer-height: 2.5rem;
+}
+
+@media (min-width: 36rem) {
+    .app-shell {
+        --footer-height: clamp(0.75rem, calc(2.375rem - 1.875dvw), 1.25rem);
+    }
 }
 
 .background-frame {
     position: absolute;
-    inset-inline: clamp(0.85rem, 2dvw, 1.5rem);
-    top: clamp(0.85rem, 2dvw, 1.5rem);
-    bottom: calc(clamp(0.85rem, 2dvw, 1.5rem) + 1rem);
+    inset-inline: clamp(1.25rem, 2dvw, 1.75rem);
+    top: clamp(1.25rem, 2dvw, 1.75rem);
+    bottom: calc(clamp(1.25rem, 2dvw, 1.75rem) + var(--footer-height));
     border: 1px solid;
     padding: 2dvh 2dvw;
     box-sizing: border-box;
