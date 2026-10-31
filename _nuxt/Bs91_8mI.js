@@ -1,0 +1,1 @@
+import{_ as e,b as t,mt as n}from"./D9D_YlD4.js";import{t as r}from"#entry";var i={};function a(r,i){return n(),t(`main`,null,[...i[0]||=[e(`h1`,null,`Skills`,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
