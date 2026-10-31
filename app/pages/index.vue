@@ -3,7 +3,8 @@
         <div class="flex items-center gap-3">
             <h1>Bastián Contreras Wasilkowski</h1>
             |
-            <NuxtImg :src="usePublicAsset('/images/logos/MyPortfolio.png')" alt="Logo" class="h-16 w-16 object-contain" />
+            <NuxtImg :src="usePublicAsset(lightLogo?.src)" :alt="lightLogo?.alt" class="block h-16 w-16 object-contain dark:hidden" />
+            <NuxtImg :src="usePublicAsset(darkLogo?.src)" :alt="darkLogo?.alt" class="hidden h-16 w-16 object-contain dark:block" />
         </div>
         <p class="text-lg font-semibold">Este portfolio aún está en desarrollo 😁</p>
         <br />
@@ -34,4 +35,8 @@
 
 <script setup lang="ts">
 import { usePublicAsset } from '~/composables/use_public_assets';
+import { assetsManager } from '~/utils/assets_manager';
+
+const lightLogo = assetsManager.find((img) => img.id === 'logo-light');
+const darkLogo = assetsManager.find((img) => img.id === 'logo-dark');
 </script>

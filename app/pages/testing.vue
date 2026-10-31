@@ -128,7 +128,8 @@
         <div v-if="isVisibleImagenes">
             <h1>Imagenes</h1>
             <hr class="my-2" />
-            <NuxtImg :src="usePublicAsset('/images/logos/MyPortfolio.png')" alt="Logo" />
+            <NuxtImg :src="usePublicAsset(lightLogo?.src)" :alt="lightLogo?.alt" />
+            <NuxtImg :src="usePublicAsset(darkLogo?.src)" :alt="darkLogo?.alt" />
         </div>
         <!-- #################### BOTONES #################### -->
         <div v-if="isVisibleThemes">
@@ -196,6 +197,11 @@
 
 <script setup lang="ts">
 import { usePublicAsset } from '~/composables/use_public_assets';
+import { assetsManager } from '~/utils/assets_manager';
+
+// Control y Muestra de Imágenes
+const lightLogo = assetsManager.find((img) => img.id === 'logo-light');
+const darkLogo = assetsManager.find((img) => img.id === 'logo-dark');
 
 // Definición de Variables para Visibilidad:
 const isVisibleTextos = ref(false);
