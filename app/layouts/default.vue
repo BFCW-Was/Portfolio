@@ -6,7 +6,7 @@
             <p class="subtitle">{{ subtitles[currentIndex] }}</p>
         </div>
         <div v-else-if="showSplash === false" key="content" class="app-shell">
-            <!-- <Header /> o <SideBar /> -->
+            <!-- <NavBar />, <Header /> o <SideBar /> -->
             <NavBar />
             <!-- <MainContent /> -->
             <main class="background-frame">

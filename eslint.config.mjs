@@ -26,6 +26,7 @@ export default withNuxt(betterTailwindcss.configs['correctness-error'], {
         'vue/no-unused-components': 'warn',
         'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
         'vue/no-child-content': 'warn',
+        'vue/block-order': ['error', { order: ['template', 'script', 'style'] }],
         // Tailwind CSS:
         'better-tailwindcss/no-unknown-classes': 'off',
     },

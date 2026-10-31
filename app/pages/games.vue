@@ -1,5 +1,5 @@
 <template>
     <main>
-        <h1>Copyright</h1>
+        <h1>Gaming Section</h1>
     </main>
 </template>
