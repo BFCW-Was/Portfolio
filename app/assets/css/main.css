@@ -85,7 +85,7 @@
 
 /* ### Themes ### */
 /* Light */
-:root {
+.light {
     --ui-bg: var(--color-bfcw-white-70);
     --ui-bg-muted: var(--color-bfcw-white-90);
     --ui-bg-elevated: var(--color-bfcw-white-90);
