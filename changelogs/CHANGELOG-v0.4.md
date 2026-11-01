@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.4.0 (55%): Componentes de Diseño | [Work in Progress]
+## 0.4.0 (65%): Componentes de Diseño | [Work in Progress]
 
 ### Added
 
