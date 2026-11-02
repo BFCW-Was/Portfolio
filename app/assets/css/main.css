@@ -18,7 +18,7 @@
     --font-code: 'Chakra Petch', sans-serif;
 
     /* ### Color Palletes ### */
-    /* Black */
+    /* Black: https://coolors.co/090508-0e040a-13030b-18020c-211c1e-2b2427 */
     --color-bfcw-black-100: #090508;
     --color-bfcw-black-90: #0e040a;
     --color-bfcw-black-70: #13030b;
@@ -26,7 +26,7 @@
     --color-bfcw-black-30: #211c1e;
     --color-bfcw-black-20: #2b2427;
 
-    /* White */
+    /* White: https://coolors.co/fefefe-f2f2f2-e1e1e1-d0d0d0-aeadad-8c8a8b */
     --color-bfcw-white-100: #fefefe;
     --color-bfcw-white-90: #f2f2f2;
     --color-bfcw-white-70: #e1e1e1;
@@ -34,7 +34,7 @@
     --color-bfcw-white-30: #aeadad;
     --color-bfcw-white-20: #8c8a8b;
 
-    /* Sepia */
+    /* Sepia: https://coolors.co/251e12-312517-4e3c27-81694a-b4976d-c7b191 */
     --color-bfcw-sepia-100: #251e12;
     --color-bfcw-sepia-90: #312517;
     --color-bfcw-sepia-70: #4e3c27;
@@ -42,7 +42,7 @@
     --color-bfcw-sepia-30: #b4976d;
     --color-bfcw-sepia-20: #c7b191;
 
-    /* Cyan */
+    /* Cyan: https://coolors.co/0d5e5c-138583-30aba5-46d5b3-77e8cd-9df1dd */
     --color-bfcw-cyan-100: #0d5e5c;
     --color-bfcw-cyan-90: #138583;
     --color-bfcw-cyan-70: #30aba5;
@@ -50,7 +50,7 @@
     --color-bfcw-cyan-30: #77e8cd;
     --color-bfcw-cyan-20: #9df1dd;
 
-    /* Fire */
+    /* Fire: https://coolors.co/762d23-9d3c2f-a45044-b06d63-bc8a82-d0b3ae */
     --color-bfcw-fire-100: #762d23;
     --color-bfcw-fire-90: #9d3c2f;
     --color-bfcw-fire-70: #a45044;
@@ -58,7 +58,7 @@
     --color-bfcw-fire-30: #bc8a82;
     --color-bfcw-fire-20: #d0b3ae;
 
-    /* Mustard */
+    /* Mustard: https://coolors.co/ebbc00-e8c70a-e6cf01-efdd3e-f4e775-e2dbab */
     --color-bfcw-mustard-100: #ebbc00;
     --color-bfcw-mustard-90: #e8c70a;
     --color-bfcw-mustard-70: #e6cf01;
@@ -66,7 +66,7 @@
     --color-bfcw-mustard-30: #f4e775;
     --color-bfcw-mustard-20: #e2dbab;
 
-    /* Burgundy */
+    /* Burgundy: https://coolors.co/27060f-42132a-53172f-7c375b-d792ac-f7c9cc */
     --color-bfcw-burgundy-100: #27060f;
     --color-bfcw-burgundy-90: #42132a;
     --color-bfcw-burgundy-70: #53172f;
@@ -74,7 +74,7 @@
     --color-bfcw-burgundy-30: #d792ac;
     --color-bfcw-burgundy-20: #f7c9cc;
 
-    /* Indigo */
+    /* Indigo: https://coolors.co/3a1b76-472688-53309a-6040a0-6b50a1-846fb2 */
     --color-bfcw-indigo-100: #3a1b76;
     --color-bfcw-indigo-90: #472688;
     --color-bfcw-indigo-70: #53309a;
