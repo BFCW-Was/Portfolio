@@ -75,6 +75,24 @@
                     </section>
                 </div>
                 <hr class="my-5" />
+                <section>
+                    <h2 class="mb-4 text-lg font-semibold">Ejemplo de Código</h2>
+                    <SnippetsCodeDisplay>
+                        <SnippetsCodeDisplayFile name="index.html" language="html">
+                            <pre v-pre>
+                                <div class="font-code">
+                                    <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
+                                    <p class="mb-4">ÁÉÍÓÚ Ñ Ü · áéíóú ñ ü · ¿Qué? ¡Sí! «Hola» — "mundo"...</p>
+                                    <p class="mb-4">0123456789 · 0O oO · 1Il · @ # $ % & * + = / \ | ~ ^ _</p>
+                                    <p class="mb-4">😀 🚀 ❤️ 🎉 👨‍💻 ✨</p>
+                                    <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
+                                    <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
+                                </div>
+                            </pre>
+                        </SnippetsCodeDisplayFile>
+                    </SnippetsCodeDisplay>
+                </section>
+                <hr class="my-5" />
                 <div class="flex flex-col gap-2">
                     <h1>Title (h1)</h1>
                     <h2>Title (h2)</h2>
@@ -150,6 +168,33 @@
                 </template>
             </SnippetsInformationCard>
             <hr class="my-5" />
+            <!-- SnippetsCodeDisplay.vue -->
+            <SnippetsCodeDisplay>
+                <SnippetsCodeDisplayFile name="index.html" language="html">
+                    <pre v-pre>
+                        <head>
+                            <title>Page Title</title>
+                        </head>
+                        <body>
+                            <h1>This is a Heading</h1>
+                            <p>This is a paragraph.</p>
+                        </body>
+                    </pre>
+                </SnippetsCodeDisplayFile>
+                <SnippetsCodeDisplayFile name="style.css" language="css">
+                    <pre v-pre>
+                        body {
+                            background-color: powderblue;
+                        }
+                        h1 {
+                            color: blue;
+                        }
+                        p {
+                            color: red;
+                        }
+                    </pre>
+                </SnippetsCodeDisplayFile>
+            </SnippetsCodeDisplay>
         </div>
 
         <!-- #################### THEME #################### -->
