@@ -141,6 +141,11 @@
         <div v-if="isVisibleBotones">
             <h1>Botones</h1>
             <hr class="my-2" />
+            <!-- DownloadButton.vue -->
+            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-pdf" variant="outlined" class="m-4" />
+            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-audio" variant="gradient" class="m-4" />
+            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-invoice" variant="filled" class="m-4" />
+            <hr class="my-5" />
             <!-- ClipboardTooltip.vue -->
             <SnippetsClipboardTooltip text="Test Text" class="m-4">
                 <UButton aria-label="Test Label" color="neutral" variant="subtle" icon="i-fa6-solid-flask-vial" label="Test Span" />
@@ -158,6 +163,16 @@
         <div v-if="isVisibleComponentes">
             <h1>Componentes</h1>
             <hr class="my-2" />
+            <!-- Timeline.vue -->
+            <SnippetsTimeline>
+                <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
+                <SnippetsTimelineStep :number="2" title="Title 2" description="Another step" />
+                <SnippetsTimelineStep :number="3" title="Title 3" description="Last step" />
+                <SnippetsTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
+                <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
+                <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
+            </SnippetsTimeline>
+            <hr class="my-5" />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
