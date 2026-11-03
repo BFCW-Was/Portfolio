@@ -92,10 +92,31 @@ watch(
 }
 
 .nav-box {
-    border: 2px solid var(--color-bfcw-white-70);
+    // Light Theme
+    --nav-background: var(--color-bfcw-white-90);
+    --nav-border: var(--color-bfcw-black-20);
+    --nav-shadow: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
+    --nav-icon: var(--color-bfcw-black-70);
+
+    --nav-active: var(--color-bfcw-cyan-70);
+    --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 40%, transparent);
+    --nav-active-indicator: var(--color-bfcw-cyan-50);
+
+    --nav-home: var(--color-bfcw-fire-70);
+    --nav-home-active: var(--color-bfcw-cyan-70);
+    --nav-home-hover: var(--color-bfcw-mustard-70);
+    --nav-home-background: var(--color-bfcw-white-90);
+
+    --nav-divider: var(--color-bfcw-fire-70);
+
+    --nav-hover: var(--color-bfcw-mustard-100);
+    --nav-hover-background: color-mix(in oklab, var(--color-bfcw-mustard-70) 40%, transparent);
+    --nav-hover-indicator: var(--color-bfcw-mustard-100);
+
+    border: 2px solid var(--nav-border);
     border-radius: 0.5rem;
-    background: var(--color-bfcw-black-90);
-    box-shadow: 0 0 12px -3px color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
+    background: var(--nav-background);
+    box-shadow: 0 0 12px -3px var(--nav-shadow);
 }
 
 .nav-item {
@@ -106,16 +127,16 @@ watch(
     width: 3rem;
 
     &[aria-expanded='true'] .nav-icon {
-        color: var(--color-bfcw-cyan-50);
+        color: var(--nav-active);
     }
 
     &[aria-current='page'] .nav-home {
-        --home-from: var(--color-bfcw-cyan-90);
+        --home-from: var(--nav-home-active);
     }
 
     &:not(.nav-beam):hover {
         .nav-home {
-            --home-from: var(--color-bfcw-mustard-70);
+            --home-from: var(--nav-home-hover);
         }
     }
 }
@@ -124,12 +145,12 @@ watch(
     position: relative;
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--color-bfcw-white-100);
+    color: var(--nav-icon);
     transition: color 150ms;
 }
 
 .nav-home {
-    --home-from: var(--color-bfcw-fire-100);
+    --home-from: var(--nav-home);
 
     position: relative;
     display: flex;
@@ -138,7 +159,7 @@ watch(
     width: 2rem;
     height: 2rem;
     border-radius: 9999px;
-    background: linear-gradient(to bottom, var(--home-from), var(--color-bfcw-black-90));
+    background: linear-gradient(to bottom, var(--home-from), var(--nav-home-background));
 }
 
 .nav-divider {
@@ -152,62 +173,99 @@ watch(
         width: 2px;
         height: 1.5rem;
         border-radius: 9999px;
-        background: linear-gradient(to bottom, var(--color-bfcw-fire-90), transparent);
+        background: linear-gradient(to bottom, var(--nav-divider), transparent);
     }
 }
 
-.nav-beam[aria-current='page'] {
-    .nav-icon {
-        color: var(--color-bfcw-cyan-50);
+.nav-beam {
+    &[aria-current='page'] {
+        .nav-icon {
+            color: var(--nav-active);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, var(--nav-active-background), transparent);
+            clip-path: polygon(var(--beam-inset, 20%) 0, calc(100% - var(--beam-inset, 20%)) 0, 100% 100%, 0 100%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            width: 2rem;
+            height: 2px;
+            border-radius: 0 0 9999px 9999px;
+            background: var(--nav-active-indicator);
+            transform: translateX(-50%);
+        }
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent), transparent);
-        clip-path: polygon(var(--beam-inset, 20%) 0, calc(100% - var(--beam-inset, 20%)) 0, 100% 100%, 0 100%);
-    }
+    &:hover {
+        .nav-icon {
+            color: var(--nav-hover);
+        }
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 50%;
-        width: 2rem;
-        height: 2px;
-        border-radius: 0 0 9999px 9999px;
-        background: var(--color-bfcw-cyan-30);
-        transform: translateX(-50%);
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, var(--nav-hover-background), transparent);
+            clip-path: polygon(var(--beam-inset, 20%) 0, calc(100% - var(--beam-inset, 20%)) 0, 100% 100%, 0 100%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            width: 2rem;
+            height: 2px;
+            border-radius: 0 0 9999px 9999px;
+            background: var(--nav-hover-indicator);
+            transform: translateX(-50%);
+        }
     }
 }
 
-.nav-beam:hover {
-    .nav-icon {
-        color: var(--color-bfcw-mustard-100);
-    }
+// Dark Theme
+.dark .nav-box {
+    --nav-background: var(--color-bfcw-black-100);
+    --nav-border: var(--color-bfcw-white-70);
+    --nav-icon: var(--color-bfcw-white-100);
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, color-mix(in oklab, var(--color-bfcw-mustard-70) 40%, transparent), transparent);
-        clip-path: polygon(var(--beam-inset, 20%) 0, calc(100% - var(--beam-inset, 20%)) 0, 100% 100%, 0 100%);
-    }
+    --nav-active: var(--color-bfcw-cyan-50);
+    --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
+    --nav-active-indicator: var(--color-bfcw-cyan-30);
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 50%;
-        width: 2rem;
-        height: 2px;
-        border-radius: 0 0 9999px 9999px;
-        background: var(--color-bfcw-mustard-100);
-        transform: translateX(-50%);
-    }
+    --nav-home: var(--color-bfcw-fire-100);
+    --nav-home-active: var(--color-bfcw-cyan-90);
+    --nav-home-background: var(--color-bfcw-black-100);
+
+    --nav-divider: var(--color-bfcw-fire-90);
 }
 
+// Sepia Theme
+.theme-sepia .nav-box {
+    --nav-background: var(--color-bfcw-sepia-90);
+    --nav-border: var(--color-bfcw-white-70);
+    --nav-icon: var(--color-bfcw-white-100);
+
+    --nav-active: var(--color-bfcw-cyan-50);
+    --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
+    --nav-active-indicator: var(--color-bfcw-cyan-30);
+
+    --nav-home: var(--color-bfcw-fire-100);
+    --nav-home-active: var(--color-bfcw-cyan-90);
+    --nav-home-background: var(--color-bfcw-sepia-90);
+
+    --nav-divider: var(--color-bfcw-fire-90);
+}
+
+// Transitions
 .pop-enter-active {
     transition:
         opacity 200ms ease-out,
@@ -224,147 +282,5 @@ watch(
 .pop-leave-to {
     opacity: 0;
     transform: translateY(0.5rem) scale(0.95);
-}
-
-// Colores y Themes
-.light {
-    .nav-box {
-        border-color: var(--color-bfcw-black-20);
-        background: var(--color-bfcw-white-90);
-        color: var(--color-bfcw-cyan-90);
-    }
-
-    .nav-item {
-        &[aria-expanded='true'] .nav-icon {
-            color: var(--color-bfcw-cyan-70);
-        }
-
-        &[aria-current='page'] .nav-home {
-            --home-from: var(--color-bfcw-cyan-70);
-        }
-    }
-
-    .nav-icon {
-        color: var(--color-bfcw-black-70);
-    }
-
-    .nav-home {
-        --home-from: var(--color-bfcw-fire-70);
-        background: linear-gradient(to bottom, var(--home-from), var(--color-bfcw-white-90));
-    }
-
-    .nav-divider {
-        &::before {
-            background: linear-gradient(to bottom, var(--color-bfcw-fire-70), transparent);
-        }
-    }
-
-    .nav-beam[aria-current='page'] {
-        .nav-icon {
-            color: var(--color-bfcw-cyan-70);
-        }
-
-        &::before {
-            background: linear-gradient(to bottom, color-mix(in oklab, var(--color-bfcw-cyan-70) 40%, transparent), transparent);
-        }
-
-        &::after {
-            background: var(--color-bfcw-cyan-50);
-        }
-    }
-}
-
-.dark {
-    .nav-box {
-        border-color: var(--color-bfcw-white-70);
-        background: var(--color-bfcw-black-100);
-        color: var(--color-bfcw-cyan-70);
-    }
-
-    .nav-item {
-        &[aria-expanded='true'] .nav-icon {
-            color: var(--color-bfcw-cyan-50);
-        }
-
-        &[aria-current='page'] .nav-home {
-            --home-from: var(--color-bfcw-cyan-90);
-        }
-    }
-
-    .nav-icon {
-        color: var(--color-bfcw-white-100);
-    }
-
-    .nav-home {
-        --home-from: var(--color-bfcw-fire-100);
-        background: linear-gradient(to bottom, var(--home-from), var(--color-bfcw-black-100));
-    }
-
-    .nav-divider {
-        &::before {
-            background: linear-gradient(to bottom, var(--color-bfcw-fire-90), transparent);
-        }
-    }
-
-    .nav-beam[aria-current='page'] {
-        .nav-icon {
-            color: var(--color-bfcw-cyan-50);
-        }
-
-        &::before {
-            background: linear-gradient(to bottom, color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent), transparent);
-        }
-
-        &::after {
-            background: var(--color-bfcw-cyan-30);
-        }
-    }
-}
-
-.theme-sepia {
-    .nav-box {
-        border-color: var(--color-bfcw-white-70);
-        background: var(--color-bfcw-sepia-90);
-        color: var(--color-bfcw-cyan-70);
-    }
-
-    .nav-item {
-        &[aria-expanded='true'] .nav-icon {
-            color: var(--color-bfcw-cyan-50);
-        }
-
-        &[aria-current='page'] .nav-home {
-            --home-from: var(--color-bfcw-cyan-90);
-        }
-    }
-
-    .nav-icon {
-        color: var(--color-bfcw-white-100);
-    }
-
-    .nav-home {
-        --home-from: var(--color-bfcw-fire-100);
-        background: linear-gradient(to bottom, var(--home-from), var(--color-bfcw-sepia-90));
-    }
-
-    .nav-divider {
-        &::before {
-            background: linear-gradient(to bottom, var(--color-bfcw-fire-90), transparent);
-        }
-    }
-
-    .nav-beam[aria-current='page'] {
-        .nav-icon {
-            color: var(--color-bfcw-cyan-50);
-        }
-
-        &::before {
-            background: linear-gradient(to bottom, color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent), transparent);
-        }
-
-        &::after {
-            background: var(--color-bfcw-cyan-30);
-        }
-    }
 }
 </style>

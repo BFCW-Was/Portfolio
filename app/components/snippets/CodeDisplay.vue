@@ -225,7 +225,8 @@ onBeforeUnmount(() => lockPage(false));
 
 <style scoped lang="scss">
 .code-display {
-    --cd-background-color: color-mix(in oklab, var(--color-bfcw-white-100) 25%, white);
+    // Light Theme
+    --cd-background-color: color-mix(in oklab, var(--color-bfcw-white-90) 65%, gray);
     --cd-muted: var(--color-bfcw-cyan-100);
     --cd-font-color: var(--color-bfcw-black-100);
     --cd-icon: color-mix(in oklab, var(--cd-font-color) 80%, var(--cd-background-color));
@@ -375,13 +376,15 @@ onBeforeUnmount(() => lockPage(false));
     }
 }
 
+// Dark Theme
 .dark .code-display {
-    --cd-background-color: color-mix(in oklab, #011d24 50%, black);
+    --cd-background-color: color-mix(in oklab, var(--color-bfcw-black-100) 5%, black);
     --cd-font-color: var(--color-bfcw-white-90);
     --cd-accent: var(--color-bfcw-cyan-70);
     --cd-muted: var(--color-bfcw-cyan-70);
 }
 
+// Sepia Theme
 .theme-sepia .code-display {
     --cd-background-color: color-mix(in oklab, var(--color-bfcw-sepia-100) 25%, black);
     --cd-font-color: var(--color-bfcw-sepia-20);
