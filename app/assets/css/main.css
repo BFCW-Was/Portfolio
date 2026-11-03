@@ -42,13 +42,13 @@
     --color-bfcw-sepia-30: #b4976d;
     --color-bfcw-sepia-20: #c7b191;
 
-    /* Cyan: https://coolors.co/0d5e5c-138583-30aba5-46d5b3-77e8cd-9df1dd */
+    /* Cyan: https://coolors.co/0d5e5c-138583-30aba5-46c7b7-77ddd0-9de9df */
     --color-bfcw-cyan-100: #0d5e5c;
     --color-bfcw-cyan-90: #138583;
     --color-bfcw-cyan-70: #30aba5;
-    --color-bfcw-cyan-50: #46d5b3;
-    --color-bfcw-cyan-30: #77e8cd;
-    --color-bfcw-cyan-20: #9df1dd;
+    --color-bfcw-cyan-50: #46c7b7;
+    --color-bfcw-cyan-30: #77ddd0;
+    --color-bfcw-cyan-20: #9de9df;
 
     /* Fire: https://coolors.co/762d23-9d3c2f-a45044-b06d63-bc8a82-d0b3ae */
     --color-bfcw-fire-100: #762d23;
@@ -58,13 +58,13 @@
     --color-bfcw-fire-30: #bc8a82;
     --color-bfcw-fire-20: #d0b3ae;
 
-    /* Mustard: https://coolors.co/ebbc00-e8c70a-e6cf01-efdd3e-f4e775-e2dbab */
-    --color-bfcw-mustard-100: #ebbc00;
-    --color-bfcw-mustard-90: #e8c70a;
-    --color-bfcw-mustard-70: #e6cf01;
-    --color-bfcw-mustard-50: #efdd3e;
-    --color-bfcw-mustard-30: #f4e775;
-    --color-bfcw-mustard-20: #e2dbab;
+    /* Mustard: https://coolors.co/f3be14-efc91c-f1d029-f4dd4d-f7e771-f7ea8f */
+    --color-bfcw-mustard-100: #f3be14;
+    --color-bfcw-mustard-90: #efc91c;
+    --color-bfcw-mustard-70: #f1d029;
+    --color-bfcw-mustard-50: #f4dd4d;
+    --color-bfcw-mustard-30: #f7e771;
+    --color-bfcw-mustard-20: #f7ea8f;
 
     /* Burgundy: https://coolors.co/27060f-42132a-53172f-7c375b-d792ac-f7c9cc */
     --color-bfcw-burgundy-100: #27060f;

@@ -4,8 +4,8 @@
             <UButton color="primary" @click="isVisibleTextos = !isVisibleTextos">{{ isVisibleTextos ? 'Ocultar' : 'Mostrar' }} Textos</UButton>
             <UButton color="primary" @click="isVisibleBotones = !isVisibleBotones">{{ isVisibleBotones ? 'Ocultar' : 'Mostrar' }} Botones</UButton>
             <UButton color="primary" @click="isVisibleImagenes = !isVisibleImagenes">{{ isVisibleImagenes ? 'Ocultar' : 'Mostrar' }} Imagenes</UButton>
-            <UButton color="primary" @click="isVisibleThemes = !isVisibleThemes">{{ isVisibleThemes ? 'Ocultar' : 'Mostrar' }} Temas</UButton>
             <UButton color="primary" @click="isVisibleComponentes = !isVisibleComponentes">{{ isVisibleComponentes ? 'Ocultar' : 'Mostrar' }} Componentes</UButton>
+            <UButton color="primary" @click="isVisibleThemes = !isVisibleThemes">{{ isVisibleThemes ? 'Ocultar' : 'Mostrar' }} Temas</UButton>
         </div>
         <!-- #################### TEXTOS #################### -->
         <div v-if="isVisibleTextos">
@@ -123,6 +123,11 @@
         <div v-if="isVisibleBotones">
             <h1>Botones</h1>
             <hr class="my-2" />
+            <!-- ClipboardTooltip.vue -->
+            <SnippetsClipboardTooltip text="Test Text" class="m-4">
+                <UButton aria-label="Test Label" color="neutral" variant="subtle" icon="i-fa6-solid-flask-vial" label="Test Span" />
+            </SnippetsClipboardTooltip>
+            <hr class="my-5" />
         </div>
         <!-- #################### IMÁGENES #################### -->
         <div v-if="isVisibleImagenes">
@@ -131,7 +136,23 @@
             <NuxtImg :src="usePublicAsset(lightLogo?.src)" :alt="lightLogo?.alt" />
             <NuxtImg :src="usePublicAsset(darkLogo?.src)" :alt="darkLogo?.alt" />
         </div>
-        <!-- #################### BOTONES #################### -->
+        <!-- #################### COMPONENTES #################### -->
+        <div v-if="isVisibleComponentes">
+            <h1>Componentes</h1>
+            <hr class="my-2" />
+            <!-- InformationCard.vue -->
+            <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
+                <template #body>
+                    <div class="text-default">
+                        <p>Este es un div de ejemplo.</p>
+                        <UButton size="xs" color="primary" @click="nextColorIC">Cambiar Color</UButton>
+                    </div>
+                </template>
+            </SnippetsInformationCard>
+            <hr class="my-5" />
+        </div>
+
+        <!-- #################### THEME #################### -->
         <div v-if="isVisibleThemes">
             <h1>Temas</h1>
             <hr class="my-2" />
@@ -171,25 +192,26 @@
                     <UCheckbox label="Checkbox" color="primary" />
                 </div>
             </div>
-        </div>
-        <!-- #################### COMPONENTES #################### -->
-        <div v-if="isVisibleComponentes">
-            <h1>Componentes</h1>
-            <hr class="my-2" />
-            <!-- InformationCard.vue -->
-            <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
-                <template #body>
-                    <div class="text-default">
-                        <p>Este es un div de ejemplo.</p>
-                        <UButton size="xs" color="primary" @click="nextColorIC">Cambiar Color</UButton>
-                    </div>
-                </template>
-            </SnippetsInformationCard>
             <hr class="my-5" />
-            <!-- ClipboardTooltip.vue -->
-            <SnippetsClipboardTooltip text="Test Text" class="m-4">
-                <UButton aria-label="Test Label" color="neutral" variant="subtle" icon="i-fa6-solid-flask-vial" label="Test Span" />
-            </SnippetsClipboardTooltip>
+
+            <!-- Colores por Palette -->
+            <div v-for="palette in palettesWithValues" :key="palette.category" class="mx-16 space-y-3">
+                <h3 class="border-b pb-1 text-lg font-semibold text-gray-400">{{ palette.category }}</h3>
+
+                <div class="mb-5 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+                    <div
+                        v-for="color in palette.colors"
+                        :key="color.name"
+                        class="flex h-28 flex-col justify-between rounded-lg border border-gray-700 p-4 shadow-sm"
+                        :style="{ backgroundColor: `var(${color.name})` }"
+                    >
+                        <span class="mx-auto w-fit rounded bg-black/60 px-2 py-1 text-center font-mono text-xs text-white">
+                            {{ color.name }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5" />
         </div>
         <!-- ##### -->
     </main>
@@ -245,4 +267,107 @@ const items: SelectorItem[] = [
     { label: 'ITEM6', variant: 'normal' },
     { label: 'ITEM7', variant: 'normal' },
 ];
+
+const colorPalettes = [
+    {
+        category: 'Black Palette',
+        colors: [
+            { name: '--color-bfcw-black-100' },
+            { name: '--color-bfcw-black-90' },
+            { name: '--color-bfcw-black-70' },
+            { name: '--color-bfcw-black-50' },
+            { name: '--color-bfcw-black-30' },
+            { name: '--color-bfcw-black-20' },
+        ],
+    },
+    {
+        category: 'White Palette',
+        colors: [
+            { name: '--color-bfcw-white-100' },
+            { name: '--color-bfcw-white-90' },
+            { name: '--color-bfcw-white-70' },
+            { name: '--color-bfcw-white-50' },
+            { name: '--color-bfcw-white-30' },
+            { name: '--color-bfcw-white-20' },
+        ],
+    },
+    {
+        category: 'Sepia Palette',
+        colors: [
+            { name: '--color-bfcw-sepia-100' },
+            { name: '--color-bfcw-sepia-90' },
+            { name: '--color-bfcw-sepia-70' },
+            { name: '--color-bfcw-sepia-50' },
+            { name: '--color-bfcw-sepia-30' },
+            { name: '--color-bfcw-sepia-20' },
+        ],
+    },
+    {
+        category: 'Cyan Palette',
+        colors: [
+            { name: '--color-bfcw-cyan-100' },
+            { name: '--color-bfcw-cyan-90' },
+            { name: '--color-bfcw-cyan-70' },
+            { name: '--color-bfcw-cyan-50' },
+            { name: '--color-bfcw-cyan-30' },
+            { name: '--color-bfcw-cyan-20' },
+        ],
+    },
+    {
+        category: 'Fire Palette',
+        colors: [
+            { name: '--color-bfcw-fire-100' },
+            { name: '--color-bfcw-fire-90' },
+            { name: '--color-bfcw-fire-70' },
+            { name: '--color-bfcw-fire-50' },
+            { name: '--color-bfcw-fire-30' },
+            { name: '--color-bfcw-fire-20' },
+        ],
+    },
+    {
+        category: 'Mustard Palette',
+        colors: [
+            { name: '--color-bfcw-mustard-100' },
+            { name: '--color-bfcw-mustard-90' },
+            { name: '--color-bfcw-mustard-70' },
+            { name: '--color-bfcw-mustard-50' },
+            { name: '--color-bfcw-mustard-30' },
+            { name: '--color-bfcw-mustard-20' },
+        ],
+    },
+    {
+        category: 'Burgundy Palette',
+        colors: [
+            { name: '--color-bfcw-burgundy-100' },
+            { name: '--color-bfcw-burgundy-90' },
+            { name: '--color-bfcw-burgundy-70' },
+            { name: '--color-bfcw-burgundy-50' },
+            { name: '--color-bfcw-burgundy-30' },
+            { name: '--color-bfcw-burgundy-20' },
+        ],
+    },
+    {
+        category: 'Indigo Palette',
+        colors: [
+            { name: '--color-bfcw-indigo-100' },
+            { name: '--color-bfcw-indigo-90' },
+            { name: '--color-bfcw-indigo-70' },
+            { name: '--color-bfcw-indigo-50' },
+            { name: '--color-bfcw-indigo-30' },
+            { name: '--color-bfcw-indigo-20' },
+        ],
+    },
+];
+
+const palettesWithValues = computed(() => {
+    if (import.meta.server) return colorPalettes;
+    const styles = getComputedStyle(document.documentElement);
+
+    return colorPalettes.map((palette) => ({
+        ...palette,
+        colors: palette.colors.map((color) => ({
+            ...color,
+        })),
+    }));
+});
 </script>
