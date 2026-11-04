@@ -156,8 +156,14 @@
         <div v-if="isVisibleImagenes">
             <h1>Imagenes</h1>
             <hr class="my-2" />
-            <NuxtImg :src="usePublicAsset(lightLogo?.src)" :alt="lightLogo?.alt" />
-            <NuxtImg :src="usePublicAsset(darkLogo?.src)" :alt="darkLogo?.alt" />
+            <div class="flex flex-wrap items-center gap-4 *:h-100 *:w-100">
+                <NuxtImg :src="usePublicAsset(lightLogo?.src)" :alt="lightLogo?.alt" />
+                <NuxtImg :src="usePublicAsset(darkLogo?.src)" :alt="darkLogo?.alt" />
+                <NuxtImg :src="usePublicAsset(basicTesting?.src)" :alt="basicTesting?.alt" />
+                <NuxtImg :src="usePublicAsset(cyanTesting?.src)" :alt="cyanTesting?.alt" />
+                <NuxtImg :src="usePublicAsset(fireTesting?.src)" :alt="fireTesting?.alt" />
+                <NuxtImg :src="usePublicAsset(mustardTesting?.src)" :alt="mustardTesting?.alt" />
+            </div>
         </div>
         <!-- #################### COMPONENTES #################### -->
         <div v-if="isVisibleComponentes">
@@ -289,6 +295,10 @@ import { assetsManager } from '~/utils/assets_manager';
 // Control y Muestra de Imágenes
 const lightLogo = assetsManager.find((img) => img.id === 'logo-light');
 const darkLogo = assetsManager.find((img) => img.id === 'logo-dark');
+const basicTesting = assetsManager.find((img) => img.id === 'testing-basic');
+const cyanTesting = assetsManager.find((img) => img.id === 'testing-cyan');
+const fireTesting = assetsManager.find((img) => img.id === 'testing-fire');
+const mustardTesting = assetsManager.find((img) => img.id === 'testing-mustard');
 
 // Definición de Variables para Visibilidad:
 const isVisibleTextos = ref(false);
