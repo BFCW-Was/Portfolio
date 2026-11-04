@@ -121,7 +121,7 @@ function toggleExpand() {
         &.#{$name} {
             border: 2px solid $color;
             border-left: 12px solid $color;
-            box-shadow: 2px 2px 4px 2px rgba($color, 0.15);
+            box-shadow: 2px 2px 4px 2px color-mix(in oklab, $color 15%, transparent);
 
             .card-header {
                 color: $color;

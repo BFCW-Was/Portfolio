@@ -86,17 +86,17 @@ const variantClass = (variant: ItemVariant) => {
             }
 
             $colors: (
-                'variant-burgundy': var(--color-bfcw-burgundy-90),
+                'variant-burgundy': var(--color-bfcw-burgundy-70),
                 'variant-sepia': var(--color-bfcw-sepia-70),
                 'variant-gray': var(--color-bfcw-white-20),
-                'variant-cyan': var(--color-bfcw-cyan-90),
-                'variant-fire': var(--color-bfcw-fire-90),
-                'variant-mustard': var(--color-bfcw-mustard-90),
+                'variant-cyan': var(--color-bfcw-cyan-70),
+                'variant-fire': var(--color-bfcw-fire-70),
+                'variant-mustard': var(--color-bfcw-mustard-70),
             );
 
             @each $name, $color in $colors {
                 &.#{$name} {
-                    color: rgba($color, 0.8);
+                    color: color-mix(in oklab, $color 55%, transparent);
 
                     &.selected {
                         color: $color;
