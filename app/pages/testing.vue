@@ -227,6 +227,13 @@
                 <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
             </SnippetsTimeline>
             <hr class="my-5" />
+            <!-- Title Card.vue -->
+            <div class="flex flex-wrap gap-5">
+                <SnippetsTitleCard title="Temporal Title" variant="top-left" />
+                <SnippetsTitleCard title="Temporal Title" variant="top-right" />
+                <SnippetsTitleCard title="Temporal Title" variant="bottom-left" />
+                <SnippetsTitleCard title="Temporal Title" variant="bottom-right" />
+            </div>
         </div>
 
         <!-- #################### THEME #################### -->
