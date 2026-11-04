@@ -169,6 +169,9 @@
         <div v-if="isVisibleComponentes">
             <h1>Componentes</h1>
             <hr class="my-2" />
+            <!-- Thumbnail.vue -->
+            <SnippetsThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
+            <hr class="my-5" />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
