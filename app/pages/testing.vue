@@ -163,19 +163,6 @@
         <div v-if="isVisibleComponentes">
             <h1>Componentes</h1>
             <hr class="my-2" />
-            <!-- Timeline.vue -->
-            <SnippetsTimeline>
-                <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <SnippetsTimelineStep :number="2" title="Title 2" description="Another step" />
-                <SnippetsTimelineStep :number="3" title="Title 3" description="Last step" />
-                <SnippetsTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
-                <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
-                <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
-            </SnippetsTimeline>
-            <!-- ItemSelector.vue -->
-            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" class="m-4" />
-            <div>Seleccionado: {{ selectedItem }}</div>
-            <hr class="my-5" />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
@@ -213,6 +200,21 @@
                     </pre>
                 </SnippetsCodeDisplayFile>
             </SnippetsCodeDisplay>
+            <hr class="my-5" />
+            <!-- ItemSelector.vue -->
+            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" class="m-4" />
+            <div class="text-center">Seleccionado: {{ selectedItem }}</div>
+            <hr class="my-5" />
+            <!-- Timeline.vue -->
+            <SnippetsTimeline>
+                <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
+                <SnippetsTimelineStep :number="2" title="Title 2" description="Another step" />
+                <SnippetsTimelineStep :number="3" title="Title 3" description="Last step" />
+                <SnippetsTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
+                <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
+                <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
+            </SnippetsTimeline>
+            <hr class="my-5" />
         </div>
 
         <!-- #################### THEME #################### -->
