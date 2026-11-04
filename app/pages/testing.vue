@@ -328,7 +328,6 @@ const items: SelectorItem[] = [
     { label: 'ITEM4', variant: 'variant-cyan' },
     { label: 'ITEM5', variant: 'variant-fire' },
     { label: 'ITEM6', variant: 'variant-mustard' },
-    { label: 'ITEM7', variant: 'variant-burgundy' },
 ];
 
 // Paletas de Colores:
