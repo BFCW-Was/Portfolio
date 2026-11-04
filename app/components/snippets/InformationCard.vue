@@ -139,7 +139,7 @@ function toggleExpand() {
 
 // Sepia Theme
 .theme-sepia .custom-card-info {
-    --cc-bg: var(--color-bfcw-sepia-90);
+    --cc-bg: var(--color-bfcw-black-70);
     --cc-text: var(--color-bfcw-white-90);
     --cc-footnote: var(--color-bfcw-sepia-20);
 }
