@@ -231,7 +231,7 @@ onBeforeUnmount(() => lockPage(false));
     --cd-font-color: var(--color-bfcw-black-100);
     --cd-icon: color-mix(in oklab, var(--cd-font-color) 80%, var(--cd-background-color));
     --cd-bar: color-mix(in oklab, var(--cd-background-color) 80%, white);
-    --cd-border: color-mix(in oklab, var(--cd-background-color) 80%, white);
+    --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, black);
     --cd-hover: color-mix(in oklab, var(--cd-background-color) 80%, white);
     --cd-accent: var(--color-bfcw-cyan-30);
     --cd-accent-font-color: var(--color-bfcw-black-90);
@@ -239,7 +239,7 @@ onBeforeUnmount(() => lockPage(false));
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid var(--cd-border);
+    border: 2px solid var(--cd-border);
     border-radius: 4px;
     background: var(--cd-background-color);
     color: var(--cd-font-color);
@@ -382,6 +382,7 @@ onBeforeUnmount(() => lockPage(false));
     --cd-font-color: var(--color-bfcw-white-90);
     --cd-accent: var(--color-bfcw-cyan-70);
     --cd-muted: var(--color-bfcw-cyan-70);
+    --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, white);
 }
 
 // Sepia Theme
@@ -391,5 +392,6 @@ onBeforeUnmount(() => lockPage(false));
     --cd-muted: var(--color-bfcw-sepia-50);
     --cd-accent: var(--color-bfcw-sepia-30);
     --cd-accent-font-color: var(--color-bfcw-sepia-100);
+    --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, white);
 }
 </style>
