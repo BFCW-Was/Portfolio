@@ -172,6 +172,9 @@
                 <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
                 <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
             </SnippetsTimeline>
+            <!-- ItemSelector.vue -->
+            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" class="m-4" />
+            <div>Seleccionado: {{ selectedItem }}</div>
             <hr class="my-5" />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
@@ -300,7 +303,7 @@ function changeTextBlockWidth() {
 }
 
 // Cambio de Estilo InformationCard:
-const colorsIC = ['burgundy', 'sepia', 'gray', 'cyan', 'fire', 'mustard'];
+const colorsIC = ['variant-burgundy', 'variant-sepia', 'variant-gray', 'variant-cyan', 'variant-fire', 'variant-mustard'];
 const colorIndexIC = ref(0);
 const currentColorIC = computed(() => colorsIC[colorIndexIC.value]);
 
@@ -308,10 +311,10 @@ function nextColorIC() {
     colorIndexIC.value = (colorIndexIC.value + 1) % colorsIC.length;
 }
 
-// Definición de Variables locales:
+// Cambiar estilo de ItemSelector:
 const selectedItem = ref(0);
 
-type ItemVariant = 'normal' | 'red' | 'cyan' | 'yellow' | 'green';
+type ItemVariant = 'variant-burgundy' | 'variant-sepia' | 'variant-gray' | 'variant-cyan' | 'variant-fire' | 'variant-mustard';
 
 interface SelectorItem {
     label: string;
@@ -319,15 +322,16 @@ interface SelectorItem {
 }
 
 const items: SelectorItem[] = [
-    { label: 'ITEM1', variant: 'normal' },
-    { label: 'ITEM2', variant: 'red' },
-    { label: 'ITEM3', variant: 'cyan' },
-    { label: 'ITEM4', variant: 'yellow' },
-    { label: 'ITEM5', variant: 'green' },
-    { label: 'ITEM6', variant: 'normal' },
-    { label: 'ITEM7', variant: 'normal' },
+    { label: 'ITEM1', variant: 'variant-burgundy' },
+    { label: 'ITEM2', variant: 'variant-sepia' },
+    { label: 'ITEM3', variant: 'variant-gray' },
+    { label: 'ITEM4', variant: 'variant-cyan' },
+    { label: 'ITEM5', variant: 'variant-fire' },
+    { label: 'ITEM6', variant: 'variant-mustard' },
+    { label: 'ITEM7', variant: 'variant-burgundy' },
 ];
 
+// Paletas de Colores:
 const colorPalettes = [
     {
         category: 'Black Palette',

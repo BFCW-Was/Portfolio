@@ -97,18 +97,14 @@ watch(
     --nav-border: var(--color-bfcw-black-20);
     --nav-shadow: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
     --nav-icon: var(--color-bfcw-black-70);
-
     --nav-active: var(--color-bfcw-cyan-70);
     --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 40%, transparent);
     --nav-active-indicator: var(--color-bfcw-cyan-50);
-
     --nav-home: var(--color-bfcw-fire-70);
     --nav-home-active: var(--color-bfcw-cyan-70);
     --nav-home-hover: var(--color-bfcw-mustard-70);
     --nav-home-background: var(--color-bfcw-white-90);
-
     --nav-divider: var(--color-bfcw-fire-70);
-
     --nav-hover: var(--color-bfcw-mustard-100);
     --nav-hover-background: color-mix(in oklab, var(--color-bfcw-mustard-70) 40%, transparent);
     --nav-hover-indicator: var(--color-bfcw-mustard-100);
@@ -236,15 +232,12 @@ watch(
     --nav-background: var(--color-bfcw-black-100);
     --nav-border: var(--color-bfcw-white-70);
     --nav-icon: var(--color-bfcw-white-100);
-
     --nav-active: var(--color-bfcw-cyan-50);
     --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
     --nav-active-indicator: var(--color-bfcw-cyan-30);
-
     --nav-home: var(--color-bfcw-fire-100);
     --nav-home-active: var(--color-bfcw-cyan-90);
     --nav-home-background: var(--color-bfcw-black-100);
-
     --nav-divider: var(--color-bfcw-fire-90);
 }
 
@@ -253,15 +246,12 @@ watch(
     --nav-background: var(--color-bfcw-sepia-90);
     --nav-border: var(--color-bfcw-white-70);
     --nav-icon: var(--color-bfcw-white-100);
-
     --nav-active: var(--color-bfcw-cyan-50);
     --nav-active-background: color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
     --nav-active-indicator: var(--color-bfcw-cyan-30);
-
     --nav-home: var(--color-bfcw-fire-100);
     --nav-home-active: var(--color-bfcw-cyan-90);
     --nav-home-background: var(--color-bfcw-sepia-90);
-
     --nav-divider: var(--color-bfcw-fire-90);
 }
 

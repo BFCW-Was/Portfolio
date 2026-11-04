@@ -6,7 +6,7 @@
 import type { PropType } from 'vue';
 import { isCodeLanguage, type CodeLanguage } from '~/composables/code_languages.ts';
 
-defineProps({
+const props = defineProps({
     name: {
         type: String,
         required: true,
