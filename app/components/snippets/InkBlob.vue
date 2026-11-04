@@ -32,8 +32,8 @@
             >
                 <defs v-if="after === 'end'">
                     <mask :id="`${uid}-${i}`" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
-                        <rect width="200" height="200" fill="#fff" />
-                        <path class="ink__hole" :d="BLOB_PATH" fill="#000" />
+                        <rect width="200" height="200" fill="#ffffff" />
+                        <path class="ink__hole" :d="BLOB_PATH" fill="#000000" />
                     </mask>
                 </defs>
                 <path :d="BLOB_PATH" :mask="after === 'end' ? `url(#${uid}-${i})` : undefined" />
