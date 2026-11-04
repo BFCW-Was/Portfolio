@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.4.0 (65%): Componentes de Diseño | [Work in Progress]
+## 0.4.0 (80%): Componentes de Diseño | [Work in Progress]
 
 ### Added
 
@@ -19,3 +19,4 @@
 - Mejora en borde general de la web y responsividad con elementos circundantes.
 - Cambio de logo de la web.
 - Corrección de visualización del logo en la pestaña del navegador.
+- Revisión menor en paletas de colores.
