@@ -226,15 +226,11 @@ onBeforeUnmount(() => lockPage(false));
 <style scoped lang="scss">
 .code-display {
     // Light Theme
-    --cd-background-color: color-mix(in oklab, var(--color-bfcw-white-90) 65%, gray);
-    --cd-muted: var(--color-bfcw-cyan-100);
-    --cd-font-color: var(--color-bfcw-black-100);
-    --cd-icon: color-mix(in oklab, var(--cd-font-color) 80%, var(--cd-background-color));
-    --cd-bar: color-mix(in oklab, var(--cd-background-color) 80%, white);
+    --cd-icon: color-mix(in oklab, var(--ui-component-text) 80%, var(--cd-background-color));
+    --cd-background-color: color-mix(in oklab, var(--ui-text-muted) 65%, gray);
     --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, black);
+    --cd-bar: color-mix(in oklab, var(--cd-background-color) 80%, white);
     --cd-hover: color-mix(in oklab, var(--cd-background-color) 80%, white);
-    --cd-accent: var(--color-bfcw-cyan-30);
-    --cd-accent-font-color: var(--color-bfcw-black-90);
 
     display: flex;
     flex-direction: column;
@@ -242,7 +238,7 @@ onBeforeUnmount(() => lockPage(false));
     border: 2px solid var(--cd-border);
     border-radius: 4px;
     background: var(--cd-background-color);
-    color: var(--cd-font-color);
+    color: var(--ui-component-text);
     font-family: var(--font-code);
 
     &--fullscreen {
@@ -260,14 +256,14 @@ onBeforeUnmount(() => lockPage(false));
     }
 
     &__name {
-        color: var(--cd-muted);
+        color: var(--ui-text-muted);
     }
 
     &__lang {
         padding: 0.125rem 0.5rem;
         border-radius: 2px;
-        background: var(--cd-accent);
-        color: var(--cd-accent-font-color);
+        background: var(--ui-primary);
+        color: var(--ui-component-text);
         font-size: 0.6875rem;
         font-weight: 700;
         letter-spacing: 0.04em;
@@ -292,11 +288,11 @@ onBeforeUnmount(() => lockPage(false));
 
         &:hover:not(:disabled) {
             background: var(--cd-hover);
-            color: var(--cd-font-color);
+            color: var(--ui-component-text);
         }
 
         &:focus-visible {
-            outline: 2px solid var(--cd-accent);
+            outline: 2px solid var(--ui-primary);
             outline-offset: -2px;
         }
 
@@ -316,7 +312,7 @@ onBeforeUnmount(() => lockPage(false));
         align-items: center;
         gap: 0.5rem;
         padding: 0.5rem 0.75rem;
-        color: var(--cd-muted);
+        color: var(--ui-text-muted);
         font-size: 0.75rem;
         text-align: left;
         white-space: nowrap;
@@ -327,13 +323,13 @@ onBeforeUnmount(() => lockPage(false));
 
         &:hover {
             background: var(--cd-hover);
-            color: var(--cd-font-color);
+            color: var(--ui-component-text);
         }
 
         &--active {
             background: var(--cd-background-color);
-            box-shadow: inset 2px 0 var(--cd-accent);
-            color: var(--cd-font-color);
+            box-shadow: inset 2px 0 var(--ui-primary);
+            color: var(--ui-component-text);
         }
     }
 
@@ -368,7 +364,7 @@ onBeforeUnmount(() => lockPage(false));
         min-width: var(--gutter);
         padding-inline: 0.75rem 1rem;
         background: var(--cd-background-color);
-        color: var(--cd-muted);
+        color: var(--ui-text-muted);
         font-variant-numeric: tabular-nums;
         text-align: right;
         cursor: pointer;
@@ -378,20 +374,13 @@ onBeforeUnmount(() => lockPage(false));
 
 // Dark Theme
 .dark .code-display {
-    --cd-background-color: color-mix(in oklab, var(--color-bfcw-black-100) 5%, black);
-    --cd-font-color: var(--color-bfcw-white-90);
-    --cd-accent: var(--color-bfcw-cyan-70);
-    --cd-muted: var(--color-bfcw-cyan-70);
+    --cd-background-color: color-mix(in oklab, var(--ui-text-muted) 5%, black);
     --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, white);
 }
 
 // Sepia Theme
 .theme-sepia .code-display {
-    --cd-background-color: color-mix(in oklab, var(--color-bfcw-sepia-100) 25%, black);
-    --cd-font-color: var(--color-bfcw-sepia-20);
-    --cd-muted: var(--color-bfcw-sepia-50);
-    --cd-accent: var(--color-bfcw-sepia-30);
-    --cd-accent-font-color: var(--color-bfcw-sepia-100);
+    --cd-background-color: color-mix(in oklab, var(--ui-text-muted) 25%, black);
     --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, white);
 }
 </style>

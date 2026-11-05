@@ -29,14 +29,11 @@ const props = defineProps({
 <style scoped lang="scss">
 .timeline-step {
     // Light Theme
-    --tl-accent: var(--color-bfcw-cyan-50);
-    --tl-text: var(--color-bfcw-black-100);
-    --tl-heading: var(--color-bfcw-black-100);
-    --tl-muted: color-mix(in oklab, var(--tl-text) 50%, transparent);
-    --tl-line: linear-gradient(to bottom, var(--tl-accent), transparent);
-    --tl-button-border: var(--tl-accent);
+    --tl-muted: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
+    --tl-line: linear-gradient(to bottom, var(--ui-primary), transparent);
     --tl-button-background: transparent;
-    --tl-button-text: var(--tl-text);
+    --tl-button-border: var(--ui-primary);
+    --tl-button-text: var(--ui-component-text);
 
     display: flex;
     align-items: flex-start;
@@ -47,8 +44,8 @@ const props = defineProps({
         min-width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid var(--tl-accent);
-        color: var(--tl-text);
+        border: 2px solid var(--ui-primary);
+        color: var(--ui-component-text);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,7 +75,7 @@ const props = defineProps({
             margin: 0;
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--tl-heading);
+            color: var(--ui-component-text);
         }
 
         p {
@@ -96,21 +93,5 @@ const props = defineProps({
             cursor: pointer;
         }
     }
-}
-
-// Dark Theme
-.dark .timeline-step {
-    --tl-accent: var(--color-bfcw-cyan-70);
-    --tl-text: var(--color-bfcw-white-100);
-    --tl-heading: var(--color-bfcw-white-100);
-    --tl-muted: color-mix(in oklab, var(--tl-text) 50%, transparent);
-}
-
-// Sepia Theme
-.theme-sepia .timeline-step {
-    --tl-accent: var(--color-bfcw-cyan-50);
-    --tl-text: var(--color-bfcw-white-100);
-    --tl-heading: var(--color-bfcw-white-100);
-    --tl-muted: color-mix(in oklab, var(--tl-text) 60%, transparent);
 }
 </style>

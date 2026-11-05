@@ -41,15 +41,12 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .panel {
-    // Light Theme
-    --panel-bg: var(--color-bfcw-white-90);
-    --panel-text: var(--color-bfcw-black-90);
-    --panel-position: color-mix(in oklab, var(--panel-text) 50%, transparent);
-    --panel-content: color-mix(in oklab, var(--panel-text) 90%, transparent);
-    --panel-shadow: color-mix(in oklab, var(--color-bfcw-cyan-100) 15%, transparent);
+    --panel-position: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
+    --panel-content: color-mix(in oklab, var(--ui-component-text) 90%, transparent);
+    --panel-shadow: color-mix(in oklab, var(--ui-tertiary) 15%, transparent);
 
-    background-color: var(--panel-bg);
-    color: var(--panel-text);
+    background-color: var(--ui-component);
+    color: var(--ui-component-text);
     padding: 1.5rem;
     border-radius: 1rem;
     border-top: 3px solid var(--color-bfcw-cyan-70);
@@ -102,7 +99,7 @@ const props = defineProps({
 }
 
 .quote-icon {
-    color: var(--color-bfcw-cyan-70);
+    color: var(--ui-primary);
     font-size: 2rem;
 }
 
@@ -110,19 +107,5 @@ const props = defineProps({
     font-size: 1rem;
     line-height: 1.5;
     color: var(--panel-content);
-}
-
-// Dark Theme
-.dark .panel {
-    --panel-bg: var(--color-bfcw-black-100);
-    --panel-text: var(--color-bfcw-white-90);
-    --panel-shadow: color-mix(in oklab, var(--color-bfcw-black-100) 50%, transparent);
-}
-
-// Sepia Theme
-.theme-sepia .panel {
-    --panel-bg: var(--color-bfcw-black-70);
-    --panel-text: var(--color-bfcw-white-90);
-    --panel-shadow: color-mix(in oklab, var(--color-bfcw-sepia-100) 50%, transparent);
 }
 </style>

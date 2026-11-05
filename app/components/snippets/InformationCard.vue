@@ -59,18 +59,12 @@ function toggleExpand() {
 
 <style scoped lang="scss">
 .custom-card-info {
-    // Light Theme
-    --cc-bg: var(--color-bfcw-white-90);
-    --cc-text: var(--color-bfcw-black-90);
-    --cc-footnote: var(--color-bfcw-black-50);
-
     margin: 16px;
     padding: 8px 24px;
     border-radius: 4px;
-    font-size: 0.75rem;
     gap: 8px;
-    background-color: var(--cc-bg);
-    color: var(--cc-text);
+    background-color: var(--ui-component);
+    color: var(--ui-component-text);
 
     .card-header {
         padding: 10px 0px;
@@ -104,8 +98,8 @@ function toggleExpand() {
     .footnote {
         margin: 4px;
         margin-left: 12px;
-        font-size: 0.5rem;
-        color: var(--cc-footnote);
+        font-size: 12px;
+        color: var(--ui-text-muted);
     }
 
     $colors: (
@@ -128,19 +122,5 @@ function toggleExpand() {
             }
         }
     }
-}
-
-// Dark Theme
-.dark .custom-card-info {
-    --cc-bg: var(--color-bfcw-black-70);
-    --cc-text: var(--color-bfcw-white-90);
-    --cc-footnote: var(--color-bfcw-white-20);
-}
-
-// Sepia Theme
-.theme-sepia .custom-card-info {
-    --cc-bg: var(--color-bfcw-black-70);
-    --cc-text: var(--color-bfcw-white-90);
-    --cc-footnote: var(--color-bfcw-sepia-20);
 }
 </style>

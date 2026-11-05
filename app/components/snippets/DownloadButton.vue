@@ -29,10 +29,6 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .download-button {
-    // Light Theme
-    --db-text: var(--color-bfcw-white-90);
-    --db-border: var(--color-bfcw-black-20);
-
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -49,35 +45,23 @@ const props = defineProps({
 
     &.outlined {
         background: transparent;
-        color: var(--db-text);
-        border: 2px solid var(--db-border);
+        color: var(--ui-component-text);
+        border: 2px solid var(--ui-component-border);
         background-image: linear-gradient(to right, var(--color-bfcw-burgundy-100), var(--color-bfcw-cyan-100));
     }
 
     &.gradient {
         background-image: linear-gradient(to right, var(--color-bfcw-burgundy-100), var(--color-bfcw-cyan-100));
-        color: var(--db-text);
+        color: var(--ui-component-text);
     }
 
     &.filled {
         background-color: var(--color-bfcw-cyan-100);
-        color: var(--db-text);
+        color: var(--ui-component-text);
     }
 
     &:hover {
         opacity: 0.5;
     }
-}
-
-// Dark Theme
-.dark .download-button {
-    --db-text: var(--color-bfcw-white-90);
-    --db-border: var(--color-bfcw-white-90);
-}
-
-// Sepia Theme
-.theme-sepia .download-button {
-    --db-text: var(--color-bfcw-white-70);
-    --db-border: var(--color-bfcw-white-70);
 }
 </style>

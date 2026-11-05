@@ -54,13 +54,13 @@ const variantClass = (variant: ItemVariant) => {
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    border: 3px dashed var(--ui-text);
+    border: 3px dashed var(--ui-component-text);
     border-radius: 1rem;
 
     .selector-label {
         font-size: 1.2rem;
         font-weight: 600;
-        color: var(--ui-text);
+        color: var(--ui-component-text);
     }
 
     .items {

@@ -1,8 +1,4 @@
 .splash-screen {
-    // Light Theme
-    --ss-background: var(--color-bfcw-white-70);
-    --ss-text: var(--color-bfcw-black-90);
-
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -12,8 +8,8 @@
     align-items: center;
     text-align: center;
     overflow: hidden;
-    background-color: var(--ss-background);
-    color: var(--ss-text);
+    background-color: var(--ui-component);
+    color: var(--ui-component-text);
 
     .main-title {
         font-size: 3rem;
@@ -45,16 +41,4 @@
             transform: translateY(0);
         }
     }
-}
-
-// Dark Theme
-.dark .splash-screen {
-    --ss-background: var(--color-bfcw-black-70);
-    --ss-text: var(--color-bfcw-white-90);
-}
-
-// Sepia Theme
-.theme-sepia .splash-screen {
-    --ss-background: var(--color-bfcw-sepia-100);
-    --ss-text: var(--color-bfcw-white-90);
 }

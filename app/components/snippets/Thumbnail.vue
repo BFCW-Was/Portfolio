@@ -38,15 +38,12 @@ const props = defineProps({
 <style scoped lang="scss">
 .thumbnail-card {
     // Light Theme
-    --tc-bg: var(--color-bfcw-white-90);
-    --tc-text: var(--color-bfcw-black-90);
-    --tc-img-bg: var(--color-bfcw-white-70);
-    --tc-year: color-mix(in oklab, var(--tc-text) 60%, transparent);
-    --tc-shadow: color-mix(in oklab, var(--color-bfcw-black-100) 10%, transparent);
-    --tc-border: color-mix(in oklab, var(--tc-text) 10%, transparent);
+    --tc-year: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
+    --tc-shadow: color-mix(in oklab, var(--ui-component-text) 10%, transparent);
+    --tc-border: color-mix(in oklab, var(--ui-component-text) 10%, transparent);
 
-    background-color: var(--tc-bg);
-    color: var(--tc-text);
+    background-color: var(--ui-component);
+    color: var(--ui-component-text);
     border-radius: 1rem;
     overflow: hidden;
     width: 240px;
@@ -57,7 +54,7 @@ const props = defineProps({
     .image-container {
         width: 100%;
         height: 180px;
-        background-color: var(--tc-img-bg);
+        background-color: var(--ui-component-border);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,21 +100,5 @@ const props = defineProps({
             font-weight: 500;
         }
     }
-}
-
-// Dark Theme
-.dark .thumbnail-card {
-    --tc-bg: var(--color-bfcw-black-100);
-    --tc-text: var(--color-bfcw-white-90);
-    --tc-img-bg: var(--color-bfcw-black-70);
-    --tc-shadow: color-mix(in oklab, var(--color-bfcw-black-100) 50%, transparent);
-}
-
-// Sepia Theme
-.theme-sepia .thumbnail-card {
-    --tc-bg: var(--color-bfcw-black-70);
-    --tc-text: var(--color-bfcw-white-90);
-    --tc-img-bg: var(--color-bfcw-sepia-100);
-    --tc-shadow: color-mix(in oklab, var(--color-bfcw-sepia-100) 50%, transparent);
 }
 </style>
