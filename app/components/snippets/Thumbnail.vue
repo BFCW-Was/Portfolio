@@ -76,13 +76,13 @@ const props = defineProps({
         .title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--color-bfcw-cyan-70);
+            color: var(--ui-primary);
             margin-bottom: 0.5rem;
         }
 
         .theme {
             display: inline-block;
-            background-color: var(--color-bfcw-cyan-70);
+            background-color: var(--ui-primary);
             color: var(--color-bfcw-white-100);
             padding: 0.2rem 0.8rem;
             border-radius: var(--ui-radius-lg);

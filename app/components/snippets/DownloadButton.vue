@@ -47,16 +47,16 @@ const props = defineProps({
         background: transparent;
         color: var(--ui-component-text);
         border: 2px solid var(--ui-component-border);
-        background-image: linear-gradient(to right, var(--color-bfcw-burgundy-100), var(--color-bfcw-cyan-100));
+        background-image: linear-gradient(to right, var(--ui-secondary-dark), var(--ui-primary-dark));
     }
 
     &.gradient {
-        background-image: linear-gradient(to right, var(--color-bfcw-burgundy-100), var(--color-bfcw-cyan-100));
+        background-image: linear-gradient(to right, var(--ui-secondary-dark), var(--ui-primary-dark));
         color: var(--ui-component-text);
     }
 
     &.filled {
-        background-color: var(--color-bfcw-cyan-100);
+        background-color: var(--ui-primary-dark);
         color: var(--ui-component-text);
     }
 

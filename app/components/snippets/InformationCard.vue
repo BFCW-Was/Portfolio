@@ -43,7 +43,7 @@ const props = defineProps({
     color: {
         type: String,
         default: 'variant-cyan',
-        validator: (v: string) => ['variant-burgundy', 'variant-sepia', 'variant-gray', 'variant-cyan', 'variant-fire', 'variant-mustard'].includes(v),
+        validator: (v: string) => ['variant-cyan', 'variant-burgundy', 'variant-fire', 'variant-mustard', 'variant-sepia', 'variant-gray'].includes(v),
     },
 });
 
@@ -103,12 +103,12 @@ function toggleExpand() {
     }
 
     $colors: (
-        'variant-burgundy': var(--color-bfcw-burgundy-90),
-        'variant-sepia': var(--color-bfcw-sepia-70),
-        'variant-gray': var(--color-bfcw-white-20),
         'variant-cyan': var(--color-bfcw-cyan-90),
+        'variant-burgundy': var(--color-bfcw-burgundy-90),
         'variant-fire': var(--color-bfcw-fire-90),
         'variant-mustard': var(--color-bfcw-mustard-90),
+        'variant-sepia': var(--color-bfcw-sepia-70),
+        'variant-gray': var(--color-bfcw-white-20),
     );
 
     @each $name, $color in $colors {

@@ -95,7 +95,7 @@ watch(
     border: 2px solid var(--ui-component-border);
     border-radius: var(--ui-radius);
     background: var(--ui-component);
-    box-shadow: 0 0 12px -3px color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
+    box-shadow: 0 0 12px -3px color-mix(in oklab, var(--ui-primary) 60%, transparent);
 }
 
 .nav-item {

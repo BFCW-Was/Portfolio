@@ -87,7 +87,7 @@ const props = defineProps({
     },
     color: {
         type: String,
-        default: '--color-bfcw-white-50',
+        default: '--ui-bg-elevated',
     },
     afterDuration: {
         type: Number,

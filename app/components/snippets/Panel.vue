@@ -49,7 +49,7 @@ const props = defineProps({
     color: var(--ui-component-text);
     padding: 1.5rem;
     border-radius: var(--ui-radius-lg);
-    border-top: 3px solid var(--color-bfcw-cyan-70);
+    border-top: 3px solid var(--ui-primary);
     width: 100%;
     max-width: 480px;
     display: flex;
@@ -68,7 +68,7 @@ const props = defineProps({
     width: 3rem;
     height: 3rem;
     border-radius: var(--ui-radius-circular);
-    background: radial-gradient(circle at 30% 30%, var(--color-bfcw-cyan-70), var(--color-bfcw-indigo-70));
+    background: radial-gradient(circle at 30% 30%, var(--ui-primary), var(--ui-secondary));
     display: flex;
     align-items: center;
     justify-content: center;

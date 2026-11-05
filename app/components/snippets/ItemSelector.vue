@@ -42,7 +42,7 @@ const updateSelection = (index: number) => {
 };
 
 const variantClass = (variant: ItemVariant) => {
-    const validVariants = ['variant-burgundy', 'variant-sepia', 'variant-gray', 'variant-cyan', 'variant-fire', 'variant-mustard'];
+    const validVariants = ['variant-cyan', 'variant-burgundy', 'variant-fire', 'variant-mustard', 'variant-sepia', 'variant-gray'];
     return validVariants.includes(variant) ? variant : 'variant-gray';
 };
 </script>
@@ -86,12 +86,12 @@ const variantClass = (variant: ItemVariant) => {
             }
 
             $colors: (
-                'variant-burgundy': var(--color-bfcw-burgundy-70),
-                'variant-sepia': var(--color-bfcw-sepia-70),
-                'variant-gray': var(--color-bfcw-white-20),
                 'variant-cyan': var(--color-bfcw-cyan-70),
+                'variant-burgundy': var(--color-bfcw-burgundy-70),
                 'variant-fire': var(--color-bfcw-fire-70),
                 'variant-mustard': var(--color-bfcw-mustard-70),
+                'variant-sepia': var(--color-bfcw-sepia-70),
+                'variant-gray': var(--color-bfcw-white-20),
             );
 
             @each $name, $color in $colors {
