@@ -236,7 +236,7 @@ onBeforeUnmount(() => lockPage(false));
     flex-direction: column;
     overflow: hidden;
     border: 2px solid var(--cd-border);
-    border-radius: 4px;
+    border-radius: var(--ui-radius);
     background: var(--cd-background-color);
     color: var(--ui-component-text);
     font-family: var(--font-code);
@@ -261,7 +261,7 @@ onBeforeUnmount(() => lockPage(false));
 
     &__lang {
         padding: 0.125rem 0.5rem;
-        border-radius: 2px;
+        border-radius: var(--ui-radius);
         background: var(--ui-primary);
         color: var(--ui-component-text);
         font-size: 0.6875rem;
@@ -278,7 +278,7 @@ onBeforeUnmount(() => lockPage(false));
         min-width: 1.5rem;
         height: 1.5rem;
         padding-inline: 0.25rem;
-        border-radius: 2px;
+        border-radius: var(--ui-radius);
         color: var(--cd-icon);
         font-size: 0.6875rem;
         cursor: pointer;

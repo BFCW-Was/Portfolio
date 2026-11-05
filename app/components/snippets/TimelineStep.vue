@@ -43,7 +43,7 @@ const props = defineProps({
     .circle {
         min-width: 40px;
         height: 40px;
-        border-radius: 50%;
+        border-radius: var(--ui-radius-circular);
         border: 2px solid var(--ui-primary);
         color: var(--ui-component-text);
         display: flex;
@@ -89,7 +89,7 @@ const props = defineProps({
             border: 1px solid var(--tl-button-border);
             background: var(--tl-button-background);
             color: var(--tl-button-text);
-            border-radius: 20px;
+            border-radius: var(--ui-radius);
             cursor: pointer;
         }
     }

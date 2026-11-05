@@ -48,7 +48,7 @@ const tooltipPosition = computed(() => ({
     position: fixed;
     transform: translateX(-50%);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--ui-radius);
     font-size: 0.75rem;
     pointer-events: none;
     z-index: 9999;

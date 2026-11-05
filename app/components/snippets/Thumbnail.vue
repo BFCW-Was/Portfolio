@@ -44,7 +44,7 @@ const props = defineProps({
 
     background-color: var(--ui-component);
     color: var(--ui-component-text);
-    border-radius: 1rem;
+    border-radius: var(--ui-radius);
     overflow: hidden;
     width: 240px;
     display: flex;
@@ -85,7 +85,7 @@ const props = defineProps({
             background-color: var(--color-bfcw-cyan-70);
             color: var(--color-bfcw-white-100);
             padding: 0.2rem 0.8rem;
-            border-radius: 20px;
+            border-radius: var(--ui-radius-lg);
             font-size: 0.85rem;
             font-weight: 500;
             margin-bottom: 1rem;

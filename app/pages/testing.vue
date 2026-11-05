@@ -339,7 +339,7 @@ function nextColorIC() {
 // Cambiar estilo de ItemSelector:
 const selectedItem = ref(0);
 
-type ItemVariant = 'variant-burgundy' | 'variant-sepia' | 'variant-gray' | 'variant-cyan' | 'variant-fire' | 'variant-mustard';
+type ItemVariant = 'variant-cyan' | 'variant-burgundy' | 'variant-fire' | 'variant-mustard' | 'variant-sepia' | 'variant-gray';
 
 interface SelectorItem {
     label: string;
@@ -347,12 +347,12 @@ interface SelectorItem {
 }
 
 const items: SelectorItem[] = [
-    { label: 'ITEM1', variant: 'variant-burgundy' },
-    { label: 'ITEM2', variant: 'variant-sepia' },
-    { label: 'ITEM3', variant: 'variant-gray' },
-    { label: 'ITEM4', variant: 'variant-cyan' },
-    { label: 'ITEM5', variant: 'variant-fire' },
-    { label: 'ITEM6', variant: 'variant-mustard' },
+    { label: 'ITEM1', variant: 'variant-cyan' },
+    { label: 'ITEM2', variant: 'variant-burgundy' },
+    { label: 'ITEM3', variant: 'variant-fire' },
+    { label: 'ITEM4', variant: 'variant-mustard' },
+    { label: 'ITEM5', variant: 'variant-sepia' },
+    { label: 'ITEM6', variant: 'variant-gray' },
 ];
 
 // Paletas de Colores:

@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-type ItemVariant = 'variant-burgundy' | 'variant-sepia' | 'variant-gray' | 'variant-cyan' | 'variant-fire' | 'variant-mustard';
+type ItemVariant = 'variant-cyan' | 'variant-burgundy' | 'variant-fire' | 'variant-mustard' | 'variant-sepia' | 'variant-gray';
 
 interface SelectorItem {
     label: string;
@@ -55,7 +55,7 @@ const variantClass = (variant: ItemVariant) => {
     gap: 1rem;
     padding: 1.5rem;
     border: 3px dashed var(--ui-component-text);
-    border-radius: 1rem;
+    border-radius: var(--ui-radius);
 
     .selector-label {
         font-size: 1.2rem;
@@ -81,7 +81,7 @@ const variantClass = (variant: ItemVariant) => {
                 left: 0;
                 width: 100%;
                 height: 4px;
-                border-radius: 2px;
+                border-radius: var(--ui-radius);
                 background: currentColor;
             }
 

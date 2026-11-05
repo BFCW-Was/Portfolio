@@ -48,7 +48,7 @@ const props = defineProps({
     background-color: var(--ui-component);
     color: var(--ui-component-text);
     padding: 1.5rem;
-    border-radius: 1rem;
+    border-radius: var(--ui-radius-lg);
     border-top: 3px solid var(--color-bfcw-cyan-70);
     width: 100%;
     max-width: 480px;
@@ -67,7 +67,7 @@ const props = defineProps({
 .avatar {
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
+    border-radius: var(--ui-radius-circular);
     background: radial-gradient(circle at 30% 30%, var(--color-bfcw-cyan-70), var(--color-bfcw-indigo-70));
     display: flex;
     align-items: center;

@@ -93,7 +93,7 @@ watch(
 
 .nav-box {
     border: 2px solid var(--ui-component-border);
-    border-radius: 0.5rem;
+    border-radius: var(--ui-radius);
     background: var(--ui-component);
     box-shadow: 0 0 12px -3px color-mix(in oklab, var(--color-bfcw-cyan-70) 60%, transparent);
 }
@@ -137,7 +137,7 @@ watch(
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    border-radius: 9999px;
+    border-radius: var(--ui-radius-circular);
     background: linear-gradient(to bottom, var(--home-from), var(--ui-component));
 }
 
@@ -151,7 +151,7 @@ watch(
         content: '';
         width: 2px;
         height: 1.5rem;
-        border-radius: 9999px;
+        border-radius: var(--ui-radius);
         background: linear-gradient(to bottom, var(--ui-error), transparent);
     }
 }
@@ -177,7 +177,7 @@ watch(
             left: 50%;
             width: 2rem;
             height: 2px;
-            border-radius: 0 0 9999px 9999px;
+            border-radius: 0 0 var(--ui-radius-circular) var(--ui-radius-circular);
             background: var(--ui-info);
             transform: translateX(-50%);
         }
@@ -203,7 +203,7 @@ watch(
             left: 50%;
             width: 2rem;
             height: 2px;
-            border-radius: 0 0 9999px 9999px;
+            border-radius: 0 0 var(--ui-radius-circular) var(--ui-radius-circular);
             background: var(--ui-warning);
             transform: translateX(-50%);
         }

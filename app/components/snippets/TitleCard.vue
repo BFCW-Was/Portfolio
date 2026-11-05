@@ -42,7 +42,7 @@ $variants: (
     background-color: var(--ui-component);
     color: var(--ui-component-text);
     padding: 1.5rem 2.5rem;
-    border-radius: 8px;
+    border-radius: var(--ui-radius);
     width: fit-content;
     min-width: 200px;
     text-align: center;

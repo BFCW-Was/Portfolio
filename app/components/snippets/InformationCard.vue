@@ -61,7 +61,7 @@ function toggleExpand() {
 .custom-card-info {
     margin: 16px;
     padding: 8px 24px;
-    border-radius: 4px;
+    border-radius: var(--ui-radius);
     gap: 8px;
     background-color: var(--ui-component);
     color: var(--ui-component-text);

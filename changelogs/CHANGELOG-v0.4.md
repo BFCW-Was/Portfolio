@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.4.0 (80%): Componentes de Diseño | [Work in Progress]
+## 0.4.0 (85%): Componentes de Diseño | [Work in Progress]
 
 ### Added
 
@@ -20,3 +20,6 @@
 - Cambio de logo de la web.
 - Corrección de visualización del logo en la pestaña del navegador.
 - Revisión menor en paletas de colores.
+- Adición de variables de color para los themes en el css global.
+- Revisión mayor en paletas de colores de componentes.
+- Adición de variables de radio de borde al css global.

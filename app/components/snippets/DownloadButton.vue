@@ -33,7 +33,7 @@ const props = defineProps({
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    border-radius: 12px;
+    border-radius: var(--ui-radius);
     font-size: 1rem;
     text-decoration: none;
     transition: all 0.25s ease;
