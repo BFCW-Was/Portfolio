@@ -101,18 +101,23 @@
     --ui-text-inverted: var(--color-bfcw-white-90);
     --ui-text-muted: var(--color-bfcw-black-20);
     /* Accent Colors */
-    --ui-primary: var(--color-bfcw-cyan-30);
-    --ui-secondary: var(--color-bfcw-cyan-50);
-    --ui-tertiary: var(--color-bfcw-cyan-70);
+    /* Primary */
+    --ui-primary: var(--color-bfcw-cyan-50);
+    --ui-primary-muted: var(--color-bfcw-cyan-70);
+    --ui-primary-dark: var(--color-bfcw-cyan-100);
+    /* Secondary */
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-70);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-90);
     /* Alert Colors */
-    --ui-info: var(--color-bfcw-cyan-50);
-    --ui-success: var(--color-bfcw-cyan-70);
+    --ui-info: var(--color-bfcw-burgundy-30);
+    --ui-success: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
     /* Component Colors */
     --ui-component: var(--color-bfcw-white-90);
-    --ui-component-text: var(--color-bfcw-black-90);
-    --ui-component-border: var(--color-bfcw-black-90);
+    --ui-component-text: var(--color-bfcw-black-100);
+    --ui-component-border: var(--color-bfcw-black-100);
 }
 
 /* Dark */
@@ -126,18 +131,23 @@
     --ui-text-inverted: var(--color-bfcw-black-90);
     --ui-text-muted: var(--color-bfcw-white-20);
     /* Accent Colors */
+    /* Primary */
     --ui-primary: var(--color-bfcw-cyan-70);
-    --ui-secondary: var(--color-bfcw-cyan-90);
-    --ui-tertiary: var(--color-bfcw-cyan-100);
+    --ui-primary-muted: var(--color-bfcw-cyan-90);
+    --ui-primary-dark: var(--color-bfcw-cyan-100);
+    /* Secondary */
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
     /* Alert Colors */
-    --ui-info: var(--color-bfcw-cyan-50);
-    --ui-success: var(--color-bfcw-cyan-70);
+    --ui-info: var(--color-bfcw-burgundy-30);
+    --ui-success: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
     /* Component Colors */
     --ui-component: var(--color-bfcw-black-100);
-    --ui-component-text: var(--color-bfcw-white-90);
-    --ui-component-border: var(--color-bfcw-white-90);
+    --ui-component-text: var(--color-bfcw-white-70);
+    --ui-component-border: var(--color-bfcw-white-70);
 }
 
 /* Sepia */
@@ -151,12 +161,17 @@
     --ui-text-inverted: var(--color-bfcw-black-90);
     --ui-text-muted: var(--color-bfcw-white-20);
     /* Accent Colors */
+    /* Primary */
     --ui-primary: var(--color-bfcw-cyan-50);
-    --ui-secondary: var(--color-bfcw-cyan-70);
-    --ui-tertiary: var(--color-bfcw-cyan-90);
+    --ui-primary-muted: var(--color-bfcw-cyan-70);
+    --ui-primary-dark: var(--color-bfcw-cyan-100);
+    /* Secondary */
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
     /* Alert Colors */
-    --ui-info: var(--color-bfcw-cyan-50);
-    --ui-success: var(--color-bfcw-cyan-70);
+    --ui-info: var(--color-bfcw-burgundy-30);
+    --ui-success: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
     /* Component Colors */

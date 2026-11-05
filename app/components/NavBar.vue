@@ -110,7 +110,7 @@ watch(
     }
 
     &[aria-current='page'] .nav-home {
-        --home-from: var(--ui-tertiary);
+        --home-from: var(--ui-primary-dark);
     }
 
     &:not(.nav-beam):hover {

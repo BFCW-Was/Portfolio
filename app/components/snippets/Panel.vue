@@ -43,7 +43,7 @@ const props = defineProps({
 .panel {
     --panel-position: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
     --panel-content: color-mix(in oklab, var(--ui-component-text) 90%, transparent);
-    --panel-shadow: color-mix(in oklab, var(--ui-tertiary) 15%, transparent);
+    --panel-shadow: color-mix(in oklab, var(--ui-primary-dark) 15%, transparent);
 
     background-color: var(--ui-component);
     color: var(--ui-component-text);

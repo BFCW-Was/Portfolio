@@ -358,6 +358,30 @@ const items: SelectorItem[] = [
 // Paletas de Colores:
 const colorPalettes = [
     {
+        category: 'Theme Palette (Global Theme Variables)',
+        colors: [
+            { name: '--ui-bg' },
+            { name: '--ui-bg-muted' },
+            { name: '--ui-bg-elevated' },
+            { name: '--ui-text' },
+            { name: '--ui-text-inverted' },
+            { name: '--ui-text-muted' },
+            { name: '--ui-primary' },
+            { name: '--ui-primary-muted' },
+            { name: '--ui-primary-dark' },
+            { name: '--ui-secondary' },
+            { name: '--ui-secondary-muted' },
+            { name: '--ui-secondary-dark' },
+            { name: '--ui-info' },
+            { name: '--ui-success' },
+            { name: '--ui-warning' },
+            { name: '--ui-error' },
+            { name: '--ui-component' },
+            { name: '--ui-component-text' },
+            { name: '--ui-component-border' },
+        ],
+    },
+    {
         category: 'Black Palette',
         colors: [
             { name: '--color-bfcw-black-100' },
