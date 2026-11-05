@@ -2,7 +2,13 @@
     <UApp>
         <NuxtRouteAnnouncer />
         <NuxtLayout>
-            <NuxtPage />
+            <NuxtPage class="page-content" />
         </NuxtLayout>
     </UApp>
 </template>
+
+<style lang="scss">
+.page-content {
+    padding-bottom: 70px;
+}
+</style>

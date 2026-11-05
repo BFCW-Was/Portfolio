@@ -62,7 +62,6 @@ onBeforeUnmount(() => {
 @use '~/assets/scss/background_frame.scss';
 @use '~/assets/scss/splash_introduction.scss';
 
-// Reemplazo de v-fade-transition
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.3s ease;
