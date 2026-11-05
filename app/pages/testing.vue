@@ -242,11 +242,11 @@
             <hr class="my-2" />
             <div class="mx-auto w-full max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <UCard class="bg-primary p-6 text-inverted">
+                    <UCard class="bg-primary p-6">
                         <p class="font-bold">Primary Card</p>
                         <p class="text-sm">Testing the primary color</p>
                     </UCard>
-                    <UCard class="bg-secondary p-6 text-inverted">
+                    <UCard class="bg-secondary p-6">
                         <p class="font-bold">Secondary Card</p>
                         <p class="text-sm">Testing the secondary color</p>
                     </UCard>
@@ -254,14 +254,14 @@
                 <div class="mt-4 flex flex-wrap justify-around gap-4">
                     <UButton color="primary">Primary Button</UButton>
                     <UButton color="secondary">Secondary Button</UButton>
-                    <UButton color="success">Success Button</UButton>
                     <UButton color="info">Info Button</UButton>
+                    <UButton color="success">Success Button</UButton>
                     <UButton color="warning">Warning Button</UButton>
                     <UButton color="error">Error Button</UButton>
                 </div>
                 <div class="mt-4 flex flex-col gap-4">
-                    <UAlert color="success" title="Success Alert" />
                     <UAlert color="info" title="Info Alert" />
+                    <UAlert color="success" title="Success Alert" />
                     <UAlert color="warning" title="Warning Alert" />
                     <UAlert color="error" title="Error Alert" />
                 </div>
@@ -269,9 +269,9 @@
                     <UFormField label="Input Field">
                         <UInput color="primary" variant="outline" class="w-full" />
                     </UFormField>
-                    <USwitch label="Toggle Switch" color="secondary" />
+                    <USwitch label="Toggle Switch" color="primary" />
                     <UFormField label="Slider Control">
-                        <USlider color="info" />
+                        <USlider color="primary" />
                     </UFormField>
                     <UCheckbox label="Checkbox" color="primary" />
                 </div>
