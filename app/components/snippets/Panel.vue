@@ -48,7 +48,7 @@ const props = defineProps({
     background-color: var(--ui-component);
     color: var(--ui-component-text);
     padding: 1.5rem;
-    border-radius: var(--ui-radius-lg);
+    border-radius: var(--ui-radius);
     border-top: 3px solid var(--ui-primary);
     width: 100%;
     max-width: 480px;
@@ -99,8 +99,9 @@ const props = defineProps({
 }
 
 .quote-icon {
-    color: var(--ui-primary);
     font-size: 2rem;
+    color: transparent !important;
+    background: linear-gradient(to bottom, var(--ui-primary), var(--color-bfcw-white-100));
 }
 
 .content {

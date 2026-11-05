@@ -123,9 +123,9 @@
 /* Dark */
 .dark {
     /* Background Colors */
-    --ui-bg: var(--color-bfcw-black-90);
-    --ui-bg-muted: var(--color-bfcw-black-70);
-    --ui-bg-elevated: var(--color-bfcw-black-50);
+    --ui-bg: var(--color-bfcw-black-70);
+    --ui-bg-muted: var(--color-bfcw-black-50);
+    --ui-bg-elevated: var(--color-bfcw-black-30);
     /* Text Colors */
     --ui-text: var(--color-bfcw-white-90);
     --ui-text-inverted: var(--color-bfcw-black-90);

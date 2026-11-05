@@ -106,7 +106,7 @@ watch(
     width: 3rem;
 
     &[aria-expanded='true'] .nav-icon {
-        color: var(--ui-info);
+        color: var(--ui-primary);
     }
 
     &[aria-current='page'] .nav-home {
@@ -159,14 +159,14 @@ watch(
 .nav-beam {
     &[aria-current='page'] {
         .nav-icon {
-            color: var(--ui-info);
+            color: var(--ui-primary);
         }
 
         &::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, color-mix(in oklab, var(--ui-info) 50%, transparent), transparent);
+            background: linear-gradient(to bottom, color-mix(in oklab, var(--ui-primary) 50%, transparent), transparent);
             clip-path: polygon(var(--beam-inset, 20%) 0, calc(100% - var(--beam-inset, 20%)) 0, 100% 100%, 0 100%);
         }
 
@@ -178,7 +178,7 @@ watch(
             width: 2rem;
             height: 2px;
             border-radius: 0 0 var(--ui-radius-circular) var(--ui-radius-circular);
-            background: var(--ui-info);
+            background: var(--ui-primary);
             transform: translateX(-50%);
         }
     }

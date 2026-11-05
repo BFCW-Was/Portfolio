@@ -69,7 +69,7 @@ const props = defineProps({
     }
 
     .content {
-        padding: 1rem;
+        padding: 0.75rem;
         position: relative;
         flex: 1;
 
