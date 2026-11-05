@@ -86,47 +86,77 @@
 /* ### Themes ### */
 /* Light */
 .light {
+    /* Background Colors */
     --ui-bg: var(--color-bfcw-white-70);
     --ui-bg-muted: var(--color-bfcw-white-90);
-    --ui-bg-elevated: var(--color-bfcw-white-90);
+    --ui-bg-elevated: var(--color-bfcw-white-50);
+    /* Text Colors */
     --ui-text: var(--color-bfcw-black-90);
-    --ui-text-inverted: var(--color-bfcw-black-90);
-    --ui-primary: var(--color-bfcw-cyan-70);
-    --ui-secondary: var(--color-bfcw-cyan-90);
-    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-text-inverted: var(--color-bfcw-white-90);
+    --ui-text-muted: var(--color-bfcw-black-20);
+    /* Accent Colors */
+    --ui-primary: var(--color-bfcw-cyan-30);
+    --ui-secondary: var(--color-bfcw-cyan-50);
+    --ui-tertiary: var(--color-bfcw-cyan-70);
+    /* Alert Colors */
     --ui-info: var(--color-bfcw-cyan-50);
+    --ui-success: var(--color-bfcw-cyan-70);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
+    /* Component Colors */
+    --ui-component: var(--color-bfcw-white-90);
+    --ui-component-text: var(--color-bfcw-black-90);
+    --ui-component-border: var(--color-bfcw-black-90);
 }
 
 /* Dark */
 .dark {
+    /* Background Colors */
     --ui-bg: var(--color-bfcw-black-90);
     --ui-bg-muted: var(--color-bfcw-black-70);
-    --ui-bg-elevated: var(--color-bfcw-black-70);
+    --ui-bg-elevated: var(--color-bfcw-black-50);
+    /* Text Colors */
     --ui-text: var(--color-bfcw-white-90);
-    --ui-text-inverted: var(--color-bfcw-white-90);
+    --ui-text-inverted: var(--color-bfcw-black-90);
+    --ui-text-muted: var(--color-bfcw-white-20);
+    /* Accent Colors */
     --ui-primary: var(--color-bfcw-cyan-70);
     --ui-secondary: var(--color-bfcw-cyan-90);
-    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-tertiary: var(--color-bfcw-cyan-100);
+    /* Alert Colors */
     --ui-info: var(--color-bfcw-cyan-50);
+    --ui-success: var(--color-bfcw-cyan-70);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
+    /* Component Colors */
+    --ui-component: var(--color-bfcw-black-100);
+    --ui-component-text: var(--color-bfcw-white-90);
+    --ui-component-border: var(--color-bfcw-white-90);
 }
 
 /* Sepia */
 .theme-sepia {
-    --ui-bg: var(--color-bfcw-sepia-100);
-    --ui-bg-muted: var(--color-bfcw-sepia-90);
-    --ui-bg-elevated: var(--color-bfcw-sepia-90);
+    /* Background Colors */
+    --ui-bg: var(--color-bfcw-sepia-90);
+    --ui-bg-muted: var(--color-bfcw-sepia-70);
+    --ui-bg-elevated: var(--color-bfcw-sepia-100);
+    /* Text Colors */
     --ui-text: var(--color-bfcw-white-90);
-    --ui-text-inverted: var(--color-bfcw-white-90);
-    --ui-primary: var(--color-bfcw-cyan-70);
-    --ui-secondary: var(--color-bfcw-cyan-90);
-    --ui-success: var(--color-bfcw-mustard-70);
+    --ui-text-inverted: var(--color-bfcw-black-90);
+    --ui-text-muted: var(--color-bfcw-white-20);
+    /* Accent Colors */
+    --ui-primary: var(--color-bfcw-cyan-50);
+    --ui-secondary: var(--color-bfcw-cyan-70);
+    --ui-tertiary: var(--color-bfcw-cyan-90);
+    /* Alert Colors */
     --ui-info: var(--color-bfcw-cyan-50);
+    --ui-success: var(--color-bfcw-cyan-70);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
+    /* Component Colors */
+    --ui-component: var(--color-bfcw-black-50);
+    --ui-component-text: var(--color-bfcw-white-70);
+    --ui-component-border: var(--color-bfcw-white-70);
 }
 
 /* ### Global Styles ### */
