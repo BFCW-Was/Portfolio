@@ -239,6 +239,15 @@
             <SnippetsSignage variant="outlined" text="Test Texto" class="m-4" />
             <SnippetsSignage variant="gradient" text="Test Texto" class="m-4" />
             <SnippetsSignage variant="filled" text="Test Texto" class="m-4" />
+            <hr class="my-5" />
+            <!-- PolygonalIcon.vue -->
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" class="m-4" />
+            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" class="m-4" />
         </div>
 
         <!-- #################### THEME #################### -->
