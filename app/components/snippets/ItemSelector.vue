@@ -12,9 +12,9 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-type ItemVariant = 'variant-cyan' | 'variant-burgundy' | 'variant-fire' | 'variant-mustard' | 'variant-sepia' | 'variant-gray';
+export type ItemVariant = 'variant-cyan' | 'variant-burgundy' | 'variant-fire' | 'variant-mustard' | 'variant-sepia' | 'variant-gray';
 
-interface SelectorItem {
+export interface SelectorItem {
     label: string;
     variant: ItemVariant;
 }

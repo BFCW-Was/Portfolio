@@ -302,6 +302,7 @@
 </template>
 
 <script setup lang="ts">
+import type { SelectorItem } from '~/components/snippets/ItemSelector.vue';
 import { usePublicAsset } from '~/composables/use_public_assets';
 import { assetsManager } from '~/utils/assets_manager';
 
@@ -338,13 +339,6 @@ function nextColorIC() {
 
 // Cambiar estilo de ItemSelector:
 const selectedItem = ref(0);
-
-type ItemVariant = 'variant-cyan' | 'variant-burgundy' | 'variant-fire' | 'variant-mustard' | 'variant-sepia' | 'variant-gray';
-
-interface SelectorItem {
-    label: string;
-    variant: ItemVariant;
-}
 
 const items: SelectorItem[] = [
     { label: 'ITEM1', variant: 'variant-cyan' },
