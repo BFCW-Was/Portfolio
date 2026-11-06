@@ -234,6 +234,11 @@
                 <SnippetsTitleCard title="Temporal Title" variant="bottom-left" />
                 <SnippetsTitleCard title="Temporal Title" variant="bottom-right" />
             </div>
+            <hr class="my-5" />
+            <!-- Signage.vue -->
+            <SnippetsSignage variant="outlined" text="Test Texto" class="m-4" />
+            <SnippetsSignage variant="gradient" text="Test Texto" class="m-4" />
+            <SnippetsSignage variant="filled" text="Test Texto" class="m-4" />
         </div>
 
         <!-- #################### THEME #################### -->
