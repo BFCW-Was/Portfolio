@@ -41,21 +41,20 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .panel {
-    --panel-position: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
-    --panel-content: color-mix(in oklab, var(--ui-component-text) 90%, transparent);
-    --panel-shadow: color-mix(in oklab, var(--ui-primary-dark) 15%, transparent);
+    background:
+        linear-gradient(var(--ui-component), var(--ui-component)) padding-box,
+        linear-gradient(to bottom, (var(--ui-primary)), var(--color-bfcw-white-50)) border-box;
 
-    background-color: var(--ui-component);
     color: var(--ui-component-text);
     padding: 1.5rem;
+    border: 2px solid transparent;
     border-radius: var(--ui-radius);
-    border-top: 3px solid var(--ui-primary);
+
     width: 100%;
     max-width: 480px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    box-shadow: 0 4px 12px var(--panel-shadow);
 }
 
 .header {
@@ -95,7 +94,7 @@ const props = defineProps({
 
 .position {
     font-size: 0.75rem;
-    color: var(--panel-position);
+    color: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
 }
 
 .quote-icon {
@@ -107,6 +106,6 @@ const props = defineProps({
 .content {
     font-size: 1rem;
     line-height: 1.5;
-    color: var(--panel-content);
+    color: var(--ui-component-text);
 }
 </style>

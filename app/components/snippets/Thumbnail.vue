@@ -77,24 +77,24 @@ const props = defineProps({
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--ui-primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .theme {
             display: inline-block;
             background-color: var(--ui-primary);
             color: var(--color-bfcw-white-100);
-            padding: 0.2rem 0.8rem;
+            padding: 0.25rem 0.75rem;
             border-radius: var(--ui-radius-lg);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         .year {
             position: absolute;
-            bottom: 1rem;
-            right: 1rem;
+            bottom: 0.5rem;
+            right: 0.5rem;
             font-size: 1rem;
             color: var(--tc-year);
             font-weight: 500;

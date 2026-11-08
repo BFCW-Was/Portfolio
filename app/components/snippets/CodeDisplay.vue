@@ -226,8 +226,8 @@ onBeforeUnmount(() => lockPage(false));
 <style scoped lang="scss">
 .code-display {
     // Light Theme
+    --cd-background-color: color-mix(in oklab, var(--ui-component) 65%, gray);
     --cd-icon: color-mix(in oklab, var(--ui-component-text) 80%, var(--cd-background-color));
-    --cd-background-color: color-mix(in oklab, var(--ui-text-muted) 65%, gray);
     --cd-border: color-mix(in oklab, var(--cd-background-color) 70%, black);
     --cd-bar: color-mix(in oklab, var(--cd-background-color) 80%, white);
     --cd-hover: color-mix(in oklab, var(--cd-background-color) 80%, white);
