@@ -1,0 +1,19 @@
+// Anillo Decorativo Reutilizable | <span class="decorative-ring" aria-hidden="true" />
+.decorative-ring {
+    --ring-color: var(--ui-component-text);
+    --ring-dim: color-mix(in oklab, var(--ring-color) 25%, transparent);
+    --ring-glow: color-mix(in oklab, var(--ui-primary-muted, var(--ui-primary)) 60%, transparent);
+
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background:
+        radial-gradient(ellipse 100% 90% at 50% 100%, var(--ring-glow), transparent) padding-box,
+        linear-gradient(var(--ui-component), var(--ui-component)) padding-box,
+        conic-gradient(from 0deg, var(--ring-color) 0deg, var(--ring-dim) 136deg, var(--ring-color) 136deg, var(--ring-color) 224deg, var(--ring-dim) 224deg, var(--ring-color) 360deg) border-box;
+}
