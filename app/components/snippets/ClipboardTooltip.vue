@@ -2,7 +2,7 @@
     <div class="clipboard-wrapper" @click="copyToClipboard" @mousemove="updateMousePosition">
         <slot>Copiar</slot>
         <Teleport to="body">
-            <div v-if="showTooltip" class="clipboard-tooltip text-onPrimary bg-primary" :style="tooltipPosition">¡Copiado!</div>
+            <div v-if="showTooltip" class="clipboard-tooltip" :style="tooltipPosition">¡Copiado!</div>
         </Teleport>
     </div>
 </template>
@@ -54,5 +54,7 @@ const tooltipPosition = computed(() => ({
     z-index: 9999;
     opacity: 0.9;
     transition: opacity 0.2s ease;
+    background-color: var(--ui-primary);
+    color: var(--ui-text);
 }
 </style>
