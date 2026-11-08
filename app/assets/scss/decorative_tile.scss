@@ -1,0 +1,19 @@
+// Recuadro Decorativo con Ícono Reutilizable | <span class="decorative-tile"><UIcon name="i-..." /></span>
+.decorative-tile {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--ui-component-text);
+    border-radius: var(--ui-radius, 0.75rem);
+    background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), var(--ui-component));
+    color: var(--ui-component-text);
+
+    > * {
+        width: 55%;
+        height: 55%;
+    }
+}
