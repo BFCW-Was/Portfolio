@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <div class="flex items-center gap-3">
             <h1>Bastián Contreras Wasilkowski</h1>
             |
@@ -30,7 +30,7 @@
                 <UButton to="https://github.com/BFCW-Was" target="_blank" rel="noopener noreferrer" aria-label="Github" color="neutral" variant="subtle" icon="i-fa6-brands-github" label="Github" />
             </div>
         </div>
-    </main>
+    </section>
 </template>
 
 <script setup lang="ts">

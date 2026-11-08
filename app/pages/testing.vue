@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <div class="flex justify-center gap-2">
             <UButton color="primary" @click="isVisibleTextos = !isVisibleTextos">{{ isVisibleTextos ? 'Ocultar' : 'Mostrar' }} Textos</UButton>
             <UButton color="primary" @click="isVisibleBotones = !isVisibleBotones">{{ isVisibleBotones ? 'Ocultar' : 'Mostrar' }} Botones</UButton>
@@ -14,7 +14,7 @@
 
             <div class="mx-auto my-8 max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-5">
-                    <section class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
+                    <div class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
                         <h2 class="mb-4 border-b border-gray-300 pb-2 text-sm font-semibold">DEFAULT</h2>
                         <div>
                             <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -24,9 +24,9 @@
                             <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
                             <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
+                    <div class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
                         <h2 class="mb-4 border-b border-gray-300 pb-2 text-sm font-semibold">TITLES</h2>
                         <div class="font-title">
                             <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -36,9 +36,9 @@
                             <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
                             <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
+                    <div class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
                         <h2 class="mb-4 border-b border-gray-300 pb-2 text-sm font-semibold">BASE</h2>
                         <div class="font-base">
                             <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -48,9 +48,9 @@
                             <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
                             <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
+                    <div class="min-w-0 border-r-0 pr-4 xl:border-r xl:border-gray-300">
                         <h2 class="mb-4 border-b border-gray-300 pb-2 text-sm font-semibold">DISLEXIC</h2>
                         <div class="font-dislexic">
                             <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -60,9 +60,9 @@
                             <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
                             <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="min-w-0">
+                    <div class="min-w-0">
                         <h2 class="mb-4 border-b border-gray-300 pb-2 text-sm font-semibold">CODE</h2>
                         <div class="font-code">
                             <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -72,7 +72,7 @@
                             <p class="mb-4">日本語：こんにちは、世界！ひらがな カタカナ</p>
                             <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                         </div>
-                    </section>
+                    </div>
                 </div>
                 <hr class="my-5" />
                 <section>
@@ -312,7 +312,7 @@
             <hr class="my-5" />
         </div>
         <!-- ##### -->
-    </main>
+    </section>
 </template>
 
 <script setup lang="ts">

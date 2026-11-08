@@ -1,8 +1,8 @@
 <template>
-    <main>
+    <section>
         <InkBlob type="center" after="end" />
         <h1>Gaming Section</h1>
-    </main>
+    </section>
 </template>
 
 <script setup lang="ts">
