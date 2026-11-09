@@ -24,7 +24,7 @@
     <div class="min-[36rem]:hidden" @keydown.esc="open = false">
         <button v-if="open" type="button" aria-label="Cerrar Menú" class="fixed inset-0 z-40 cursor-default" @click="open = false" />
 
-        <div class="nav-floating flex w-44 flex-col gap-2 min-[26rem]:w-[min(20rem,calc(100vw-2rem))]">
+        <div class="nav-floating flex w-44 flex-col gap-2 min-[26rem]:w-[min(20rem,calc(100dvw-2rem))]">
             <Transition name="pop">
                 <div v-if="open" id="navbar-menu" class="nav-box grid max-h-[60dvh] origin-bottom grid-cols-1 gap-1 overflow-y-auto p-1.5 min-[26rem]:grid-cols-2">
                     <NuxtLink

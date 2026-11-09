@@ -214,7 +214,7 @@
             </SnippetsCodeDisplay>
             <hr class="my-5" />
             <!-- ItemSelector.vue -->
-            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" class="m-4" />
+            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
             <div class="text-center">Seleccionado: {{ selectedItem }}</div>
             <hr class="my-5" />
             <!-- Timeline.vue -->
@@ -236,25 +236,29 @@
             </div>
             <hr class="my-5" />
             <!-- Signage.vue -->
-            <SnippetsSignage variant="outlined" text="Test Texto" class="m-4" />
-            <SnippetsSignage variant="gradient" text="Test Texto" class="m-4" />
-            <SnippetsSignage variant="filled" text="Test Texto" class="m-4" />
+            <div class="flex flex-wrap gap-5">
+                <SnippetsSignage variant="outlined" text="Test Texto" />
+                <SnippetsSignage variant="gradient" text="Test Texto" />
+                <SnippetsSignage variant="filled" text="Test Texto" />
+            </div>
             <hr class="my-5" />
-            <!-- PolygonalIcon.vue -->
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" class="m-4" />
-            <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" class="m-4" />
+            <div class="flex flex-wrap gap-5">
+                <!-- PolygonalIcon.vue -->
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
+                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
+            </div>
             <hr class="my-5" />
             <!-- FeatureCard.vue -->
             <SnippetsFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
             <hr class="my-5" />
             <!-- TechStack.vue -->
             <div class="my-12">
-                <SnippetsTechStack :items="itemsTechStack" />
+                <SnippetsTechStack :columns="6" :items="itemsTechStack" />
             </div>
         </div>
 

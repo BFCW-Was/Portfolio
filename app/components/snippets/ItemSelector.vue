@@ -52,32 +52,46 @@ const variantClass = (variant: ItemVariant) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    padding: clamp(0.75rem, 3vw, 1.5rem);
     border: 3px dashed var(--ui-component-text);
     border-radius: var(--ui-radius);
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
 
     .selector-label {
-        font-size: 1.2rem;
+        font-size: clamp(0.95rem, 2.5vw, 1.2rem);
         font-weight: 600;
         color: var(--ui-component-text);
+        text-align: center;
     }
 
     .items {
         display: flex;
-        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 2rem);
+        width: 100%;
+        min-width: 0;
 
         .item {
-            font-size: 1.5rem;
+            font-size: clamp(0.9rem, 3vw, 1.5rem);
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: color 0.2s ease;
             position: relative;
+            text-align: center;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+            padding: 0.25rem 0;
+            line-height: 1.3;
 
             &.selected::after {
                 content: '';
                 position: absolute;
-                bottom: -6px;
+                bottom: -4px;
                 left: 0;
                 width: 100%;
                 height: 4px;

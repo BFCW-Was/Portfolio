@@ -67,7 +67,7 @@ const OVERLAP = 8;
 const MARGIN = 8;
 const CARD_REM = 24;
 const CARD_MIN_REM = 14;
-const cardWidth = `min(clamp(${CARD_MIN_REM}rem, 70vw, ${CARD_REM}rem), 100vw - ${MARGIN * 2}px)`;
+const cardWidth = `min(clamp(${CARD_MIN_REM}rem, 70dvw, ${CARD_REM}rem), 100dvw - ${MARGIN * 2}px)`;
 
 const uid = useId();
 const root = useTemplateRef<HTMLElement>('root');
@@ -132,8 +132,8 @@ onBeforeUnmount(() => {
 $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
 
 .tech-stack {
-    --tile: clamp(4rem, 20vw, 6rem);
-    --gap: clamp(0.75rem, 3.5vw, 1.5rem);
+    --tile: clamp(4rem, 20dvw, 6rem);
+    --gap: clamp(0.75rem, 3.5dvw, 1.5rem);
     --edge: calc((var(--grow) - 1) * var(--tile) / 2);
 
     display: flex;
@@ -202,7 +202,7 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            padding: clamp(0.5rem, 2.5vw, 0.75rem) clamp(0.875rem, 4vw, 1.25rem);
+            padding: clamp(0.5rem, 2.5dvw, 0.75rem) clamp(0.875rem, 4dvw, 1.25rem);
             border: 1px solid var(--ui-component-border);
             border-radius: var(--ui-radius);
             background: var(--ui-component);
@@ -223,7 +223,7 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
             }
 
             .tech-title {
-                font-size: clamp(1.125rem, 4vw, 1.5rem);
+                font-size: clamp(1.125rem, 4dvw, 1.5rem);
                 font-weight: 500;
                 line-height: 1.15;
             }
@@ -273,7 +273,7 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
             top: 50%;
             translate: 0 -50%;
             left: calc(100% + var(--edge) - var(--overlap));
-            padding-left: calc(clamp(0.5rem, 3vw, 1.25rem) + var(--overlap));
+            padding-left: calc(clamp(0.5rem, 3dvw, 1.25rem) + var(--overlap));
 
             &.tech-card-enter-from,
             &.tech-card-leave-to {
@@ -286,7 +286,7 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
             top: 50%;
             translate: 0 -50%;
             right: calc(100% + var(--edge) - var(--overlap));
-            padding-right: calc(clamp(0.5rem, 3vw, 1.25rem) + var(--overlap));
+            padding-right: calc(clamp(0.5rem, 3dvw, 1.25rem) + var(--overlap));
 
             &.tech-card-enter-from,
             &.tech-card-leave-to {

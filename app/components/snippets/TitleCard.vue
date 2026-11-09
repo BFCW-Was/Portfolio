@@ -84,7 +84,7 @@ $variants: (
             border-#{$v}-width: 2px;
             border-#{$h}-width: 2px;
             border-#{$v}-#{$h}-radius: 8px;
-            mask-image: radial-gradient(ellipse 100% 100% at #{$v} #{$h}, #000, transparent);
+            mask-image: radial-gradient(ellipse 100% 100% at #{$v} #{$h}, black, transparent);
         }
     }
 }

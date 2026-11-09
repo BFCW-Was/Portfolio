@@ -55,16 +55,16 @@ const BLOB_PATH =
 
 // Puntos de origen de cada mancha, en unidades del viewport
 const ORIGINS: Record<BlobType, [string, string][]> = {
-    sideBottom: [['50vw', '100vh']],
-    sideUp: [['50vw', '0px']],
-    sideLeft: [['0px', '50vh']],
-    sideRight: [['100vw', '50vh']],
-    center: [['50vw', '50vh']],
+    sideBottom: [['50dvw', '100dvh']],
+    sideUp: [['50dvw', '0px']],
+    sideLeft: [['0px', '50dvh']],
+    sideRight: [['100dvw', '50dvh']],
+    center: [['50dvw', '50dvh']],
     outside: [
         ['0px', '0px'],
-        ['100vw', '0px'],
-        ['0px', '100vh'],
-        ['100vw', '100vh'],
+        ['100dvw', '0px'],
+        ['0px', '100dvh'],
+        ['100dvw', '100dvh'],
     ],
 };
 
@@ -108,7 +108,7 @@ const uid = `ink${useId().replace(/\W/g, '')}`;
 const gone = ref(false);
 const origins = computed(() => ORIGINS[props.type as BlobType] ?? []);
 const curtain = computed(() => CURTAINS[props.type as CurtainType]);
-const reach = computed(() => (props.type === 'outside' ? 'hypot(50vw, 50vh)' : undefined));
+const reach = computed(() => (props.type === 'outside' ? 'hypot(50dvw, 50dvh)' : undefined));
 
 let emitted = false;
 function onAnimationEnd(e: AnimationEvent) {
@@ -139,7 +139,7 @@ function onAnimationEnd(e: AnimationEvent) {
     }
 
     &__blob {
-        --ink-reach: hypot(max(var(--ink-x), 100vw - var(--ink-x)), max(var(--ink-y), 100vh - var(--ink-y)));
+        --ink-reach: hypot(max(var(--ink-x), 100dvw - var(--ink-x)), max(var(--ink-y), 100dvh - var(--ink-y)));
 
         position: absolute;
         left: var(--ink-x);
