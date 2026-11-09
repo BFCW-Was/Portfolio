@@ -1,5 +1,5 @@
 <template>
-    <div class="panel">
+    <div class="panel decorative-border">
         <div class="header">
             <div class="avatar">
                 <img v-if="avatar" :src="avatar" alt="avatar" />
@@ -40,6 +40,8 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
+@use '~/assets/scss/decorative_border.scss';
+
 .panel {
     color: var(--ui-component-text);
     padding: 1.5rem;
@@ -48,11 +50,6 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border: 2px solid transparent;
-    border-radius: var(--ui-radius);
-    background:
-        linear-gradient(var(--ui-component), var(--ui-component)) padding-box,
-        linear-gradient(to bottom, (var(--ui-primary)), var(--color-bfcw-white-50)) border-box;
 }
 
 .header {

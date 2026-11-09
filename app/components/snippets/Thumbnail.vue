@@ -1,21 +1,19 @@
 <template>
-    <div class="thumbnail-card">
-        <!-- Imagen -->
-        <div class="image-container">
-            <img :src="image" alt="thumbnail" class="thumbnail-image" />
-        </div>
+    <article class="thumbnail-card decorative-border">
+        <SnippetsProyectPhoto class="thumbnail-photo" :image="image" :alt="title" ratio="4 / 3" :bordered="false" />
 
-        <!-- Contenido -->
         <div class="content">
-            <div class="title">{{ title }}</div>
-            <div class="theme">{{ theme }}</div>
-            <div class="year">{{ year }}</div>
+            <h3 class="title">{{ title }}</h3>
+            <div class="meta">
+                <span class="theme">{{ theme }}</span>
+                <span class="year">{{ year }}</span>
+            </div>
         </div>
-    </div>
+    </article>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
     image: {
         type: String,
         required: true,
@@ -36,68 +34,77 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-.thumbnail-card {
-    // Light Theme
-    --tc-year: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
-    --tc-shadow: color-mix(in oklab, var(--ui-component-text) 10%, transparent);
-    --tc-border: color-mix(in oklab, var(--ui-component-text) 10%, transparent);
+@use '~/assets/scss/decorative_border.scss';
 
-    background-color: var(--ui-component);
-    color: var(--ui-component-text);
-    border-radius: var(--ui-radius);
-    overflow: hidden;
-    width: 240px;
+.thumbnail-card {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px var(--tc-shadow);
+    width: min(100%, 15rem);
+    overflow: hidden;
+    background-color: var(--ui-component);
+    color: var(--ui-component-text);
+    transition:
+        translate 200ms ease,
+        box-shadow 200ms;
 
-    .image-container {
-        width: 100%;
-        height: 180px;
-        background-color: var(--ui-component-border);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+    &:hover {
+        box-shadow: 0 0 1rem -0.25rem var(--ui-primary);
+        translate: 0 -0.25rem;
 
-        img.thumbnail-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-bottom: 2px solid var(--tc-border);
+        .thumbnail-photo :deep(.photo-image) {
+            scale: 1.05;
+        }
+    }
+
+    .thumbnail-photo {
+        border-bottom: 2px solid color-mix(in oklab, var(--ui-component-text) 10%, transparent);
+
+        :deep(.photo-image) {
+            transition: scale 300ms ease;
         }
     }
 
     .content {
-        padding: 0.75rem;
-        position: relative;
+        display: flex;
         flex: 1;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem;
 
         .title {
+            display: -webkit-box;
+            margin: 0;
+            overflow: hidden;
             font-size: 1.2rem;
             font-weight: 600;
+            line-height: 1.2;
             color: var(--ui-primary);
-            margin-bottom: 0.25rem;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
         }
 
-        .theme {
-            display: inline-block;
-            background-color: var(--ui-primary);
-            color: var(--color-bfcw-white-100);
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--ui-radius-lg);
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
+        .meta {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 0.5rem;
+            margin-top: auto;
 
-        .year {
-            position: absolute;
-            bottom: 0.5rem;
-            right: 0.5rem;
-            font-size: 1rem;
-            color: var(--tc-year);
-            font-weight: 500;
+            .theme {
+                padding: 0.25rem 0.75rem;
+                border-radius: var(--ui-radius-lg);
+                background-color: var(--ui-primary);
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: var(--color-bfcw-white-100);
+            }
+
+            .year {
+                font-size: 1rem;
+                font-weight: 500;
+                color: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
+            }
         }
     }
 }
