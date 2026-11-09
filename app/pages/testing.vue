@@ -260,6 +260,14 @@
             <div class="my-12">
                 <SnippetsTechStack :columns="6" :items="itemsTechStack" />
             </div>
+            <hr class="my-5" />
+            <!-- IconStack.vue -->
+            <div class="flex flex-wrap gap-12">
+                <SnippetsIconStack :floating="false" position="left" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="top" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="bottom" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="right" :items="socialLinks" />
+            </div>
         </div>
 
         <!-- #################### THEME #################### -->
@@ -329,6 +337,7 @@
 
 <script setup lang="ts">
 import type { FeatureItem } from '~/components/snippets/FeatureCard.vue';
+import type { IconStackItem } from '~/components/snippets/IconStack.vue';
 import type { SelectorItem } from '~/components/snippets/ItemSelector.vue';
 import type { TechStackItem } from '~/components/snippets/TechStack.vue';
 import { usePublicAsset } from '~/composables/use_public_assets';
@@ -609,5 +618,12 @@ const itemsTechStack: TechStackItem[] = [
         description: 'Framework multiplataforma para aplicaciones móviles y web',
         level: 90,
     },
+];
+
+// IconStack
+const socialLinks: IconStackItem[] = [
+    { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/bastiancontreraswasilkowski/' },
+    { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/BFCW-Was' },
+    { icon: 'i-lucide-rss', label: 'Blog', to: '/blog' },
 ];
 </script>
