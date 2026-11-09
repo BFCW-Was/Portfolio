@@ -248,6 +248,14 @@
             <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" class="m-4" />
             <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" class="m-4" />
             <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" class="m-4" />
+            <hr class="my-5" />
+            <!-- FeatureCard.vue -->
+            <SnippetsFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
+            <hr class="my-5" />
+            <!-- TechStack.vue -->
+            <div class="my-12">
+                <SnippetsTechStack :items="itemsTechStack" />
+            </div>
         </div>
 
         <!-- #################### THEME #################### -->
@@ -316,7 +324,9 @@
 </template>
 
 <script setup lang="ts">
+import type { FeatureItem } from '~/components/snippets/FeatureCard.vue';
 import type { SelectorItem } from '~/components/snippets/ItemSelector.vue';
+import type { TechStackItem } from '~/components/snippets/TechStack.vue';
 import { usePublicAsset } from '~/composables/use_public_assets';
 import { assetsManager } from '~/utils/assets_manager';
 
@@ -490,4 +500,110 @@ const palettesWithValues = computed(() => {
         })),
     }));
 });
+
+// FeatureCard
+const featuresForCard: FeatureItem[] = [
+    { title: 'Característica 1', description: 'Párrafo único de la característica 1.' },
+    { title: 'Característica 2', description: ['Primer párrafo.', 'Segundo párrafo.', 'Tercer párrafo.', 'Cuarto párrafo.', 'Quinto párrafo.'] },
+];
+
+// TechStack
+const itemsTechStack: TechStackItem[] = [
+    {
+        name: 'Vue',
+        icon: 'i-fa6-brands-vuejs',
+        description: 'Framework progresivo para interfaces de usuario',
+        level: 90,
+    },
+    {
+        name: 'Nuxt',
+        icon: 'i-simple-icons-nuxt',
+        description: 'Framework full-stack basado en Vue',
+        level: 90,
+    },
+    {
+        name: 'Svelte',
+        icon: 'i-simple-icons-svelte',
+        description: 'Framework reactivo para aplicaciones web',
+        level: 90,
+    },
+    {
+        name: 'Angular',
+        icon: 'i-fa6-brands-angular',
+        description: 'Framework frontend basado en TypeScript',
+        level: 90,
+    },
+    {
+        name: 'JavaScript',
+        icon: 'i-fa6-brands-js',
+        description: 'Lenguaje de programación para desarrollo web',
+        level: 90,
+    },
+    {
+        name: 'TypeScript',
+        icon: 'i-fa6-brands-js',
+        description: 'JavaScript con tipado estático',
+        level: 90,
+    },
+    {
+        name: 'Node.js',
+        icon: 'i-fa6-brands-node-js',
+        description: 'Entorno de ejecución de JavaScript en el servidor',
+        level: 90,
+    },
+    {
+        name: 'Rust',
+        icon: 'i-simple-icons-rust',
+        description: 'Lenguaje de sistemas enfocado en rendimiento y seguridad',
+        level: 90,
+    },
+    {
+        name: 'PHP',
+        icon: 'i-fa6-brands-php',
+        description: 'Lenguaje de programación para desarrollo backend',
+        level: 90,
+    },
+    {
+        name: 'Python',
+        icon: 'i-fa6-brands-python',
+        description: 'Lenguaje versátil para backend, automatización y datos',
+        level: 90,
+    },
+    {
+        name: 'FastAPI',
+        icon: 'i-simple-icons-fastapi',
+        description: 'Framework moderno para crear APIs con Python',
+        level: 90,
+    },
+    {
+        name: 'Laravel',
+        icon: 'i-fa6-brands-laravel',
+        description: 'Framework PHP para aplicaciones web y APIs',
+        level: 90,
+    },
+    {
+        name: 'Tailwind CSS',
+        icon: 'i-simple-icons-tailwindcss',
+        description: 'Framework CSS basado en clases de utilidad',
+        level: 90,
+    },
+    {
+        name: 'Bootstrap',
+        icon: 'i-fa6-brands-bootstrap',
+        description: 'Framework CSS para interfaces responsive',
+        level: 90,
+    },
+    {
+        name: 'Sass',
+        icon: 'i-fa6-brands-sass',
+        description: 'Preprocesador CSS con variables, mixins y funciones',
+        level: 90,
+    },
+    {
+        name: 'Flutter',
+        icon: 'i-simple-icons-flutter',
+        description: 'Framework multiplataforma para aplicaciones móviles y web',
+        level: 90,
+    },
+];
 </script>
