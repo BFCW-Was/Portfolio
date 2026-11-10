@@ -24,9 +24,9 @@ defineProps({
         default: '',
     },
     badge: {
-        type: String as PropType<'top-left' | 'bottom-right'>,
+        type: String as PropType<'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'>,
         default: 'bottom-right',
-        validator: (v: string) => ['top-left', 'bottom-right'].includes(v),
+        validator: (v: string) => ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(v),
     },
     bordered: {
         type: Boolean,
@@ -77,16 +77,28 @@ defineProps({
         border-radius: 0;
     }
 
-    &[data-badge='bottom-right'] .photo-badge {
-        right: 0;
-        bottom: 0;
-        translate: 1rem 50%;
-    }
-
     &[data-badge='top-left'] .photo-badge {
         top: 0;
         left: 0;
         translate: -1rem -50%;
+    }
+
+    &[data-badge='top-right'] .photo-badge {
+        top: 0;
+        right: 0;
+        translate: 1rem -50%;
+    }
+
+    &[data-badge='bottom-left'] .photo-badge {
+        bottom: 0;
+        left: 0;
+        translate: -1rem 50%;
+    }
+
+    &[data-badge='bottom-right'] .photo-badge {
+        right: 0;
+        bottom: 0;
+        translate: 1rem 50%;
     }
 }
 </style>
