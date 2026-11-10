@@ -175,6 +175,9 @@
             <!-- Panel.vue -->
             <SnippetsPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
             <hr class="my-5" />
+            <!-- FeatureCard.vue -->
+            <SnippetsFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
+            <hr class="my-5" />
             <!-- InformationCard.vue -->
             <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
@@ -184,6 +187,11 @@
                     </div>
                 </template>
             </SnippetsInformationCard>
+            <hr class="my-5" />
+            <!-- TechStack.vue -->
+            <div class="my-12">
+                <SnippetsTechStack :columns="6" :items="itemsTechStack" />
+            </div>
             <hr class="my-5" />
             <!-- SnippetsCodeDisplay.vue -->
             <SnippetsCodeDisplay>
@@ -213,10 +221,6 @@
                 </SnippetsCodeDisplayFile>
             </SnippetsCodeDisplay>
             <hr class="my-5" />
-            <!-- ItemSelector.vue -->
-            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
-            <div class="text-center">Seleccionado: {{ selectedItem }}</div>
-            <hr class="my-5" />
             <!-- Timeline.vue -->
             <SnippetsTimeline>
                 <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
@@ -226,6 +230,18 @@
                 <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
                 <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
             </SnippetsTimeline>
+            <hr class="my-5" />
+            <!-- ItemSelector.vue -->
+            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
+            <div class="text-center">Seleccionado: {{ selectedItem }}</div>
+            <hr class="my-5" />
+            <!-- IconStack.vue -->
+            <div class="flex flex-wrap gap-12">
+                <SnippetsIconStack :floating="false" position="left" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="top" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="bottom" :items="socialLinks" />
+                <SnippetsIconStack :floating="false" position="right" :items="socialLinks" />
+            </div>
             <hr class="my-5" />
             <!-- Title Card.vue -->
             <div class="flex flex-wrap gap-5">
@@ -242,8 +258,8 @@
                 <SnippetsSignage variant="filled" text="Test Texto" />
             </div>
             <hr class="my-5" />
+            <!-- PolygonalIcon.vue -->
             <div class="flex flex-wrap gap-5">
-                <!-- PolygonalIcon.vue -->
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
@@ -251,22 +267,6 @@
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
                 <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
-            </div>
-            <hr class="my-5" />
-            <!-- FeatureCard.vue -->
-            <SnippetsFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
-            <hr class="my-5" />
-            <!-- TechStack.vue -->
-            <div class="my-12">
-                <SnippetsTechStack :columns="6" :items="itemsTechStack" />
-            </div>
-            <hr class="my-5" />
-            <!-- IconStack.vue -->
-            <div class="flex flex-wrap gap-12">
-                <SnippetsIconStack :floating="false" position="left" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="top" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="bottom" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="right" :items="socialLinks" />
             </div>
         </div>
 
