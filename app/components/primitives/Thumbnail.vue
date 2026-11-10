@@ -1,5 +1,5 @@
 <template>
-    <article class="thumbnail-card decorative-border">
+    <div class="thumbnail-card decorative-border">
         <PrimitivesPhotoFrame class="thumbnail-photo" :image="image" :alt="title" ratio="4 / 3" :bordered="false" />
 
         <div class="content">
@@ -9,7 +9,7 @@
                 <span class="year">{{ year }}</span>
             </div>
         </div>
-    </article>
+    </div>
 </template>
 
 <script setup lang="ts">
