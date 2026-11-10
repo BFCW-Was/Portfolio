@@ -5,12 +5,12 @@
             <!-- Debe tener una opción de cambiar el tipo de vista (base/100% a 70% y 40%) -->
             <!-- Debe tener una opción de cambiar el tipo de letra a dislexia -->
         </section>
-        <SnippetsIconStack :items="socialLinks" />
+        <PrimitivesIconStack :items="socialLinks" />
     </div>
 </template>
 
 <script setup lang="ts">
-import type { IconStackItem } from '~/components/snippets/IconStack.vue';
+import type { IconStackItem } from '~/components/primitives/IconStack.vue';
 
 const socialLinks: IconStackItem[] = [
     { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/bastiancontreraswasilkowski/' },

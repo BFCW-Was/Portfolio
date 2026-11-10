@@ -12,9 +12,9 @@
             <p>Aún así, si deseas contactarme puedes hablarme por correo o mis redes sociales:</p>
             <div class="mt-2 ml-4 flex flex-col items-start gap-2">
                 <!-- Email -->
-                <SnippetsClipboardTooltip text="basticontrewasil@gmail.com">
+                <PrimitivesClipboardTooltip text="basticontrewasil@gmail.com">
                     <UButton aria-label="Copiar correo" color="neutral" variant="subtle" icon="i-fa6-solid-envelope" label="Email" />
-                </SnippetsClipboardTooltip>
+                </PrimitivesClipboardTooltip>
                 <!-- Linkedin -->
                 <UButton
                     to="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/"

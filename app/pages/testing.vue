@@ -77,8 +77,8 @@
                 <hr class="my-5" />
                 <section>
                     <h2 class="mb-4 text-lg font-semibold">Ejemplo de Código</h2>
-                    <SnippetsCodeDisplay>
-                        <SnippetsCodeDisplayFile name="index.html" language="html">
+                    <DomainCodeDisplay>
+                        <DomainCodeDisplayFile name="index.html" language="html">
                             <pre v-pre>
                                 <div class="font-code">
                                     <p class="mb-4">Parrafo con texto de prueba. Y algo de lorem ipsum para hacer que el parrafo sea mas largo. Y mi nombre Bastián Fernando Contreras Wasilkowski.</p>
@@ -89,8 +89,8 @@
                                     <p class="mb-4">Русский: Привет, мир! Ёжик, съешь ещё этих мягких французских булок.</p>
                                 </div>
                             </pre>
-                        </SnippetsCodeDisplayFile>
-                    </SnippetsCodeDisplay>
+                        </DomainCodeDisplayFile>
+                    </DomainCodeDisplay>
                 </section>
                 <hr class="my-5" />
                 <div class="flex flex-col gap-2">
@@ -142,14 +142,14 @@
             <h1>Botones</h1>
             <hr class="my-2" />
             <!-- DownloadButton.vue -->
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-pdf" variant="outlined" class="m-4" />
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-audio" variant="gradient" class="m-4" />
-            <SnippetsDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-invoice" variant="filled" class="m-4" />
+            <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-pdf" variant="outlined" class="m-4" />
+            <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-audio" variant="gradient" class="m-4" />
+            <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-invoice" variant="filled" class="m-4" />
             <hr class="my-5" />
             <!-- ClipboardTooltip.vue -->
-            <SnippetsClipboardTooltip text="Test Text" class="m-4">
+            <PrimitivesClipboardTooltip text="Test Text" class="m-4">
                 <UButton aria-label="Test Label" color="neutral" variant="subtle" icon="i-fa6-solid-flask-vial" label="Test Span" />
-            </SnippetsClipboardTooltip>
+            </PrimitivesClipboardTooltip>
             <hr class="my-5" />
         </div>
         <!-- #################### IMÁGENES #################### -->
@@ -170,32 +170,32 @@
             <h1>Componentes</h1>
             <hr class="my-2" />
             <!-- Thumbnail.vue -->
-            <SnippetsThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
+            <PrimitivesThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
             <hr class="my-5" />
             <!-- Panel.vue -->
-            <SnippetsPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
+            <PrimitivesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
             <hr class="my-5" />
             <!-- FeatureCard.vue -->
-            <SnippetsFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
+            <PrimitivesFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
             <hr class="my-5" />
             <!-- InformationCard.vue -->
-            <SnippetsInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
+            <PrimitivesInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
                     <div class="text-default">
                         <p>Este es un div de ejemplo.</p>
                         <UButton size="xs" color="primary" @click="nextColorIC">Cambiar Color</UButton>
                     </div>
                 </template>
-            </SnippetsInformationCard>
+            </PrimitivesInformationCard>
             <hr class="my-5" />
             <!-- TechStack.vue -->
             <div class="my-12">
-                <SnippetsTechStack :columns="6" :items="itemsTechStack" />
+                <DomainTechStack :columns="6" :items="itemsTechStack" />
             </div>
             <hr class="my-5" />
-            <!-- SnippetsCodeDisplay.vue -->
-            <SnippetsCodeDisplay>
-                <SnippetsCodeDisplayFile name="index.html" language="html">
+            <!-- CodeDisplay.vue -->
+            <DomainCodeDisplay>
+                <DomainCodeDisplayFile name="index.html" language="html">
                     <pre v-pre>
                         <head>
                             <title>Page Title</title>
@@ -205,8 +205,8 @@
                             <p>This is a paragraph.</p>
                         </body>
                     </pre>
-                </SnippetsCodeDisplayFile>
-                <SnippetsCodeDisplayFile name="style.css" language="css">
+                </DomainCodeDisplayFile>
+                <DomainCodeDisplayFile name="style.css" language="css">
                     <pre v-pre>
                         body {
                             background-color: powderblue;
@@ -218,55 +218,55 @@
                             color: red;
                         }
                     </pre>
-                </SnippetsCodeDisplayFile>
-            </SnippetsCodeDisplay>
+                </DomainCodeDisplayFile>
+            </DomainCodeDisplay>
             <hr class="my-5" />
             <!-- Timeline.vue -->
-            <SnippetsTimeline>
-                <SnippetsTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <SnippetsTimelineStep :number="2" title="Title 2" description="Another step" />
-                <SnippetsTimelineStep :number="3" title="Title 3" description="Last step" />
-                <SnippetsTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
-                <SnippetsTimelineStep :number="5" title="Title 5" description="Another step" />
-                <SnippetsTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
-            </SnippetsTimeline>
+            <PrimitivesTimeline>
+                <PrimitivesTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
+                <PrimitivesTimelineStep :number="2" title="Title 2" description="Another step" />
+                <PrimitivesTimelineStep :number="3" title="Title 3" description="Last step" />
+                <PrimitivesTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
+                <PrimitivesTimelineStep :number="5" title="Title 5" description="Another step" />
+                <PrimitivesTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
+            </PrimitivesTimeline>
             <hr class="my-5" />
             <!-- ItemSelector.vue -->
-            <SnippetsItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
+            <PrimitivesItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
             <div class="text-center">Seleccionado: {{ selectedItem }}</div>
             <hr class="my-5" />
             <!-- IconStack.vue -->
             <div class="flex flex-wrap gap-12">
-                <SnippetsIconStack :floating="false" position="left" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="top" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="bottom" :items="socialLinks" />
-                <SnippetsIconStack :floating="false" position="right" :items="socialLinks" />
+                <PrimitivesIconStack :floating="false" position="left" :items="socialLinks" />
+                <PrimitivesIconStack :floating="false" position="top" :items="socialLinks" />
+                <PrimitivesIconStack :floating="false" position="bottom" :items="socialLinks" />
+                <PrimitivesIconStack :floating="false" position="right" :items="socialLinks" />
             </div>
             <hr class="my-5" />
             <!-- Title Card.vue -->
             <div class="flex flex-wrap gap-5">
-                <SnippetsTitleCard title="Temporal Title" variant="top-left" />
-                <SnippetsTitleCard title="Temporal Title" variant="top-right" />
-                <SnippetsTitleCard title="Temporal Title" variant="bottom-left" />
-                <SnippetsTitleCard title="Temporal Title" variant="bottom-right" />
+                <PrimitivesTitleCard title="Temporal Title" variant="top-left" />
+                <PrimitivesTitleCard title="Temporal Title" variant="top-right" />
+                <PrimitivesTitleCard title="Temporal Title" variant="bottom-left" />
+                <PrimitivesTitleCard title="Temporal Title" variant="bottom-right" />
             </div>
             <hr class="my-5" />
             <!-- Signage.vue -->
             <div class="flex flex-wrap gap-5">
-                <SnippetsSignage variant="outlined" text="Test Texto" />
-                <SnippetsSignage variant="gradient" text="Test Texto" />
-                <SnippetsSignage variant="filled" text="Test Texto" />
+                <PrimitivesSignage variant="outlined" text="Test Texto" />
+                <PrimitivesSignage variant="gradient" text="Test Texto" />
+                <PrimitivesSignage variant="filled" text="Test Texto" />
             </div>
             <hr class="my-5" />
             <!-- PolygonalIcon.vue -->
             <div class="flex flex-wrap gap-5">
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
-                <SnippetsPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
+                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
             </div>
         </div>
 
@@ -336,10 +336,10 @@
 </template>
 
 <script setup lang="ts">
-import type { FeatureItem } from '~/components/snippets/FeatureCard.vue';
-import type { IconStackItem } from '~/components/snippets/IconStack.vue';
-import type { SelectorItem } from '~/components/snippets/ItemSelector.vue';
-import type { TechStackItem } from '~/components/snippets/TechStack.vue';
+import type { TechStackItem } from '~/components/domain/TechStack.vue';
+import type { FeatureItem } from '~/components/primitives/FeatureCard.vue';
+import type { IconStackItem } from '~/components/primitives/IconStack.vue';
+import type { SelectorItem } from '~/components/primitives/ItemSelector.vue';
 import { usePublicAsset } from '~/composables/use_public_assets';
 import { assetsManager } from '~/utils/assets_manager';
 
