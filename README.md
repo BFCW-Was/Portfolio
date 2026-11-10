@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="50" src="http://bfcw-was.github.io/Portfolio/logos/logoDark.png" alt="Logotipo de BFCW en Modo Oscuro" />
+  <img height="50" src="http://bfcw-was.github.io/Portfolio/logos/isologo_dark.svg" alt="Logotipo de BFCW en Modo Oscuro" />
 </p>
 <p align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
   <a href="https://github.com/BFCW-Was" style="color: #138583;">

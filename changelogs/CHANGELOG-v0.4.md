@@ -32,3 +32,9 @@
 ### Fixed
 
 - Corrección de visualización del logo en la pestaña del navegador.
+
+## 0.4.1 (100%): Corrección Menor en README | 2026-11-10
+
+### Fixed
+
+- Corrección de enlace a imagen del logo en el README.
