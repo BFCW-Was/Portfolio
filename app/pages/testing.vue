@@ -178,6 +178,13 @@
             <!-- FeatureCard.vue -->
             <PrimitivesFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
             <hr class="my-5" />
+            <!-- ProjectDescription.vue [1, 2 & 3] -->
+            <PrimitivesProjectCard1 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
+            <hr class="my-5" />
+            <PrimitivesProjectCard2 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
+            <hr class="my-5" />
+            <PrimitivesProjectCard3 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
+            <hr class="my-5" />
             <!-- InformationCard.vue -->
             <PrimitivesInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
                 <template #body>
