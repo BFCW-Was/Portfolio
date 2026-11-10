@@ -3,13 +3,14 @@
     --ring-color: var(--ui-component-text);
     --ring-dim: color-mix(in oklab, var(--ring-color) 25%, transparent);
     --ring-glow: color-mix(in oklab, var(--ui-primary-muted, var(--ui-primary)) 60%, transparent);
+    --ring-size: 16px;
 
     display: grid;
     flex-shrink: 0;
     place-items: center;
     box-sizing: border-box;
-    width: 20px;
-    height: 20px;
+    width: var(--ring-size);
+    height: var(--ring-size);
     border: 2px solid transparent;
     border-radius: 50%;
     background:
