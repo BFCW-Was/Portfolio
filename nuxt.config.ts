@@ -34,8 +34,15 @@ export default defineNuxtConfig({
     css: ['~/assets/css/main.css'],
     colorMode: { preference: 'dark', fallback: 'dark' },
 
-    // Imánenes
+    // Imágenes
     image: { provider: 'none' },
+
+    // Componentes HTML Personalizados
+    vue: {
+        compilerOptions: {
+            isCustomElement: (tag) => ['dislexic'].includes(tag),
+        },
+    },
 
     // Internacionalización
     i18n: {

@@ -1,6 +1,6 @@
 # **Versiones:**
 
-## 0.4.0 (55%): Componentes de Diseño | [Work in Progress]
+## 0.4.0 (100%): Componentes de Diseño | 2026-11-10
 
 ### Added
 
@@ -16,6 +16,19 @@
 
 - Finalización de Theme Mode Selector.
 - Cambio de font de la web y selección de fonts alternativas (títulos, dislexia y código).
-- Mejora en borde general de la web y responsividad con elementos circundantes.
+- Mejora en encuadre general de la web y responsividad con elementos circundantes.
 - Cambio de logo de la web.
+- Revisión menor en paletas de colores.
+- Revisión mayor en paletas de colores de componentes.
+- Adición de variables de color para los themes en el css global.
+- Adición de variables de radio de borde al css global.
+- Cambio en convención de elementos HTML bases:
+    - El layout mantiene un "main" como contenedor global de las páginas.
+    - Cada página tiene un "section" con contenido específico.
+    - Los "div" se usan para agrupar elementos dentro de paginas o componentes.
+- Mejora en responsividad de componentes.
+- Reestructuración de carpeta de componentes.
+
+### Fixed
+
 - Corrección de visualización del logo en la pestaña del navegador.

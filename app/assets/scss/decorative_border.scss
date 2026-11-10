@@ -1,0 +1,8 @@
+// Borde Decorativo Reutilizable | <div class="decorative-border">...</div>
+.decorative-border {
+    border: 2px solid transparent;
+    border-radius: var(--ui-radius);
+    background:
+        linear-gradient(var(--ui-component), var(--ui-component)) padding-box,
+        linear-gradient(to bottom, (var(--ui-primary)), var(--color-bfcw-white-50)) border-box;
+}

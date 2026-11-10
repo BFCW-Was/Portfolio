@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <h1>Skills</h1>
-    </main>
+    </section>
 </template>

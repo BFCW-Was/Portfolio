@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <div class="flex items-center gap-3">
             <h1>Bastián Contreras Wasilkowski</h1>
             |
@@ -12,9 +12,9 @@
             <p>Aún así, si deseas contactarme puedes hablarme por correo o mis redes sociales:</p>
             <div class="mt-2 ml-4 flex flex-col items-start gap-2">
                 <!-- Email -->
-                <SnippetsClipboardTooltip text="basticontrewasil@gmail.com">
+                <PrimitivesClipboardTooltip text="basticontrewasil@gmail.com">
                     <UButton aria-label="Copiar correo" color="neutral" variant="subtle" icon="i-fa6-solid-envelope" label="Email" />
-                </SnippetsClipboardTooltip>
+                </PrimitivesClipboardTooltip>
                 <!-- Linkedin -->
                 <UButton
                     to="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/"
@@ -30,7 +30,7 @@
                 <UButton to="https://github.com/BFCW-Was" target="_blank" rel="noopener noreferrer" aria-label="Github" color="neutral" variant="subtle" icon="i-fa6-brands-github" label="Github" />
             </div>
         </div>
-    </main>
+    </section>
 </template>
 
 <script setup lang="ts">

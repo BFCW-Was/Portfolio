@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <h1>Contact</h1>
-    </main>
+    </section>
 </template>

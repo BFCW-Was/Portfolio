@@ -1,0 +1,12 @@
+// Title Decorativo Personalizado | <span class="decorative-title" aria-hidden="true">Texto</span>
+.decorative-title {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--ui-component-border);
+    border-radius: 0.25rem;
+    background: var(--ui-component);
+    box-shadow: 0 0 0.75rem -0.25rem var(--ui-primary);
+    color: var(--ui-component-text);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
