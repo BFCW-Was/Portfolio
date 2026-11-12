@@ -34,9 +34,6 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_hover.scss';
-
 .thumbnail-card {
     display: flex;
     flex-direction: column;

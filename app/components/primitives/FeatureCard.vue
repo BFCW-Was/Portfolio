@@ -50,11 +50,6 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_ring.scss';
-@use '~/assets/scss/decorative_tile.scss';
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_hover.scss';
-
 $muted: color-mix(in oklab, var(--ui-component-text) 85%, transparent);
 
 .feature-card {

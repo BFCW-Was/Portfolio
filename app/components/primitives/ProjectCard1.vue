@@ -44,10 +44,6 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_ring.scss';
-@use '~/assets/scss/decorative_hover.scss';
-
 .project-card {
     width: 100%;
     max-width: 57rem;

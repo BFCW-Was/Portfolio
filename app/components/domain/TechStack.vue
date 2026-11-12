@@ -127,8 +127,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_tile.scss';
-
 $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
 
 .tech-stack {

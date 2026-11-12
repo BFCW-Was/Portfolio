@@ -40,9 +40,6 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_hover.scss';
-
 .panel {
     color: var(--ui-component-text);
     padding: 1.5rem;

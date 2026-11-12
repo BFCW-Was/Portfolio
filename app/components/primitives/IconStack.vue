@@ -61,8 +61,6 @@ const isExternal = (to: string) => /^(https?:)?\/\//.test(to);
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_title.scss';
-
 $tile: 36px;
 $pad: 0.75rem;
 $bar: calc(#{$tile} + #{$pad} * 2);
