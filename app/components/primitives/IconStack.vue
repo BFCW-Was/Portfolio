@@ -213,7 +213,7 @@ $fade: 20%;
                 border-radius: 0.25rem;
                 background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), transparent);
                 transition:
-                    transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                    transform 200ms cubic-bezier(0.35, 1.55, 0.65, 1),
                     box-shadow 200ms;
 
                 .stack-icon {

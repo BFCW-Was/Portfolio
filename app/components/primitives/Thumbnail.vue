@@ -1,5 +1,5 @@
 <template>
-    <div class="thumbnail-card decorative-border">
+    <div class="thumbnail-card decorative-border decorative-hover">
         <PrimitivesPhotoFrame class="thumbnail-photo" :image="image" :alt="title" ratio="4 / 3" :bordered="false" />
 
         <div class="content">
@@ -35,6 +35,7 @@ defineProps({
 
 <style scoped lang="scss">
 @use '~/assets/scss/decorative_border.scss';
+@use '~/assets/scss/decorative_hover.scss';
 
 .thumbnail-card {
     display: flex;
@@ -43,18 +44,6 @@ defineProps({
     overflow: hidden;
     background-color: var(--ui-component);
     color: var(--ui-component-text);
-    transition:
-        translate 200ms ease,
-        box-shadow 200ms;
-
-    &:hover {
-        box-shadow: 0 0 1rem -0.25rem var(--ui-primary);
-        translate: 0 -0.25rem;
-
-        .thumbnail-photo :deep(.photo-image) {
-            scale: 1.05;
-        }
-    }
 
     .thumbnail-photo {
         border-bottom: 2px solid color-mix(in oklab, var(--ui-component-text) 10%, transparent);
