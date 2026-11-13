@@ -107,8 +107,8 @@
     --ui-primary-dark: var(--color-bfcw-cyan-100);
     /* Secondary */
     --ui-secondary: var(--color-bfcw-burgundy-70);
-    --ui-secondary-muted: var(--color-bfcw-burgundy-70);
-    --ui-secondary-dark: var(--color-bfcw-burgundy-90);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
     /* Alert Colors */
     --ui-info: var(--color-bfcw-burgundy-30);
     --ui-success: var(--color-bfcw-cyan-50);
