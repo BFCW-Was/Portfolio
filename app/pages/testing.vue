@@ -643,6 +643,6 @@ const itemsTechStack: TechStackItem[] = [
 const socialLinks: IconStackItem[] = [
     { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/bastiancontreraswasilkowski/' },
     { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/BFCW-Was' },
-    { icon: 'i-lucide-rss', label: 'Blog', to: '/blog' },
+    { icon: 'i-lucide-rss', label: 'Blogs', to: '/blogs' },
 ];
 </script>
