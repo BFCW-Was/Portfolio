@@ -172,6 +172,13 @@
             <!-- Thumbnail.vue -->
             <PrimitivesThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
             <hr class="my-5" />
+            <!-- Separador.vue -->
+            <PrimitivesSeparator />
+            <PrimitivesSeparator :decoration="1" />
+            <PrimitivesSeparator :decoration="2" />
+            <PrimitivesSeparator :decoration="3" />
+            <PrimitivesSeparator variant="subtle" thickness="8px" />
+            <hr class="my-5" />
             <!-- Panel.vue -->
             <PrimitivesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
             <hr class="my-5" />
