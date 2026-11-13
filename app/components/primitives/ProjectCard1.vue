@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card decorative-border">
+    <div class="project-card decorative-border decorative-hover">
         <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" ratio="1" badge="bottom-left" />
         <div class="project-body">
             <span v-if="index !== undefined" class="decorative-ring project-index">{{ index }}</span>
@@ -44,9 +44,6 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_ring.scss';
-
 .project-card {
     width: 100%;
     max-width: 57rem;

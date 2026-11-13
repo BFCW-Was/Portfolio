@@ -1,5 +1,5 @@
 <template>
-    <div class="feature-card decorative-border">
+    <div class="feature-card decorative-border decorative-hover">
         <div class="feature-body" tabindex="0" role="region" :aria-label="name" :style="{ maxHeight }">
             <span class="decorative-tile">
                 <UIcon :name="icon" />
@@ -50,10 +50,6 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_ring.scss';
-@use '~/assets/scss/decorative_tile.scss';
-@use '~/assets/scss/decorative_border.scss';
-
 $muted: color-mix(in oklab, var(--ui-component-text) 85%, transparent);
 
 .feature-card {

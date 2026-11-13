@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card decorative-border">
+    <div class="project-card decorative-border decorative-hover">
         <header class="project-head">
             <span v-if="index !== undefined" class="decorative-ring project-index">{{ index }}</span>
             <h4 class="project-name">{{ name }}</h4>
@@ -53,9 +53,6 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-@use '~/assets/scss/decorative_ring.scss';
-
 .project-card {
     width: 100%;
     max-width: 31.5rem;

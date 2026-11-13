@@ -172,6 +172,13 @@
             <!-- Thumbnail.vue -->
             <PrimitivesThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
             <hr class="my-5" />
+            <!-- Separador.vue -->
+            <PrimitivesSeparator />
+            <PrimitivesSeparator :decoration="1" />
+            <PrimitivesSeparator :decoration="2" />
+            <PrimitivesSeparator :decoration="3" />
+            <PrimitivesSeparator variant="subtle" thickness="8px" />
+            <hr class="my-5" />
             <!-- Panel.vue -->
             <PrimitivesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
             <hr class="my-5" />
@@ -229,13 +236,18 @@
             </DomainCodeDisplay>
             <hr class="my-5" />
             <!-- Timeline.vue -->
-            <PrimitivesTimeline>
+            <PrimitivesTimeline variant="number">
                 <PrimitivesTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <PrimitivesTimelineStep :number="2" title="Title 2" description="Another step" />
-                <PrimitivesTimelineStep :number="3" title="Title 3" description="Last step" />
-                <PrimitivesTimelineStep :number="4" title="Title 4" description="Lorem ipsum..." />
-                <PrimitivesTimelineStep :number="5" title="Title 5" description="Another step" />
-                <PrimitivesTimelineStep :number="6" title="Title 6" description="Last step" buttonText="Finish" />
+                <PrimitivesTimelineStep :number="2" title="Title 2" description="Second step" />
+                <PrimitivesTimelineStep :number="3" title="Title 3" description="Another step" />
+                <PrimitivesTimelineStep :number="4" title="Title 4" description="Last step" buttonText="Finish" />
+            </PrimitivesTimeline>
+            <hr class="my-5" />
+            <PrimitivesTimeline variant="dot">
+                <PrimitivesTimelineStep label="2026" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
+                <PrimitivesTimelineStep label="2025" title="Title 2" description="Second step" />
+                <PrimitivesTimelineStep label="2025" title="Title 3" description="Another step" />
+                <PrimitivesTimelineStep label="2024" title="Title 4" description="Last step" buttonText="Finish" />
             </PrimitivesTimeline>
             <hr class="my-5" />
             <!-- ItemSelector.vue -->
@@ -631,6 +643,6 @@ const itemsTechStack: TechStackItem[] = [
 const socialLinks: IconStackItem[] = [
     { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/bastiancontreraswasilkowski/' },
     { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/BFCW-Was' },
-    { icon: 'i-lucide-rss', label: 'Blog', to: '/blog' },
+    { icon: 'i-lucide-rss', label: 'Blogs', to: '/blogs' },
 ];
 </script>

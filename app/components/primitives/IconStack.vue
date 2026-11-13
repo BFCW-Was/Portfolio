@@ -61,8 +61,6 @@ const isExternal = (to: string) => /^(https?:)?\/\//.test(to);
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_title.scss';
-
 $tile: 36px;
 $pad: 0.75rem;
 $bar: calc(#{$tile} + #{$pad} * 2);
@@ -213,7 +211,7 @@ $fade: 20%;
                 border-radius: 0.25rem;
                 background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), transparent);
                 transition:
-                    transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                    transform 200ms cubic-bezier(0.35, 1.55, 0.65, 1),
                     box-shadow 200ms;
 
                 .stack-icon {

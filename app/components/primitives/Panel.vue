@@ -1,5 +1,5 @@
 <template>
-    <div class="panel decorative-border">
+    <div class="panel decorative-border decorative-hover">
         <div class="header">
             <div class="avatar">
                 <img v-if="avatar" :src="avatar" alt="avatar" />
@@ -40,8 +40,6 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@use '~/assets/scss/decorative_border.scss';
-
 .panel {
     color: var(--ui-component-text);
     padding: 1.5rem;

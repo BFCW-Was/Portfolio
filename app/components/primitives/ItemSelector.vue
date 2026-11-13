@@ -48,6 +48,8 @@ const variantClass = (variant: ItemVariant) => {
 </script>
 
 <style scoped lang="scss">
+$spring: cubic-bezier(0.35, 1.55, 0.65, 1);
+
 .item-selector {
     display: flex;
     flex-direction: column;
@@ -88,7 +90,12 @@ const variantClass = (variant: ItemVariant) => {
             padding: 0.25rem 0;
             line-height: 1.3;
 
-            &.selected::after {
+            transition:
+                color 200ms ease,
+                translate 200ms $spring,
+                scale 150ms ease;
+
+            &::after {
                 content: '';
                 position: absolute;
                 bottom: -4px;
@@ -97,6 +104,20 @@ const variantClass = (variant: ItemVariant) => {
                 height: 4px;
                 border-radius: var(--ui-radius);
                 background: currentColor;
+                transform: scaleX(0);
+                transition: transform 300ms $spring;
+            }
+
+            &.selected::after {
+                transform: scaleX(1);
+            }
+
+            &:hover {
+                translate: 0 -2px;
+            }
+
+            &:active {
+                scale: 0.95;
             }
 
             $colors: (

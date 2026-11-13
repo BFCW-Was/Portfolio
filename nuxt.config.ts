@@ -31,7 +31,14 @@ export default defineNuxtConfig({
     },
 
     // Diseño
-    css: ['~/assets/css/main.css'],
+    css: [
+        '~/assets/css/main.css',
+        '~/assets/scss/decorative_border.scss',
+        '~/assets/scss/decorative_hover.scss',
+        '~/assets/scss/decorative_ring.scss',
+        '~/assets/scss/decorative_tile.scss',
+        '~/assets/scss/decorative_title.scss',
+    ],
     colorMode: { preference: 'dark', fallback: 'dark' },
 
     // Imágenes
