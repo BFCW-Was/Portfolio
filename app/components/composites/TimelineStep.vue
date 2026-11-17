@@ -49,6 +49,10 @@ const props = defineProps({
         type: Boolean,
         default: true,
     },
+    initialExpanded: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const parent = inject<Ref<Variant> | undefined>('timelineVariant', undefined);
@@ -56,13 +60,14 @@ const current = computed<Variant>(() => props.variant ?? parent?.value ?? 'numbe
 const root = useTemplateRef<HTMLElement>('root');
 const reveal = ref<'hidden' | 'shown'>();
 const text = useTemplateRef<HTMLElement>('text');
-const expanded = ref(false);
+const expanded = ref(props.initialExpanded);
 const overflowing = ref(false);
-let resizeObserver: ResizeObserver | undefined;
 const measure = () => {
     if (!text.value || expanded.value) return;
     overflowing.value = text.value.scrollHeight > text.value.clientHeight + 1;
 };
+
+let resizeObserver: ResizeObserver | undefined;
 let observer: IntersectionObserver | undefined;
 
 onMounted(() => {
@@ -197,7 +202,7 @@ $dot: 1rem;
         }
 
         .step-text {
-            --text-lines: 2;
+            --text-lines: 3;
 
             margin: 0.3rem 0;
             color: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
