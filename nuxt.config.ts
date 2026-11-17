@@ -9,6 +9,8 @@ export default defineNuxtConfig({
         baseURL: '/Portfolio/',
         // SEO
         head: {
+            title: 'Bastián Contreras Wasilkowski',
+            titleTemplate: '%s | BFCW',
             link: [
                 {
                     rel: 'icon',
