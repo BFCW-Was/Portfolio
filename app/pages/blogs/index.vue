@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IconStackItem } from '~/components/primitives/IconStack.vue';
+import type { IconStackItem } from '~/components/composites/IconStack.vue';
 
 const socialLinks: IconStackItem[] = [
     { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/bastiancontreraswasilkowski/' },
