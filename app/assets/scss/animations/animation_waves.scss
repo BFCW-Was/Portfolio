@@ -1,0 +1,14 @@
+// Ondas: Anillo semitransparente fijo alrededor del elemento y otro que se expande hacia afuera hasta desvanecerse. | animation: waves 2s ease-out infinite;
+@keyframes waves {
+    from {
+        box-shadow:
+            0 0 0 0.25rem color-mix(in oklab, var(--wave-color, var(--ui-primary)) 25%, transparent),
+            0 0 0 0.25rem color-mix(in oklab, var(--wave-color, var(--ui-primary)) 50%, transparent);
+    }
+
+    to {
+        box-shadow:
+            0 0 0 0.25rem color-mix(in oklab, var(--wave-color, var(--ui-primary)) 25%, transparent),
+            0 0 0 1rem transparent;
+    }
+}

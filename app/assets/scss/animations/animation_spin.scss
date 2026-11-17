@@ -1,0 +1,6 @@
+// Spin: Giro de 360°. | animation: spin 24s linear infinite;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

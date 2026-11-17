@@ -68,6 +68,8 @@ onBeforeUnmount(() => observer?.disconnect());
 </script>
 
 <style scoped lang="scss">
+@use '~/assets/scss/animations/animation_waves.scss';
+
 $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
 $row: 1rem;
 $dot: 1rem;
@@ -226,7 +228,9 @@ $dot: 1rem;
     }
 
     &[data-variant='dot']:hover .step-node {
-        animation: step-pulse 1200ms ease-out infinite;
+        --wave-color: var(--ui-primary);
+
+        animation: waves 1200ms ease-out infinite;
     }
 
     &[data-reveal='hidden'] {
@@ -247,20 +251,6 @@ $dot: 1rem;
             opacity: 0;
             translate: 0 0.75rem;
         }
-    }
-}
-
-@keyframes step-pulse {
-    from {
-        box-shadow:
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 25%, transparent),
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 50%, transparent);
-    }
-
-    to {
-        box-shadow:
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 25%, transparent),
-            0 0 0 1rem transparent;
     }
 }
 </style>
