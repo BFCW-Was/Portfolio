@@ -1,5 +1,5 @@
 <template>
-    <div class="panel decorative-border decorative-hover">
+    <div class="panel ornamental-border ornamental-hover">
         <div class="header">
             <div class="avatar">
                 <img v-if="avatar" :src="avatar" alt="avatar" />

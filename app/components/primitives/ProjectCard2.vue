@@ -1,7 +1,7 @@
 <template>
-    <div class="project-card decorative-border decorative-hover">
+    <div class="project-card ornamental-border ornamental-hover">
         <header class="project-head">
-            <span v-if="index !== undefined" class="decorative-ring project-index">{{ index }}</span>
+            <span v-if="index !== undefined" class="ornamental-ring project-index">{{ index }}</span>
             <h4 class="project-name">{{ name }}</h4>
         </header>
         <div class="project-content">
@@ -10,8 +10,8 @@
                     <p v-for="(line, i) in toLines(description)" :key="i" class="project-text">{{ line }}</p>
                 </div>
                 <span class="project-dots" aria-hidden="true">
-                    <span class="decorative-ring project-dot" />
-                    <span class="decorative-ring project-dot" />
+                    <span class="ornamental-ring project-dot" />
+                    <span class="ornamental-ring project-dot" />
                 </span>
             </div>
             <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="bottom-right" />

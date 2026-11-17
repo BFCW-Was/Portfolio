@@ -1,18 +1,18 @@
 <template>
-    <div class="project-card decorative-border decorative-hover">
+    <div class="project-card ornamental-border ornamental-hover">
         <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="top-left" />
         <div class="project-header">
-            <span v-if="index !== undefined" class="decorative-ring project-index">
+            <span v-if="index !== undefined" class="ornamental-ring project-index">
                 {{ index }}
             </span>
             <h4 class="project-name">{{ name }}</h4>
         </div>
         <p v-for="(line, i) in toLines(description)" :key="i" class="project-text">{{ line }}</p>
         <span class="project-dots" aria-hidden="true">
-            <span class="decorative-ring project-dot" />
-            <span class="decorative-ring project-dot" />
+            <span class="ornamental-ring project-dot" />
+            <span class="ornamental-ring project-dot" />
         </span>
-        <span class="decorative-ring project-dot project-dot--corner" aria-hidden="true" />
+        <span class="ornamental-ring project-dot project-dot--corner" aria-hidden="true" />
     </div>
 </template>
 

@@ -1,12 +1,11 @@
 <template>
-    <div class="project-card decorative-border decorative-hover">
-        <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" ratio="1" badge="bottom-left" />
+    <div class="project-card ornamental-border ornamental-hover">
         <div class="project-body">
-            <span v-if="index !== undefined" class="decorative-ring project-index">{{ index }}</span>
+            <span v-if="index !== undefined" class="ornamental-ring project-index">{{ index }}</span>
             <h4 class="project-name">{{ name }}</h4>
             <p v-for="(line, i) in toLines(description)" :key="i" class="project-text">{{ line }}</p>
         </div>
-        <span class="decorative-ring project-dot" aria-hidden="true" />
+        <span class="ornamental-ring project-dot" aria-hidden="true" />
     </div>
 </template>
 
