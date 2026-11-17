@@ -16,7 +16,6 @@
     top: clamp(1.25rem, 2dvw, 1.75rem);
     bottom: calc(clamp(1.25rem, 2dvw, 1.75rem) + var(--footer-height));
     border: 1px solid;
-    padding: 2dvh 2dvw;
     box-sizing: border-box;
     overflow-y: auto;
 }

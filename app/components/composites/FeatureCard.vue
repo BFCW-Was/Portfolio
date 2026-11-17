@@ -1,7 +1,7 @@
 <template>
-    <div class="feature-card decorative-border decorative-hover">
+    <div class="feature-card ornamental-border ornamental-hover">
         <div class="feature-body" tabindex="0" role="region" :aria-label="name" :style="{ maxHeight }">
-            <span class="decorative-tile">
+            <span class="ornamental-tile">
                 <UIcon :name="icon" />
             </span>
             <h3 class="feature-name">{{ name }}</h3>
@@ -11,7 +11,7 @@
                 <p v-for="(line, j) in toLines(feature.description)" :key="j" class="feature-text">{{ line }}</p>
             </div>
         </div>
-        <span class="decorative-ring feature-ring" aria-hidden="true" />
+        <span class="ornamental-ring feature-ring" aria-hidden="true" />
     </div>
 </template>
 

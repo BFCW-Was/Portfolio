@@ -46,6 +46,7 @@ const symbolClass = computed(() => ({
 .separator {
     --separator-color: var(--ui-secondary);
 
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;

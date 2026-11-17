@@ -11,8 +11,10 @@
 
         <div class="step-content">
             <h3 class="step-title">{{ current === 'number' ? `Step ${number}: ${title}` : title }}</h3>
-            <p v-if="description" class="step-text">{{ description }}</p>
-            <button v-if="buttonText" type="button" class="step-button">{{ buttonText }}</button>
+            <p v-if="description" ref="text" class="step-text" :class="{ 'is-collapsible': collapsible }" :data-expanded="expanded">{{ description }}</p>
+            <button v-if="description && collapsible && (overflowing || expanded)" type="button" class="step-toggle" :aria-expanded="expanded" @click="expanded = !expanded">
+                {{ expanded ? 'Ver menos' : 'Ver más' }}
+            </button>
         </div>
     </li>
 </template>
@@ -43,12 +45,24 @@ const props = defineProps({
         default: undefined,
         validator: (v: string) => ['number', 'dot'].includes(v),
     },
+    collapsible: {
+        type: Boolean,
+        default: true,
+    },
 });
 
 const parent = inject<Ref<Variant> | undefined>('timelineVariant', undefined);
 const current = computed<Variant>(() => props.variant ?? parent?.value ?? 'number');
 const root = useTemplateRef<HTMLElement>('root');
 const reveal = ref<'hidden' | 'shown'>();
+const text = useTemplateRef<HTMLElement>('text');
+const expanded = ref(false);
+const overflowing = ref(false);
+let resizeObserver: ResizeObserver | undefined;
+const measure = () => {
+    if (!text.value || expanded.value) return;
+    overflowing.value = text.value.scrollHeight > text.value.clientHeight + 1;
+};
 let observer: IntersectionObserver | undefined;
 
 onMounted(() => {
@@ -62,12 +76,21 @@ onMounted(() => {
         { threshold: 0.2 }
     );
     if (root.value) observer.observe(root.value);
+    if (text.value) {
+        resizeObserver = new ResizeObserver(measure);
+        resizeObserver.observe(text.value);
+    }
 });
 
-onBeforeUnmount(() => observer?.disconnect());
+onBeforeUnmount(() => {
+    observer?.disconnect();
+    resizeObserver?.disconnect();
+});
 </script>
 
 <style scoped lang="scss">
+@use '~/assets/scss/animations/animation_waves.scss';
+
 $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
 $row: 1rem;
 $dot: 1rem;
@@ -174,8 +197,32 @@ $dot: 1rem;
         }
 
         .step-text {
+            --text-lines: 2;
+
             margin: 0.3rem 0;
             color: color-mix(in oklab, var(--ui-component-text) 50%, transparent);
+
+            &.is-collapsible[data-expanded='false'] {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: var(--text-lines);
+                line-clamp: var(--text-lines);
+            }
+        }
+
+        .step-toggle {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            font-size: 0.875rem;
+            color: var(--ui-primary);
+            cursor: pointer;
+
+            &:focus-visible {
+                outline: 2px solid var(--ui-primary);
+                outline-offset: 2px;
+            }
         }
 
         .step-button {
@@ -226,7 +273,9 @@ $dot: 1rem;
     }
 
     &[data-variant='dot']:hover .step-node {
-        animation: step-pulse 1200ms ease-out infinite;
+        --wave-color: var(--ui-primary);
+
+        animation: waves 1200ms ease-out infinite;
     }
 
     &[data-reveal='hidden'] {
@@ -247,20 +296,6 @@ $dot: 1rem;
             opacity: 0;
             translate: 0 0.75rem;
         }
-    }
-}
-
-@keyframes step-pulse {
-    from {
-        box-shadow:
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 25%, transparent),
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 50%, transparent);
-    }
-
-    to {
-        box-shadow:
-            0 0 0 0.25rem color-mix(in oklab, var(--ui-primary) 25%, transparent),
-            0 0 0 1rem transparent;
     }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div class="thumbnail-card decorative-border decorative-hover">
-        <PrimitivesPhotoFrame class="thumbnail-photo" :image="image" :alt="title" ratio="4 / 3" :bordered="false" />
+    <div class="thumbnail-card ornamental-border ornamental-hover">
+        <CompositesPhotoFrame class="thumbnail-photo" :image="image" :alt="title" ratio="4 / 3" :bordered="false" />
 
         <div class="content">
             <h3 class="title">{{ title }}</h3>

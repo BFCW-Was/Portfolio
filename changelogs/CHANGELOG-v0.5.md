@@ -1,10 +1,13 @@
 # **Versiones:**
 
-## 0.5.0 (5%): Estructura de Vistas y Contenido en Español | [Work in Progress]
+## 0.5.0 (15%): Estructura de Vistas y Contenido en Español | [Work in Progress]
 
 ### Added
 
+- Incorporación del título de la web en pestaña del navegador.
+- Reestructuración de blogs y games para tener navegación por ID + la página principal.
 - Implementación de la navegación básica entre todas las vistas la web.
+- Implementación de movimiento hacia arriba de la web al cambiar de página.
 - Creación de la estructura visual (elementos y su ubicación) de las vistas principales:
     - "about": Muestra una introducción de mí, mis gustos y mi forma de trabajar.
     - "experience": Muestra el detalle de mi experiencia académica y profesional.
@@ -21,4 +24,3 @@
     - "not_found" (404): Muestra un mensaje de error para rutas incorrectas y páginas no encontradas.
     - "under_construction" (501): Muestra un mensaje de error para páginas en construcción.
 - Incorporación del contenido definitivo de las vistas principales, en español.
-- Corrección y revisión de los textos y la consistencia del contenido.

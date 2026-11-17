@@ -5,7 +5,7 @@
             <UButton color="primary" @click="isVisibleBotones = !isVisibleBotones">{{ isVisibleBotones ? 'Ocultar' : 'Mostrar' }} Botones</UButton>
             <UButton color="primary" @click="isVisibleImagenes = !isVisibleImagenes">{{ isVisibleImagenes ? 'Ocultar' : 'Mostrar' }} Imagenes</UButton>
             <UButton color="primary" @click="isVisibleComponentes = !isVisibleComponentes">{{ isVisibleComponentes ? 'Ocultar' : 'Mostrar' }} Componentes</UButton>
-            <UButton color="primary" @click="isVisibleThemes = !isVisibleThemes">{{ isVisibleThemes ? 'Ocultar' : 'Mostrar' }} Temas</UButton>
+            <UButton color="primary" @click="isVisibleThemesAndStyles = !isVisibleThemesAndStyles">{{ isVisibleThemesAndStyles ? 'Ocultar' : 'Mostrar' }} Temas y Estilos</UButton>
         </div>
         <!-- #################### TEXTOS #################### -->
         <div v-if="isVisibleTextos">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <hr class="my-5" />
+                <hr class="my-5 w-full" />
                 <section>
                     <h2 class="mb-4 text-lg font-semibold">Ejemplo de Código</h2>
                     <DomainCodeDisplay>
@@ -92,7 +92,7 @@
                         </DomainCodeDisplayFile>
                     </DomainCodeDisplay>
                 </section>
-                <hr class="my-5" />
+                <hr class="my-5 w-full" />
                 <div class="flex flex-col gap-2">
                     <h1>Title (h1)</h1>
                     <h2>Title (h2)</h2>
@@ -114,7 +114,7 @@
                     <mark>Highlighted (mark)</mark>
                 </div>
             </div>
-            <hr class="my-5" />
+            <hr class="my-5 w-full" />
             <div class="flex flex-col items-center gap-2">
                 <UButton @click="changeTextBlockWidth">Ancho: {{ textBlockWidth }}</UButton>
                 <div v-for="n in 7" :key="n" :style="{ width: textBlockWidth }">
@@ -145,12 +145,12 @@
             <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-pdf" variant="outlined" class="m-4" />
             <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-audio" variant="gradient" class="m-4" />
             <PrimitivesDownloadButton label="Descargar Archivo" href="/files/sample.pdf" icon="i-fa6-solid-file-invoice" variant="filled" class="m-4" />
-            <hr class="my-5" />
+            <hr class="my-5 w-full" />
             <!-- ClipboardTooltip.vue -->
             <PrimitivesClipboardTooltip text="Test Text" class="m-4">
                 <UButton aria-label="Test Label" color="neutral" variant="subtle" icon="i-fa6-solid-flask-vial" label="Test Span" />
             </PrimitivesClipboardTooltip>
-            <hr class="my-5" />
+            <hr class="my-5 w-full" />
         </div>
         <!-- #################### IMÁGENES #################### -->
         <div v-if="isVisibleImagenes">
@@ -169,48 +169,18 @@
         <div v-if="isVisibleComponentes">
             <h1>Componentes</h1>
             <hr class="my-2" />
-            <!-- Thumbnail.vue -->
-            <PrimitivesThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
-            <hr class="my-5" />
-            <!-- Separador.vue -->
-            <PrimitivesSeparator />
-            <PrimitivesSeparator :decoration="1" />
-            <PrimitivesSeparator :decoration="2" />
-            <PrimitivesSeparator :decoration="3" />
-            <PrimitivesSeparator variant="subtle" thickness="8px" />
-            <hr class="my-5" />
-            <!-- Panel.vue -->
-            <PrimitivesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
-            <hr class="my-5" />
-            <!-- FeatureCard.vue -->
-            <PrimitivesFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
-            <hr class="my-5" />
-            <!-- ProjectDescription.vue [1, 2 & 3] -->
-            <PrimitivesProjectCard1 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
-            <hr class="my-5" />
-            <PrimitivesProjectCard2 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
-            <hr class="my-5" />
-            <PrimitivesProjectCard3 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
-            <hr class="my-5" />
-            <!-- InformationCard.vue -->
-            <PrimitivesInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
-                <template #body>
-                    <div class="text-default">
-                        <p>Este es un div de ejemplo.</p>
-                        <UButton size="xs" color="primary" @click="nextColorIC">Cambiar Color</UButton>
-                    </div>
-                </template>
-            </PrimitivesInformationCard>
-            <hr class="my-5" />
-            <!-- TechStack.vue -->
-            <div class="my-12">
-                <DomainTechStack :columns="6" :items="itemsTechStack" />
-            </div>
-            <hr class="my-5" />
-            <!-- CodeDisplay.vue -->
-            <DomainCodeDisplay>
-                <DomainCodeDisplayFile name="index.html" language="html">
-                    <pre v-pre>
+            <h4>Componentes del Dominio</h4>
+            <hr class="my-2" />
+            <div class="mx-[8%] flex flex-col items-center gap-2">
+                <!-- TechStack.vue -->
+                <div class="my-12">
+                    <DomainTechStack :columns="6" :items="itemsTechStack" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- CodeDisplay.vue -->
+                <DomainCodeDisplay>
+                    <DomainCodeDisplayFile name="index.html" language="html">
+                        <pre v-pre>
                         <head>
                             <title>Page Title</title>
                         </head>
@@ -219,9 +189,9 @@
                             <p>This is a paragraph.</p>
                         </body>
                     </pre>
-                </DomainCodeDisplayFile>
-                <DomainCodeDisplayFile name="style.css" language="css">
-                    <pre v-pre>
+                    </DomainCodeDisplayFile>
+                    <DomainCodeDisplayFile name="style.css" language="css">
+                        <pre v-pre>
                         body {
                             background-color: powderblue;
                         }
@@ -232,67 +202,175 @@
                             color: red;
                         }
                     </pre>
-                </DomainCodeDisplayFile>
-            </DomainCodeDisplay>
-            <hr class="my-5" />
-            <!-- Timeline.vue -->
-            <PrimitivesTimeline variant="number">
-                <PrimitivesTimelineStep :number="1" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <PrimitivesTimelineStep :number="2" title="Title 2" description="Second step" />
-                <PrimitivesTimelineStep :number="3" title="Title 3" description="Another step" />
-                <PrimitivesTimelineStep :number="4" title="Title 4" description="Last step" buttonText="Finish" />
-            </PrimitivesTimeline>
-            <hr class="my-5" />
-            <PrimitivesTimeline variant="dot">
-                <PrimitivesTimelineStep label="2026" title="Title 1" description="Lorem ipsum..." buttonText="See Examples" />
-                <PrimitivesTimelineStep label="2025" title="Title 2" description="Second step" />
-                <PrimitivesTimelineStep label="2025" title="Title 3" description="Another step" />
-                <PrimitivesTimelineStep label="2024" title="Title 4" description="Last step" buttonText="Finish" />
-            </PrimitivesTimeline>
-            <hr class="my-5" />
-            <!-- ItemSelector.vue -->
-            <PrimitivesItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
-            <div class="text-center">Seleccionado: {{ selectedItem }}</div>
-            <hr class="my-5" />
-            <!-- IconStack.vue -->
-            <div class="flex flex-wrap gap-12">
-                <PrimitivesIconStack :floating="false" position="left" :items="socialLinks" />
-                <PrimitivesIconStack :floating="false" position="top" :items="socialLinks" />
-                <PrimitivesIconStack :floating="false" position="bottom" :items="socialLinks" />
-                <PrimitivesIconStack :floating="false" position="right" :items="socialLinks" />
+                    </DomainCodeDisplayFile>
+                </DomainCodeDisplay>
+                <hr class="my-5 w-full" />
             </div>
-            <hr class="my-5" />
-            <!-- Title Card.vue -->
-            <div class="flex flex-wrap gap-5">
-                <PrimitivesTitleCard title="Temporal Title" variant="top-left" />
-                <PrimitivesTitleCard title="Temporal Title" variant="top-right" />
-                <PrimitivesTitleCard title="Temporal Title" variant="bottom-left" />
-                <PrimitivesTitleCard title="Temporal Title" variant="bottom-right" />
+
+            <h4>Componentes Compuestos</h4>
+            <hr class="my-2" />
+            <div class="mx-[8%] flex flex-col items-center gap-2">
+                <!-- Thumbnail.vue -->
+                <CompositesThumbnail :image="usePublicAsset(fireTesting?.src)" title="TITLE" theme="THEME" year="2026" />
+                <hr class="my-5 w-full" />
+                <!-- Panel.vue -->
+                <div class="flex flex-wrap gap-12">
+                    <CompositesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." :avatar="usePublicAsset(fireTesting?.src)" />
+                    <CompositesPanel name="Lorem ipsum" position="Lorem ipsum" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." avatar="i-lucide-user" avatarType="icon" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- FeatureCard.vue -->
+                <CompositesFeatureCard name="Título" icon="i-fa6-solid-quote-right" description="Descripción" :features="featuresForCard" />
+                <hr class="my-5 w-full" />
+                <!-- ProjectDescription.vue [1, 2 & 3] -->
+                <CompositesProjectCard1
+                    :index="1"
+                    name="Name"
+                    :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']"
+                    :image="usePublicAsset(fireTesting?.src)"
+                    year="2026"
+                    :signage="signageItem"
+                />
+                <hr class="my-5 w-full" />
+                <CompositesProjectCard2 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
+                <hr class="my-5 w-full" />
+                <CompositesProjectCard3 :index="1" name="Name" :description="['Lorem ipsum dolor sit amet, consectetur adipiscing elit...']" :image="usePublicAsset(fireTesting?.src)" year="2026" />
+                <hr class="my-5 w-full" />
+                <!-- InformationCard.vue -->
+                <CompositesInformationCard title="Test Title" subtitle="Test Subtitle" footnote="Test Footnote" :color="currentColorIC">
+                    <template #body>
+                        <div class="text-default">
+                            <p>Este es un div de ejemplo.</p>
+                            <UButton size="xs" color="primary" @click="nextColorIC">Cambiar Color</UButton>
+                        </div>
+                    </template>
+                </CompositesInformationCard>
+                <hr class="my-5 w-full" />
+                <!-- Timeline.vue -->
+                <CompositesTimeline variant="number">
+                    <CompositesTimelineStep
+                        :number="1"
+                        title="Title 1"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in felis sed orci facilisis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent
+                        mollis finibus diam a volutpat. Suspendisse sed tristique purus. Etiam quis tellus at justo mattis maximus at non mi. Maecenas condimentum rhoncus nulla. Mauris interdum
+                        consequat enim at suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc blandit lacus in nisi cursus, eget eleifend massa
+                        semper. Fusce hendrerit dolor non pharetra bibendum. Donec ut semper quam, ac scelerisque turpis. Donec vel sodales orci, eget faucibus risus. Fusce quis sodales sapien, eget
+                        viverra velit. Nunc blandit quis massa faucibus sodales."
+                        buttonText="See Examples"
+                    />
+                    <CompositesTimelineStep :number="2" title="Title 2" description="Second step" />
+                    <CompositesTimelineStep :number="3" title="Title 3" description="Another step" />
+                    <CompositesTimelineStep :number="4" title="Title 4" description="Last step" buttonText="Finish" />
+                </CompositesTimeline>
+                <hr class="my-5 w-full" />
+                <CompositesTimeline variant="dot">
+                    <CompositesTimelineStep
+                        label="2026"
+                        title="Title 1"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in felis sed orci facilisis tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent
+                        mollis finibus diam a volutpat. Suspendisse sed tristique purus. Etiam quis tellus at justo mattis maximus at non mi. Maecenas condimentum rhoncus nulla. Mauris interdum
+                        consequat enim at suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc blandit lacus in nisi cursus, eget eleifend massa
+                        semper. Fusce hendrerit dolor non pharetra bibendum. Donec ut semper quam, ac scelerisque turpis. Donec vel sodales orci, eget faucibus risus. Fusce quis sodales sapien, eget
+                        viverra velit. Nunc blandit quis massa faucibus sodales."
+                        buttonText="See Examples"
+                    />
+                    <CompositesTimelineStep label="2025" title="Title 2" description="Second step" />
+                    <CompositesTimelineStep label="2025" title="Title 3" description="Another step" />
+                    <CompositesTimelineStep label="2024" title="Title 4" description="Last step" buttonText="Finish" />
+                </CompositesTimeline>
+                <hr class="my-5 w-full" />
+                <!-- ItemSelector.vue -->
+                <CompositesItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
+                <div class="text-center">Seleccionado: {{ selectedItem }}</div>
+                <hr class="my-5 w-full" />
+                <!-- IconStack.vue -->
+                <div class="flex flex-wrap gap-12">
+                    <CompositesIconStack :floating="false" position="left" :items="socialLinks" />
+                    <CompositesIconStack :floating="false" position="top" :items="socialLinks" />
+                    <CompositesIconStack :floating="false" position="bottom" :items="socialLinks" />
+                    <CompositesIconStack :floating="false" position="right" :items="socialLinks" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- PhotoFrame.vue -->
+                <CompositesPhotoFrame
+                    style="width: 250px"
+                    :image="usePublicAsset(fireTesting?.src)"
+                    :alt="fireTesting?.alt"
+                    year="2026"
+                    ratio="1"
+                    badge="bottom-left"
+                    :signage="{ variant: 'outlined', text: '2026' }"
+                />
+                <hr class="my-5 w-full" />
             </div>
-            <hr class="my-5" />
-            <!-- Signage.vue -->
-            <div class="flex flex-wrap gap-5">
-                <PrimitivesSignage variant="outlined" text="Test Texto" />
-                <PrimitivesSignage variant="gradient" text="Test Texto" />
-                <PrimitivesSignage variant="filled" text="Test Texto" />
-            </div>
-            <hr class="my-5" />
-            <!-- PolygonalIcon.vue -->
-            <div class="flex flex-wrap gap-5">
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
-                <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
+
+            <h4>Componentes Primitivos</h4>
+            <hr class="my-2" />
+            <div class="mx-[8%] flex flex-col items-center gap-2">
+                <!-- Separador.vue -->
+                <PrimitivesSeparator />
+                <PrimitivesSeparator :decoration="1" />
+                <PrimitivesSeparator :decoration="2" />
+                <PrimitivesSeparator :decoration="3" />
+                <PrimitivesSeparator variant="subtle" thickness="8px" />
+                <hr class="my-5 w-full" />
+                <!-- IconLink.vue -->
+                <div class="flex flex-wrap gap-12">
+                    <PrimitivesIconLink label="GitHub" to="https://github.com" icon="i-simple-icons-github" position="top" />
+                    <PrimitivesIconLink label="GitHub" to="https://github.com" icon="i-simple-icons-github" position="bottom" />
+                    <PrimitivesIconLink label="GitHub" to="https://github.com" icon="i-simple-icons-github" position="left" />
+                    <PrimitivesIconLink label="GitHub" to="https://github.com" icon="i-simple-icons-github" position="right" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- Title Card.vue -->
+                <div class="flex flex-wrap gap-5">
+                    <PrimitivesTitleCard title="Temporal Title" variant="top-left" />
+                    <PrimitivesTitleCard title="Temporal Title" variant="top-right" />
+                    <PrimitivesTitleCard title="Temporal Title" variant="bottom-left" />
+                    <PrimitivesTitleCard title="Temporal Title" variant="bottom-right" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- Signage.vue -->
+                <div class="flex flex-wrap gap-5">
+                    <PrimitivesSignage variant="outlined" text="Test Texto" />
+                    <PrimitivesSignage variant="gradient" text="Test Texto" />
+                    <PrimitivesSignage variant="filled" text="Test Texto" />
+                </div>
+                <hr class="my-5 w-full" />
+                <!-- PolygonalIcon.vue -->
+                <div class="flex flex-wrap gap-5">
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="3" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="4" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="5" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="12" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="24" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="50" :size="100" />
+                    <PrimitivesPolygonalIcon icon="i-fa6-solid-star" :sides="0" :size="100" />
+                </div>
             </div>
         </div>
 
         <!-- #################### THEME #################### -->
-        <div v-if="isVisibleThemes">
-            <h1>Temas</h1>
+        <div v-if="isVisibleThemesAndStyles">
+            <h1>Temas y Estilos</h1>
             <hr class="my-2" />
+            <div class="animations-test">
+                <ul class="grid">
+                    <li v-for="item in animations" :key="item.name" class="card ornamental-border">
+                        <div class="stage">
+                            <!-- El key cambia al repetir, lo que reinicia la animación -->
+                            <div :key="item.runs" class="sample" :class="item.name">
+                                <UIcon name="i-lucide-sparkles" />
+                            </div>
+                        </div>
+                        <code>{{ item.name }}</code>
+                        <p>{{ item.note }}</p>
+                        <UButton size="xs" variant="outline" icon="i-lucide-rotate-ccw" @click="item.runs++">Repetir</UButton>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-5 w-full" />
+
             <div class="mx-auto w-full max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <UCard class="bg-primary p-6">
@@ -329,7 +407,7 @@
                     <UCheckbox label="Checkbox" color="primary" />
                 </div>
             </div>
-            <hr class="my-5" />
+            <hr class="my-5 w-full" />
 
             <!-- Colores por Palette -->
             <div v-for="palette in palettesWithValues" :key="palette.category" class="mx-16 space-y-3">
@@ -348,7 +426,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="my-5" />
+            <hr class="my-5 w-full" />
         </div>
         <!-- ##### -->
     </section>
@@ -356,9 +434,10 @@
 
 <script setup lang="ts">
 import type { TechStackItem } from '~/components/domain/TechStack.vue';
-import type { FeatureItem } from '~/components/primitives/FeatureCard.vue';
-import type { IconStackItem } from '~/components/primitives/IconStack.vue';
-import type { SelectorItem } from '~/components/primitives/ItemSelector.vue';
+import type { FeatureItem } from '~/components/composites/FeatureCard.vue';
+import type { IconStackItem } from '~/components/composites/IconStack.vue';
+import type { SelectorItem } from '~/components/composites/ItemSelector.vue';
+import type { SignageItem } from '~/components/composites/PhotoFrame.vue';
 import { usePublicAsset } from '~/composables/use_public_assets';
 import { assetsManager } from '~/utils/assets_manager';
 
@@ -375,7 +454,7 @@ const isVisibleTextos = ref(false);
 const isVisibleBotones = ref(false);
 const isVisibleImagenes = ref(false);
 const isVisibleComponentes = ref(false);
-const isVisibleThemes = ref(false);
+const isVisibleThemesAndStyles = ref(false);
 
 // Cambio de Ancho de Texto:
 const textBlockWidth = ref('100%');
@@ -533,6 +612,20 @@ const palettesWithValues = computed(() => {
     }));
 });
 
+// Animaciones
+const animations = reactive([
+    { name: 'drop', note: 'Entrada con desplazamiento (desde arriba)', runs: 0 },
+    { name: 'rise', note: 'Entrada con desplazamiento (desde abajo)', runs: 0 },
+    { name: 'spin', note: 'Giro continuo', runs: 0 },
+    { name: 'float', note: 'Flotación vertical suave', runs: 0 },
+    { name: 'vibration', note: 'Sacudidas laterales rápidas', runs: 0 },
+    { name: 'twinkle', note: 'Tintineo con destello', runs: 0 },
+    { name: 'waves', note: 'Ondas que se expanden', runs: 0 },
+    { name: 'lift', note: 'Levantamiento suave', runs: 0 },
+    { name: 'upscale', note: 'Aumento de escala', runs: 0 },
+    { name: 'downscale', note: 'Disminución de escala', runs: 0 },
+]);
+
 // FeatureCard
 const featuresForCard: FeatureItem[] = [
     { title: 'Característica 1', description: 'Párrafo único de la característica 1.' },
@@ -645,4 +738,113 @@ const socialLinks: IconStackItem[] = [
     { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/BFCW-Was' },
     { icon: 'i-lucide-rss', label: 'Blogs', to: '/blogs' },
 ];
+
+// ProjectCard:
+const signageItem: SignageItem = {
+    variant: 'outlined',
+    text: 'label',
+    position: 'top-right',
+};
 </script>
+
+<style lang="scss" scoped>
+@use '~/assets/scss/animations/animation_rise.scss';
+@use '~/assets/scss/animations/animation_drop.scss';
+@use '~/assets/scss/animations/animation_spin.scss';
+@use '~/assets/scss/animations/animation_float.scss';
+@use '~/assets/scss/animations/animation_vibration.scss';
+@use '~/assets/scss/animations/animation_twinkle.scss';
+@use '~/assets/scss/animations/animation_waves.scss';
+@use '~/assets/scss/animations/animation_lift.scss';
+@use '~/assets/scss/animations/animation_upscale.scss';
+@use '~/assets/scss/animations/animation_downscale.scss';
+
+.animations-test {
+    --duration: 2s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: var(--ui-component-text);
+
+            .stage {
+                display: grid;
+                place-items: center;
+                width: 100%;
+                height: 6rem;
+
+                .sample {
+                    display: grid;
+                    place-items: center;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: var(--ui-radius);
+                    background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), var(--ui-component));
+                    font-size: 1.5rem;
+
+                    &.drop {
+                        animation: drop var(--duration) ease-in-out infinite;
+                    }
+
+                    &.rise {
+                        animation: rise var(--duration) ease-in-out infinite;
+                    }
+
+                    &.spin {
+                        animation: spin var(--duration) ease-in-out infinite;
+                    }
+
+                    &.float {
+                        animation: float var(--duration) ease-in-out infinite;
+                    }
+
+                    &.vibration {
+                        animation: vibration var(--duration) ease-in-out infinite;
+                    }
+
+                    &.twinkle {
+                        animation: twinkle var(--duration) ease-in-out infinite;
+                    }
+
+                    &.waves {
+                        animation: waves var(--duration) ease-in-out infinite;
+                    }
+
+                    &.lift {
+                        animation: lift var(--duration) ease-in-out infinite;
+                    }
+
+                    &.upscale {
+                        animation: upscale var(--duration) ease-in-out infinite;
+                    }
+
+                    &.downscale {
+                        animation: downscale var(--duration) ease-in-out infinite;
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
+            }
+        }
+    }
+}
+</style>

@@ -1,0 +1,7 @@
+// Drop: Aparece/desaparece con un leve desplazamiento hacia abajo. | animation: drop 0.6s ease-in both;
+@keyframes drop {
+    from {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+}

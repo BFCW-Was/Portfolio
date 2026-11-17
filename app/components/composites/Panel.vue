@@ -1,8 +1,9 @@
 <template>
-    <div class="panel decorative-border decorative-hover">
+    <div class="panel ornamental-border ornamental-hover">
         <div class="header">
             <div class="avatar">
-                <img v-if="avatar" :src="avatar" alt="avatar" />
+                <img v-if="avatar && avatarType === 'image'" :src="avatar" alt="avatar" />
+                <UIcon v-else-if="avatar && avatarType === 'icon'" :name="avatar" class="avatar-icon" />
             </div>
             <div class="user-info">
                 <div class="name">{{ name }}</div>
@@ -32,6 +33,10 @@ const props = defineProps({
         type: String,
         default: '',
     },
+    avatarType: {
+        type: String as () => 'image' | 'icon',
+        default: 'image',
+    },
     quoteIcon: {
         type: String,
         default: 'i-fa6-solid-quote-right',
@@ -59,6 +64,7 @@ const props = defineProps({
 .avatar {
     width: 3rem;
     height: 3rem;
+    flex-shrink: 0;
     border-radius: var(--ui-radius-circular);
     background: radial-gradient(circle at 30% 30%, var(--ui-primary), var(--ui-secondary));
     display: flex;
@@ -70,6 +76,11 @@ const props = defineProps({
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .avatar-icon {
+        font-size: 1.5rem;
+        color: var(--color-bfcw-white-100);
     }
 }
 

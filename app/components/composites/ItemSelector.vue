@@ -48,6 +48,9 @@ const variantClass = (variant: ItemVariant) => {
 </script>
 
 <style scoped lang="scss">
+@use '~/assets/scss/animations/animation_lift.scss';
+@use '~/assets/scss/animations/animation_downscale.scss';
+
 $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
 
 .item-selector {
@@ -113,11 +116,11 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
             }
 
             &:hover {
-                translate: 0 -2px;
+                animation: lift 200ms cubic-bezier(0.35, 1.55, 0.65, 1) forwards;
             }
 
             &:active {
-                scale: 0.95;
+                animation: downscale 150ms ease forwards;
             }
 
             $colors: (

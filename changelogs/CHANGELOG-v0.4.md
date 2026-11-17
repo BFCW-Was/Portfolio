@@ -28,7 +28,6 @@
     - Cada página tiene un "section" con contenido específico.
     - Los "div" se usan para agrupar elementos dentro de paginas o componentes.
 - Mejora en responsividad de componentes.
-- Reestructuración de carpeta de componentes.
 
 ### Fixed
 
@@ -52,3 +51,43 @@
 ### Changed
 
 - Centralización de estilos SCSS decorativos en configuración global de Nuxt.
+
+## 0.4.3 (100%): Animaciones | 2026-11-17
+
+### Added
+
+- Implementación de animaciones SCSS nuevas (drop, rise, spin, twinkle, vibration, etc).
+- Centralización de animaciones en carpeta 'animations/'.
+
+### Changed
+
+- Separación de animaciones pre-existentes en archivos propios (waves).
+
+## 0.4.4 (100%): Cambios de Estructuración de Estilos | 2026-11-17
+
+### Changed
+
+- Renombre de componentes "decorative" a "ornamental".
+- Separación de archivos SCSS en base, ornamentales (ornamental) y animaciones (animations):
+    - Base (sin carpeta): Elementos de ambiente y utilizados a nivel global.
+    - Ornamentals: Adornos, no poseen funcionalidades que afecten como se comporta la web, ni otros componentes.
+    - Animations: Animaciones reutilizables de la web.
+
+## 0.4.5 (100%): Ajustes en Componentes y Cambios en su Estructuración + Mejoras de Estilos | 2026-11-17
+
+### Added
+
+- Implementación de componente IconLink para reutilización de iconos con enlaces.
+- Posibilidad de manejar ícono o imagen en componente de Panel.
+- Posibilidad de colapsar/desplegar información de las timelines.
+- Posibilidad de colocar la NavBar en vertical u horizontal.
+
+### Changed
+
+- Mejoras en colores y espaciado de la web.
+- Leves mejoras en responsividad.
+- Separación de componentes en base, primitivos (primitives), compuestos (composites) y dominio (domain):
+    - Base (sin carpeta): Elementos de ambiente y utilizados a nivel global.
+    - Primitives: Simples, no utilizan otros componentes en su implementación.
+    - Composites: Levemente más complejos, utilizan otros componentes en su implementación.
+    - Domain: Componentes específicos de la lógica del proyecto.

@@ -54,7 +54,7 @@ const tooltipPosition = computed(() => ({
     z-index: 9999;
     opacity: 0.9;
     transition: opacity 0.2s ease;
-    background-color: var(--ui-primary);
-    color: var(--ui-text);
+    background-color: var(--ui-component);
+    color: var(--ui-component-border);
 }
 </style>

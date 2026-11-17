@@ -2,7 +2,7 @@
     <div class="info-arrow-box" :class="variant">
         <svg viewBox="0 0 260 60" preserveAspectRatio="none">
             <defs>
-                <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="0">
+                <linearGradient :id="gradientId" x1="0" y1="0" x2="1" y2="0">
                     <stop offset="0%" :stop-color="gradientStart" />
                     <stop offset="100%" :stop-color="gradientEnd" />
                 </linearGradient>
@@ -39,8 +39,10 @@ const props = defineProps({
     },
 });
 
+const gradientId = `signage-gradient-${useId()}`;
+
 const backgroundFill = computed(() => {
-    if (props.variant === 'gradient' || props.variant === 'outlined') return 'url(#gradient)';
+    if (props.variant === 'gradient' || props.variant === 'outlined') return `url(#${gradientId})`;
     if (props.variant === 'filled') return 'var(--ui-primary-dark)';
     return 'transparent';
 });
@@ -61,25 +63,34 @@ const strokeColor = computed(() => {
 <style scoped lang="scss">
 .info-arrow-box {
     display: inline-flex;
-    align-items: center;
     position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    max-height: 50px;
-    transition: all 0.25s ease;
+    align-items: center;
+
+    width: fit-content;
+    min-width: 100px;
+    max-width: 500px;
+    min-height: 20px;
+
+    transition: opacity 0.25s ease;
+
+    svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     .content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 160px;
-        height: 90%;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        min-width: 0;
+        padding: 5px 30px 5px 15px;
         display: flex;
         align-items: center;
-        padding: 8px 16px;
         color: var(--color-bfcw-white-100);
-        z-index: 1;
+        overflow-wrap: anywhere;
+        line-height: 1.4;
     }
 
     &:hover {

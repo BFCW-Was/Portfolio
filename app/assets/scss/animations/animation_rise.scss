@@ -1,0 +1,7 @@
+// Rise: Aparece/desaparece con un leve desplazamiento hacia arriba. | animation: rise 0.6s ease-out both;
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+}

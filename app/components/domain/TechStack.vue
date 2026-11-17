@@ -3,7 +3,7 @@
         <li v-for="(item, i) in items" :key="item.name" class="tech-item" :class="{ 'tech-item--active': active === i }" :data-side="placements[i]?.side ?? 'right'">
             <button
                 type="button"
-                class="tech-tile decorative-tile"
+                class="tech-tile ornamental-tile"
                 :aria-label="item.name"
                 :aria-describedby="active === i ? `${uid}-card-${i}` : undefined"
                 @pointerenter="onEnter(i, $event)"

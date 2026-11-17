@@ -94,8 +94,8 @@
 .light {
     /* Background Colors */
     --ui-bg: var(--color-bfcw-white-70);
-    --ui-bg-muted: var(--color-bfcw-white-90);
     --ui-bg-elevated: var(--color-bfcw-white-50);
+    --ui-bg-muted: var(--color-bfcw-white-90);
     /* Text Colors */
     --ui-text: var(--color-bfcw-black-90);
     --ui-text-inverted: var(--color-bfcw-white-90);
@@ -103,12 +103,14 @@
     /* Accent Colors */
     /* Primary */
     --ui-primary: var(--color-bfcw-cyan-50);
+    --ui-primary-elevated: var(--color-bfcw-cyan-30);
     --ui-primary-muted: var(--color-bfcw-cyan-70);
     --ui-primary-dark: var(--color-bfcw-cyan-100);
     /* Secondary */
-    --ui-secondary: var(--color-bfcw-burgundy-70);
-    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
-    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-elevated: var(--color-bfcw-burgundy-30);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-70);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-90);
     /* Alert Colors */
     --ui-info: var(--color-bfcw-burgundy-30);
     --ui-success: var(--color-bfcw-cyan-50);
@@ -124,8 +126,8 @@
 .dark {
     /* Background Colors */
     --ui-bg: var(--color-bfcw-black-70);
-    --ui-bg-muted: var(--color-bfcw-black-50);
     --ui-bg-elevated: var(--color-bfcw-black-30);
+    --ui-bg-muted: var(--color-bfcw-black-50);
     /* Text Colors */
     --ui-text: var(--color-bfcw-white-90);
     --ui-text-inverted: var(--color-bfcw-black-90);
@@ -133,12 +135,14 @@
     /* Accent Colors */
     /* Primary */
     --ui-primary: var(--color-bfcw-cyan-70);
+    --ui-primary-elevated: var(--color-bfcw-cyan-50);
     --ui-primary-muted: var(--color-bfcw-cyan-90);
     --ui-primary-dark: var(--color-bfcw-cyan-100);
     /* Secondary */
-    --ui-secondary: var(--color-bfcw-burgundy-70);
-    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
-    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-elevated: var(--color-bfcw-burgundy-30);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-70);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-90);
     /* Alert Colors */
     --ui-info: var(--color-bfcw-burgundy-30);
     --ui-success: var(--color-bfcw-cyan-50);
@@ -154,8 +158,8 @@
 .theme-sepia {
     /* Background Colors */
     --ui-bg: var(--color-bfcw-sepia-90);
-    --ui-bg-muted: var(--color-bfcw-sepia-70);
     --ui-bg-elevated: var(--color-bfcw-sepia-100);
+    --ui-bg-muted: var(--color-bfcw-sepia-70);
     /* Text Colors */
     --ui-text: var(--color-bfcw-white-90);
     --ui-text-inverted: var(--color-bfcw-black-90);
@@ -163,19 +167,21 @@
     /* Accent Colors */
     /* Primary */
     --ui-primary: var(--color-bfcw-cyan-50);
+    --ui-primary-elevated: var(--color-bfcw-cyan-30);
     --ui-primary-muted: var(--color-bfcw-cyan-70);
     --ui-primary-dark: var(--color-bfcw-cyan-100);
     /* Secondary */
-    --ui-secondary: var(--color-bfcw-burgundy-70);
-    --ui-secondary-muted: var(--color-bfcw-burgundy-90);
-    --ui-secondary-dark: var(--color-bfcw-burgundy-100);
+    --ui-secondary: var(--color-bfcw-burgundy-50);
+    --ui-secondary-elevated: var(--color-bfcw-burgundy-30);
+    --ui-secondary-muted: var(--color-bfcw-burgundy-70);
+    --ui-secondary-dark: var(--color-bfcw-burgundy-90);
     /* Alert Colors */
     --ui-info: var(--color-bfcw-burgundy-30);
     --ui-success: var(--color-bfcw-cyan-50);
     --ui-warning: var(--color-bfcw-mustard-90);
     --ui-error: var(--color-bfcw-fire-100);
     /* Component Colors */
-    --ui-component: var(--color-bfcw-black-50);
+    --ui-component: var(--color-bfcw-sepia-100);
     --ui-component-text: var(--color-bfcw-white-70);
     --ui-component-border: var(--color-bfcw-white-70);
 }
@@ -186,9 +192,17 @@
         font-family: var(--font-base);
     }
 
+    body:has(.nav-horizontal) {
+        --section-padding: 5dvh 2dvw 10dvh 2dvw;
+    }
+
+    body:has(.nav-vertical) {
+        --section-padding: 5dvh 7dvw 5dvh 2dvw;
+    }
+
     section {
         min-height: 100%;
-        padding-bottom: 80px;
+        padding: var(--section-padding);
     }
 
     h1,
