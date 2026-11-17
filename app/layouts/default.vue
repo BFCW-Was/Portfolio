@@ -9,7 +9,7 @@
             <!-- <NavBar />, <Header /> o <SideBar /> -->
             <NavBar />
             <!-- <MainContent /> -->
-            <main class="background-frame">
+            <main id="main-container" class="background-frame">
                 <slot />
             </main>
             <!-- <Footer /> -->
