@@ -77,6 +77,7 @@ const signagePosition = computed<Position | undefined>(() => {
 .photo-card {
     position: relative;
     width: 100%;
+    min-width: 150px;
     margin: 0;
 
     .photo-frame {
