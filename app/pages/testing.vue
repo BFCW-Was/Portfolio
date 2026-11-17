@@ -5,7 +5,7 @@
             <UButton color="primary" @click="isVisibleBotones = !isVisibleBotones">{{ isVisibleBotones ? 'Ocultar' : 'Mostrar' }} Botones</UButton>
             <UButton color="primary" @click="isVisibleImagenes = !isVisibleImagenes">{{ isVisibleImagenes ? 'Ocultar' : 'Mostrar' }} Imagenes</UButton>
             <UButton color="primary" @click="isVisibleComponentes = !isVisibleComponentes">{{ isVisibleComponentes ? 'Ocultar' : 'Mostrar' }} Componentes</UButton>
-            <UButton color="primary" @click="isVisibleThemes = !isVisibleThemes">{{ isVisibleThemes ? 'Ocultar' : 'Mostrar' }} Temas</UButton>
+            <UButton color="primary" @click="isVisibleThemesAndStyles = !isVisibleThemesAndStyles">{{ isVisibleThemesAndStyles ? 'Ocultar' : 'Mostrar' }} Temas y Estilos</UButton>
         </div>
         <!-- #################### TEXTOS #################### -->
         <div v-if="isVisibleTextos">
@@ -290,9 +290,26 @@
         </div>
 
         <!-- #################### THEME #################### -->
-        <div v-if="isVisibleThemes">
-            <h1>Temas</h1>
+        <div v-if="isVisibleThemesAndStyles">
+            <h1>Temas y Estilos</h1>
             <hr class="my-2" />
+            <div class="animations-test">
+                <ul class="grid">
+                    <li v-for="item in animations" :key="item.name" class="card ornamental-border">
+                        <div class="stage">
+                            <!-- El key cambia al repetir, lo que reinicia la animación -->
+                            <div :key="item.runs" class="sample" :class="item.name">
+                                <UIcon name="i-lucide-sparkles" />
+                            </div>
+                        </div>
+                        <code>{{ item.name }}</code>
+                        <p>{{ item.note }}</p>
+                        <UButton size="xs" variant="outline" icon="i-lucide-rotate-ccw" @click="item.runs++">Repetir</UButton>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-5" />
+
             <div class="mx-auto w-full max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <UCard class="bg-primary p-6">
@@ -375,7 +392,7 @@ const isVisibleTextos = ref(false);
 const isVisibleBotones = ref(false);
 const isVisibleImagenes = ref(false);
 const isVisibleComponentes = ref(false);
-const isVisibleThemes = ref(false);
+const isVisibleThemesAndStyles = ref(false);
 
 // Cambio de Ancho de Texto:
 const textBlockWidth = ref('100%');
@@ -533,6 +550,20 @@ const palettesWithValues = computed(() => {
     }));
 });
 
+// Animaciones
+const animations = reactive([
+    { name: 'drop', note: 'Entrada con desplazamiento (desde arriba)', runs: 0 },
+    { name: 'rise', note: 'Entrada con desplazamiento (desde abajo)', runs: 0 },
+    { name: 'spin', note: 'Giro continuo', runs: 0 },
+    { name: 'float', note: 'Flotación vertical suave', runs: 0 },
+    { name: 'vibration', note: 'Sacudidas laterales rápidas', runs: 0 },
+    { name: 'twinkle', note: 'Tintineo con destello', runs: 0 },
+    { name: 'waves', note: 'Ondas que se expanden', runs: 0 },
+    { name: 'lift', note: 'Levantamiento suave', runs: 0 },
+    { name: 'upscale', note: 'Aumento de escala', runs: 0 },
+    { name: 'downscale', note: 'Disminución de escala', runs: 0 },
+]);
+
 // FeatureCard
 const featuresForCard: FeatureItem[] = [
     { title: 'Característica 1', description: 'Párrafo único de la característica 1.' },
@@ -646,3 +677,105 @@ const socialLinks: IconStackItem[] = [
     { icon: 'i-lucide-rss', label: 'Blogs', to: '/blogs' },
 ];
 </script>
+
+<style lang="scss" scoped>
+@use '~/assets/scss/animations/animation_rise.scss';
+@use '~/assets/scss/animations/animation_drop.scss';
+@use '~/assets/scss/animations/animation_spin.scss';
+@use '~/assets/scss/animations/animation_float.scss';
+@use '~/assets/scss/animations/animation_vibration.scss';
+@use '~/assets/scss/animations/animation_twinkle.scss';
+@use '~/assets/scss/animations/animation_waves.scss';
+@use '~/assets/scss/animations/animation_lift.scss';
+@use '~/assets/scss/animations/animation_upscale.scss';
+@use '~/assets/scss/animations/animation_downscale.scss';
+
+.animations-test {
+    --duration: 2s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: var(--ui-component-text);
+
+            .stage {
+                display: grid;
+                place-items: center;
+                width: 100%;
+                height: 6rem;
+
+                .sample {
+                    display: grid;
+                    place-items: center;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: var(--ui-radius);
+                    background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), var(--ui-component));
+                    font-size: 1.5rem;
+
+                    &.drop {
+                        animation: drop var(--duration) ease-in-out infinite;
+                    }
+
+                    &.rise {
+                        animation: rise var(--duration) ease-in-out infinite;
+                    }
+
+                    &.spin {
+                        animation: spin var(--duration) ease-in-out infinite;
+                    }
+
+                    &.float {
+                        animation: float var(--duration) ease-in-out infinite;
+                    }
+
+                    &.vibration {
+                        animation: vibration var(--duration) ease-in-out infinite;
+                    }
+
+                    &.twinkle {
+                        animation: twinkle var(--duration) ease-in-out infinite;
+                    }
+
+                    &.waves {
+                        animation: waves var(--duration) ease-in-out infinite;
+                    }
+
+                    &.lift {
+                        animation: lift var(--duration) ease-in-out infinite;
+                    }
+
+                    &.upscale {
+                        animation: upscale var(--duration) ease-in-out infinite;
+                    }
+
+                    &.downscale {
+                        animation: downscale var(--duration) ease-in-out infinite;
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
+            }
+        }
+    }
+}
+</style>
