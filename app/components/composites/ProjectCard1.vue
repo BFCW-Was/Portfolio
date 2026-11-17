@@ -1,6 +1,6 @@
 <template>
     <div class="project-card ornamental-border ornamental-hover">
-        <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" ratio="1" badge="bottom-left" :signage="signage" />
+        <CompositesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" ratio="1" badge="bottom-left" :signage="signage" />
         <div class="project-body">
             <span v-if="index !== undefined" class="ornamental-ring project-index">{{ index }}</span>
             <h4 class="project-name">{{ name }}</h4>
@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { SignageItem } from '~/components/primitives/PhotoFrame.vue';
+import type { SignageItem } from '~/components/composites/PhotoFrame.vue';
 
 defineProps({
     name: {

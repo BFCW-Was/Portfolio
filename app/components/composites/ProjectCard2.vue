@@ -14,7 +14,7 @@
                     <span class="ornamental-ring project-dot" />
                 </span>
             </div>
-            <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="bottom-right" />
+            <CompositesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="bottom-right" />
         </div>
     </div>
 </template>

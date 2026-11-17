@@ -1,6 +1,6 @@
 <template>
     <div class="project-card ornamental-border ornamental-hover">
-        <PrimitivesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="top-left" />
+        <CompositesPhotoFrame class="project-photo" :image="image" :alt="alt" :year="year" badge="top-left" />
         <div class="project-header">
             <span v-if="index !== undefined" class="ornamental-ring project-index">
                 {{ index }}
