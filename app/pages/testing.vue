@@ -438,8 +438,7 @@ import type { FeatureItem } from '~/components/composites/FeatureCard.vue';
 import type { IconStackItem } from '~/components/composites/IconStack.vue';
 import type { SelectorItem } from '~/components/composites/ItemSelector.vue';
 import type { SignageItem } from '~/components/composites/PhotoFrame.vue';
-import { usePublicAsset } from '~/composables/use_public_assets';
-import { assetsManager } from '~/utils/assets_manager';
+import { assetsManager } from '~/utils/assets_manager.ts';
 
 // Control y Muestra de Imágenes
 const lightLogo = assetsManager.find((img) => img.id === 'logo-light');
