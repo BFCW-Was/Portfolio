@@ -91,3 +91,11 @@
     - Primitives: Simples, no utilizan otros componentes en su implementación.
     - Composites: Levemente más complejos, utilizan otros componentes en su implementación.
     - Domain: Componentes específicos de la lógica del proyecto.
+
+## 0.4.6 (100%): Ajuste en Splash | 2026-11-19
+
+### Changed
+
+- Conversión de Splash inicial a componente.
+    - Centralización de estilos, template y script del splash en un solo archivo.
+    - Mejora sustancial en diseño y funcionalidad del splash.
