@@ -492,6 +492,7 @@
             </div>
             <hr class="my-5 w-full" />
 
+            <h2>Elementos de NuxtUI</h2>
             <div class="mx-auto w-full max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <UCard class="bg-primary p-6">
@@ -551,9 +552,9 @@
             <hr class="my-5 w-full" />
 
             <!-- Colores por Palette -->
+            <h2>Paletas de Colores</h2>
             <div v-for="palette in palettesWithValues" :key="palette.category" class="mx-16 space-y-3">
                 <h3 class="border-b pb-1 text-lg font-semibold text-gray-400">{{ palette.category }}</h3>
-
                 <div class="mb-5 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
                     <div
                         v-for="color in palette.colors"
