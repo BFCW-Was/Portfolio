@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import { isCodeLanguage, type CodeLanguage } from '~/composables/code_languages.ts';
+import { isCodeLanguage, type CodeLanguage } from '~/composables/components/code_languages';
 
 const props = defineProps({
     name: {

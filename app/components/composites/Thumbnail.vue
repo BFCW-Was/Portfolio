@@ -5,7 +5,7 @@
         <div class="content">
             <h3 class="title">{{ title }}</h3>
             <div class="meta">
-                <span class="theme">{{ theme }}</span>
+                <UBadge variant="solid" class="theme">{{ theme }}</UBadge>
                 <span class="year">{{ year }}</span>
             </div>
         </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
     image: {
         type: String,
         required: true,
@@ -78,11 +78,7 @@ defineProps({
             margin-top: auto;
 
             .theme {
-                padding: 0.25rem 0.75rem;
                 border-radius: var(--ui-radius-lg);
-                background-color: var(--ui-primary);
-                font-size: 0.8rem;
-                font-weight: 500;
                 color: var(--color-bfcw-white-100);
             }
 

@@ -3,9 +3,9 @@
         <div class="photo-frame" :style="{ aspectRatio: ratio }">
             <img v-if="image" :src="image" :alt="alt" class="photo-image" loading="lazy" decoding="async" />
         </div>
-        <span v-if="year" class="photo-badge">
+        <UBadge v-if="year" class="photo-badge" variant="solid">
             {{ year }}
-        </span>
+        </UBadge>
         <PrimitivesSignage v-if="signage" class="photo-signage" :variant="signage.variant" :text="signage.text" />
     </figure>
 </template>
@@ -98,13 +98,8 @@ const signagePosition = computed<Position | undefined>(() => {
 
     .photo-badge {
         position: absolute;
-        padding: 0.25rem 0.75rem;
         border-radius: var(--ui-radius-lg);
-        background: var(--ui-primary);
         color: var(--color-bfcw-white-100);
-        font-size: 0.8rem;
-        font-weight: 500;
-        line-height: 1.2;
     }
 
     // Positioning of Badge & Signage

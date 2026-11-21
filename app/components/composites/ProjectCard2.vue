@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-defineProps({
+const props = defineProps({
     name: {
         type: String,
         required: true,
@@ -62,8 +62,8 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
     scrollbar-width: thin;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vw, 1.5rem);
-    padding: clamp(1rem, 4vw, 2rem);
+    gap: clamp(1rem, 3dvw, 1.5rem);
+    padding: clamp(1rem, 4dvw, 2rem);
 
     .project-head {
         display: flex;
@@ -71,9 +71,9 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
         gap: 0.5rem;
 
         .project-index {
-            --ring-size: clamp(2rem, 4vw, 4rem);
+            --ring-size: clamp(2rem, 4dvw, 4rem);
 
-            font-size: clamp(0.9rem, 1.5vw, 2rem);
+            font-size: clamp(0.9rem, 1.5dvw, 2rem);
         }
 
         .project-name {
@@ -86,7 +86,7 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
     .project-content {
         display: flex;
         flex-wrap: wrap;
-        gap: clamp(1.25rem, 4vw, 2rem);
+        gap: clamp(1.25rem, 4dvw, 2rem);
 
         .project-body {
             display: flex;

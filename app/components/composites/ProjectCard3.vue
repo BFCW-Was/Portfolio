@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-defineProps({
+const props = defineProps({
     name: {
         type: String,
         required: true,
@@ -62,7 +62,7 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    padding: clamp(2rem, 6vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+    padding: clamp(2rem, 6dvw, 2.5rem) clamp(1rem, 4dvw, 2rem);
     text-align: center;
 
     .project-header {
@@ -71,9 +71,9 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
         gap: 8px;
 
         .project-index {
-            --ring-size: clamp(2rem, 3vw, 4rem);
+            --ring-size: clamp(2rem, 3dvw, 4rem);
 
-            font-size: clamp(0.9rem, 1.5vw, 2rem);
+            font-size: clamp(0.9rem, 1.5dvw, 2rem);
         }
     }
 
@@ -98,8 +98,8 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 
     .project-dots {
         position: absolute;
-        top: clamp(0.75rem, 3vw, 1.25rem);
-        right: clamp(0.75rem, 3vw, 1.25rem);
+        top: clamp(0.75rem, 3dvw, 1.25rem);
+        right: clamp(0.75rem, 3dvw, 1.25rem);
         display: flex;
         gap: 0.5rem;
     }
@@ -107,8 +107,8 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
     .project-dot {
         &--corner {
             position: absolute;
-            bottom: clamp(0.75rem, 3vw, 1.25rem);
-            left: clamp(0.75rem, 3vw, 1.25rem);
+            bottom: clamp(0.75rem, 3dvw, 1.25rem);
+            left: clamp(0.75rem, 3dvw, 1.25rem);
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="info-arrow-box" :class="variant">
+    <div class="info-arrow-box" :class="[variant, { 'hover-enabled': hover }]">
         <svg viewBox="0 0 260 60" preserveAspectRatio="none">
             <defs>
                 <linearGradient :id="gradientId" x1="0" y1="0" x2="1" y2="0">
@@ -36,6 +36,10 @@ const props = defineProps({
         type: String,
         default: 'outlined',
         validator: (v: string) => ['outlined', 'gradient', 'filled'].includes(v),
+    },
+    hover: {
+        type: Boolean,
+        default: true,
     },
 });
 
@@ -93,8 +97,8 @@ const strokeColor = computed(() => {
         line-height: 1.4;
     }
 
-    &:hover {
-        opacity: 0.5;
+    &.hover-enabled:hover {
+        opacity: 0.75;
     }
 }
 </style>

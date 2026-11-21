@@ -245,27 +245,4 @@ function onAnimationEnd(e: AnimationEvent) {
         translate: calc(var(--ink-dx) * 100%) calc(var(--ink-dy) * 100%);
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .ink__blob {
-        animation-duration: 1ms;
-    }
-    .ink--fade {
-        animation-delay: 1ms;
-    }
-    .ink__hole {
-        animation-delay: 1ms;
-        animation-duration: 1ms;
-    }
-    .ink__curtain,
-    .ink__plate,
-    .ink--end .ink__curtain,
-    .ink--end .ink__plate {
-        animation-duration: 1ms;
-    }
-    .ink--end .ink__curtain,
-    .ink--end .ink__plate {
-        animation-delay: 0s, 1ms;
-    }
-}
 </style>

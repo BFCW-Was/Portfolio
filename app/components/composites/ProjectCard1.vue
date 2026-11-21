@@ -14,7 +14,7 @@
 import type { PropType } from 'vue';
 import type { SignageItem } from '~/components/composites/PhotoFrame.vue';
 
-defineProps({
+const props = defineProps({
     name: {
         type: String,
         required: true,
@@ -60,8 +60,8 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: clamp(1rem, 2vw, 3rem);
-    padding: clamp(1.25rem, 2.25vw, 3.5rem);
+    gap: clamp(1rem, 2dvw, 3rem);
+    padding: clamp(1.25rem, 2.25dvw, 3.5rem);
 
     .project-photo {
         flex: 1 1 14rem;
@@ -75,9 +75,9 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
         gap: 0.75rem;
 
         .project-index {
-            --ring-size: clamp(2rem, 4vw, 4rem);
+            --ring-size: clamp(2rem, 4dvw, 4rem);
 
-            font-size: clamp(0.9rem, 1.5vw, 2rem);
+            font-size: clamp(0.9rem, 1.5dvw, 2rem);
         }
 
         .project-name {
@@ -96,8 +96,8 @@ const toLines = (description: string | string[]) => (Array.isArray(description) 
 
     .project-dot {
         position: absolute;
-        top: clamp(1rem, 3vw, 2rem);
-        right: clamp(1rem, 4vw, 3rem);
+        top: clamp(1rem, 3dvw, 2rem);
+        right: clamp(1rem, 4dvw, 3rem);
         pointer-events: none;
     }
 }

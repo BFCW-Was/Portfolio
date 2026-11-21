@@ -114,7 +114,7 @@ const symbolClass = computed(() => ({
         gap: 0;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
         gap: 12px;
 
         &__bar {

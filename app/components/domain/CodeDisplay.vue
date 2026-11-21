@@ -72,7 +72,7 @@
 
 <script setup lang="ts">
 import { Comment, Fragment, Text, isVNode, type VNode } from 'vue';
-import { CODE_LANGUAGES, isCodeLanguage, type CodeFile } from '~/composables/code_languages.ts';
+import { CODE_LANGUAGES, isCodeLanguage, type CodeFile } from '~/composables/components/code_languages.ts';
 import CodeDisplayFile from './CodeDisplayFile.vue';
 
 const props = defineProps({

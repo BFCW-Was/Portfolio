@@ -101,7 +101,7 @@ $row: 1rem;
 $dot: 1rem;
 
 .timeline-step {
-    --label-width: clamp(3.5rem, 14vw, 5rem);
+    --label-width: clamp(3.5rem, 14dvw, 5rem);
 
     display: grid;
     grid-template-columns: auto 1fr;

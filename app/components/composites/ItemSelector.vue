@@ -57,8 +57,8 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.5rem, 2vw, 1rem);
-    padding: clamp(0.75rem, 3vw, 1.5rem);
+    gap: clamp(0.5rem, 2dvw, 1rem);
+    padding: clamp(0.75rem, 3dvw, 1.5rem);
     border: 3px dashed var(--ui-component-text);
     border-radius: var(--ui-radius);
     width: 100%;
@@ -66,7 +66,7 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
     min-width: 0;
 
     .selector-label {
-        font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+        font-size: clamp(0.95rem, 2.5dvw, 1.2rem);
         font-weight: 600;
         color: var(--ui-component-text);
         text-align: center;
@@ -77,12 +77,12 @@ $spring: cubic-bezier(0.35, 1.55, 0.65, 1);
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 2rem);
+        gap: clamp(0.5rem, 2dvw, 1rem) clamp(0.75rem, 3dvw, 2rem);
         width: 100%;
         min-width: 0;
 
         .item {
-            font-size: clamp(0.9rem, 3vw, 1.5rem);
+            font-size: clamp(0.9rem, 3dvw, 1.5rem);
             font-weight: 500;
             cursor: pointer;
             transition: color 0.2s ease;
