@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
     // const wipRoutes: string[] = [];
-    const wipRoutes: string[] = ['/about', '/experience', '/projects', '/contact', '/blogs', '/games'];
+    const wipRoutes: string[] = ['/blogs', '/games'];
 
     addRouteMiddleware(
         'under_construction',
