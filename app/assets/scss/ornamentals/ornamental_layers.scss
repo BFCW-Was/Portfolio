@@ -1,0 +1,17 @@
+// Capas Apiladas de Sombras (desplazadas en escalera). | <div class="ornamental-layers">...</div>
+.ornamental-layers {
+    --layer-step: var(--layer-rest, 0.5rem);
+
+    filter: drop-shadow(var(--layer-step) var(--layer-step) 0 color-mix(in srgb, var(--layer-color, var(--ui-secondary)) 30%, transparent))
+        drop-shadow(var(--layer-step) var(--layer-step) 0 color-mix(in srgb, var(--layer-color, var(--ui-secondary)) 20%, transparent))
+        drop-shadow(var(--layer-step) var(--layer-step) 0 color-mix(in srgb, var(--layer-color, var(--ui-secondary)) 12%, transparent));
+    transition:
+        filter 0.3s ease,
+        translate 0.3s ease;
+
+    &:hover {
+        --layer-step: var(--layer-hover, 0.75rem);
+
+        translate: -0.25rem -0.25rem;
+    }
+}

@@ -1,0 +1,6 @@
+// Texto Solo Contorno (sin relleno). | <span class="ornamental-ghost">...</span>
+.ornamental-ghost {
+    color: transparent;
+    -webkit-text-stroke: 1px color-mix(in srgb, var(--ghost-color, var(--ui-text)) 60%, transparent);
+    user-select: none;
+}

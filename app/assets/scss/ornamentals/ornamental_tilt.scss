@@ -1,0 +1,16 @@
+// Inclinación 3D (según puntero del mouse). | <a class="ornamental-tilt" @pointermove="onTilt" @pointerleave="resetTilt">...</a>
+// Requiere --tx y --ty en [-1, 1] (posición relativa del puntero); vuelven a 0 en pointerleave.
+//  const box: DOMRect = el.getBoundingClientRect();
+//  el.style.setProperty('--tx', String(((e.clientX - box.left) / box.width - 0.5) * 2));
+//  el.style.setProperty('--ty', String(((e.clientY - box.top) / box.height - 0.5) * 2));
+.ornamental-tilt {
+    --lift: 0px;
+
+    transform: perspective(var(--tilt-perspective, 500px)) translateY(var(--lift)) rotateX(calc(var(--ty, 0) * var(--tilt-angle, 10deg))) rotateY(calc(var(--tx, 0) * var(--tilt-angle, 10deg) * -1));
+    transition: transform 0.2s ease-out;
+
+    &:hover,
+    &:focus-visible {
+        --lift: var(--tilt-lift, -6px);
+    }
+}

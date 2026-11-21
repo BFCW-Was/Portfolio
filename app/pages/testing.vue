@@ -406,6 +406,91 @@
                 </ul>
             </div>
             <hr class="my-5 w-full" />
+            <div class="ornamentals-test">
+                <h2>Adornos</h2>
+                <ul class="grid">
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample ornamental-border">Texto</div>
+                        </div>
+                        <code>ornamental-border</code>
+                        <p>Borde decorativo</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample ornamental-hover">Hover</div>
+                        </div>
+                        <code>ornamental-hover</code>
+                        <p>Efecto al pasar el mouse por encima</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample ornamental-tile">Tile</div>
+                        </div>
+                        <code>ornamental-tile</code>
+                        <p>Baldosa decorativa</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <h3 class="ornamental-title">Título</h3>
+                        </div>
+                        <code>ornamental-title</code>
+                        <p>Estilo de título decorativo</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <span class="ornamental-ring" style="--ring-size: 5rem" aria-hidden="true" />
+                        </div>
+                        <code>ornamental-ring</code>
+                        <p>Anillo (tamaño con --ring-size)</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage stage--relative">
+                            <span class="dots-fill ornamental-dots" aria-hidden="true" />
+                        </div>
+                        <code>ornamental-dots</code>
+                        <p>Trama de puntos que se desvanece hacia los bordes</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <p class="ornamental-eyebrow">01 / Demo</p>
+                        </div>
+                        <code>ornamental-eyebrow</code>
+                        <p>Etiqueta tipo coordenada con una línea a cada lado</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample sample--wide ornamental-noise">Ruido</div>
+                        </div>
+                        <code>ornamental-noise</code>
+                        <p>Textura de ruido estática (--noise-opacity)</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample sample--wide ornamental-layers">Capas</div>
+                        </div>
+                        <code>ornamental-layers</code>
+                        <p>Sombras traslúcidas apiladas; se alejan en hover</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <span class="ghost ornamental-ghost">2026</span>
+                        </div>
+                        <code>ornamental-ghost</code>
+                        <p>Texto solo con contorno (--ghost-color)</p>
+                    </li>
+                    <li class="card card--wide ornamental-border">
+                        <div class="stage stage--auto">
+                            <div class="ornamental-tabs">
+                                <UTabs v-model="activeTab" :items="tabs" :content="false" size="md" variant="link" />
+                            </div>
+                        </div>
+                        <code>ornamental-tabs</code>
+                        <p>Pestañas (UTabs) con responsividad</p>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-5 w-full" />
 
             <div class="mx-auto w-full max-w-7xl px-4">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -501,6 +586,16 @@ const textBlockWidth = ref('100%');
 function changeTextBlockWidth() {
     textBlockWidth.value = textBlockWidth.value === '100%' ? '70%' : textBlockWidth.value === '70%' ? '40%' : '100%';
 }
+
+// Muestra de Tabs:
+const activeTab = ref('all');
+const tabs = [
+    { label: 'Todas', value: 'all' },
+    { label: 'Cloud', value: 'cloud' },
+    { label: 'Front-End', value: 'front' },
+    { label: 'Back-End', value: 'back' },
+    { label: 'Base de Datos', value: 'db' },
+];
 
 // Cambio de Estilo InformationCard:
 const colorsIC = ['variant-burgundy', 'variant-sepia', 'variant-gray', 'variant-cyan', 'variant-fire', 'variant-mustard'];
@@ -996,6 +1091,82 @@ const signageItem: SignageItem = {
                             translate: calc(var(--px, 0) * 22px) calc(var(--py, 0) * 15px);
                         }
                     }
+                }
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: color-mix(in oklab, var(--ui-component-text) 60%, transparent);
+            }
+        }
+    }
+}
+
+.ornamentals-test {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: var(--ui-component-text);
+
+            // Las tarjetas anchas ocupan toda la fila (por ejemplo, la de las pestañas)
+            &--wide {
+                grid-column: 1 / -1;
+            }
+
+            .stage {
+                display: grid;
+                place-items: center;
+                width: 100%;
+                height: 6rem;
+
+                &--relative {
+                    position: relative;
+                }
+
+                &--auto {
+                    height: auto;
+                    min-height: 6rem;
+                }
+
+                .dots-fill {
+                    position: absolute;
+                    inset: 0;
+                }
+
+                .sample {
+                    display: grid;
+                    place-items: center;
+                    width: 5rem;
+                    height: 3.5rem;
+                    border-radius: var(--ui-radius);
+                    background: linear-gradient(to bottom, var(--ui-primary-muted, var(--ui-primary)), var(--ui-component));
+                    font-size: 0.9rem;
+
+                    &--wide {
+                        width: 7rem;
+                        height: 4rem;
+                    }
+                }
+
+                .ghost {
+                    font-size: 3rem;
+                    line-height: 1;
                 }
             }
 

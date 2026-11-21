@@ -1,0 +1,7 @@
+// Trama de Puntos Estática (se desvanece hacia los bordes). | <span class="ornamental-dots" aria-hidden="true" />; Con (absolute + inset: 0).
+.ornamental-dots {
+    background-image: radial-gradient(var(--dots-color, color-mix(in srgb, var(--ui-text) 20%, transparent)) 1px, transparent 1.5px);
+    background-size: var(--dots-gap, 24px) var(--dots-gap, 24px);
+    mask-image: radial-gradient(ellipse at center, #000 35%, transparent 85%);
+    pointer-events: none;
+}

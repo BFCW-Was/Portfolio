@@ -1,4 +1,4 @@
-// Anillo Decorativo Reutilizable | <span class="ornamental-ring" aria-hidden="true" />
+// Anillo Decorativo | <span class="ornamental-ring" aria-hidden="true" />
 .ornamental-ring {
     --ring-color: var(--ui-component-text);
     --ring-dim: color-mix(in oklab, var(--ring-color) 25%, transparent);

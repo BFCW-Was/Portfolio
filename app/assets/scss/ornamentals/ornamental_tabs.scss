@@ -1,0 +1,37 @@
+// Pestañas (UTabs) Responsivas. | <div class="ornamental-tabs"><UTabs :content="false" ... /></div>
+.ornamental-tabs {
+    max-width: 100%;
+
+    @media (max-width: 800px) {
+        width: 100%;
+
+        [role='tablist'] {
+            display: grid;
+            // 2 columnas iguales definidas por la pestaña más ancha
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 4px 16px;
+            width: fit-content;
+            max-width: 100%;
+            margin-inline: auto;
+
+            @media (max-width: 500px) {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        [role='tablist'] > :not([role='tab']) {
+            display: none;
+        }
+
+        [role='tab'] {
+            margin-block: 0;
+            justify-content: flex-start;
+            border-inline-start: 2px solid var(--ui-border);
+            text-align: left;
+
+            &[data-state='active'] {
+                border-inline-start-color: var(--ui-primary);
+            }
+        }
+    }
+}
