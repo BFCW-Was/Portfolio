@@ -279,6 +279,29 @@
                     <CompositesTimelineStep label="2024" title="Title 4" description="Last step" buttonText="Finish" />
                 </CompositesTimeline>
                 <hr class="my-5 w-full" />
+                <CompositesTaggedSeparator :label="'Title'" :tags="['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']" />
+                <hr class="my-5 w-full" />
+                <CompositesStatsStrip
+                    :items="[
+                        { value: '+5', label: 'Item 1' },
+                        { value: '-7', label: 'Item 2' },
+                        { value: '¿9?', label: 'Item 3' },
+                        { value: '_12_', label: 'Item 4' },
+                        { value: '15', label: 'Item 5' },
+                    ]"
+                    data-reveal
+                />
+                <hr class="my-5 w-full" />
+                <CompositesStepFlow
+                    :items="[
+                        { name: 'Title 1', icon: 'i-lucide-heart', role: 'Subtitle 1' },
+                        { name: 'Title 2', icon: 'i-lucide-star', role: 'Subtitle 2' },
+                        { name: 'Title 3', icon: 'i-lucide-zap', role: 'Subtitle 3' },
+                        { name: 'Title 4', icon: 'i-lucide-sparkles', role: 'Subtitle 4' },
+                        { name: 'Title 5', icon: 'i-lucide-rocket', role: 'Subtitle 5' },
+                    ]"
+                />
+                <hr class="my-5 w-full" />
                 <!-- ItemSelector.vue -->
                 <CompositesItemSelector v-model="selectedItem" :items="items" label="Selecciona una opción" />
                 <div class="text-center">Seleccionado: {{ selectedItem }}</div>
