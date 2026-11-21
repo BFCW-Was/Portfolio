@@ -526,6 +526,26 @@
                         <USlider color="primary" />
                     </UFormField>
                     <UCheckbox label="Checkbox" color="primary" />
+                    <UFormField label="Select Field">
+                        <USelect :items="['Opción 1', 'Opción 2', 'Opción 3']" placeholder="Selecciona..." class="w-full" />
+                    </UFormField>
+                    <UFormField label="Radio Group">
+                        <URadioGroup :items="['A', 'B', 'C']" />
+                    </UFormField>
+                </div>
+                <div class="mt-4 flex flex-wrap justify-around gap-4">
+                    <UTabs variant="pill" color="primary" :items="[{ label: 'Tab Pill 1' }, { label: 'Tab Pill 2' }]" :content="false" />
+                    <UTabs variant="link" color="secondary" :content="false" :items="[{ label: 'Tab Link 1' }, { label: 'Tab Link 2' }]" />
+                </div>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                    <UBadge color="primary" variant="solid">Solid</UBadge>
+                    <UBadge color="info" variant="soft">Soft</UBadge>
+                    <UBadge color="secondary" variant="outline">Outline</UBadge>
+                    <UBadge color="info" variant="subtle">Subtle</UBadge>
+                </div>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                    <UIcon name="i-lucide-sparkles" class="size-6 text-primary" />
+                    <UAvatar alt="BFCW" size="sm" />
                 </div>
             </div>
             <hr class="my-5 w-full" />
