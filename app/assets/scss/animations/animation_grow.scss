@@ -1,0 +1,6 @@
+// Grow: Dibuja una línea vertical desde su origen. | animation: grow linear both; animation-timeline: scroll(nearest); | animation: grow 0.9s ease-out both;
+@keyframes grow {
+    from {
+        transform: scaleY(0);
+    }
+}

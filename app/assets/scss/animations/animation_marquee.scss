@@ -1,0 +1,7 @@
+// Marquee: Desplaza una pista hacia la izquierda en bucle sin saltos. | animation: marquee 40s linear infinite;
+// La pista debe contener el contenido duplicado (dos mitades iguales) y usar padding, no gap, entre ítems.
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,17 @@
+// Settle: La pieza parte girada y desplazada (como una ficha apilada) y se alinea.
+//  @supports (animation-timeline: view()) {
+//    .elemento { animation: settle linear backwards; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+//  }
+@keyframes settle {
+    0%,
+    100% {
+        rotate: var(--r, 0deg);
+        translate: var(--tx, 0) var(--ty, 0);
+    }
+
+    40%,
+    60% {
+        rotate: 0deg;
+        translate: 0 0;
+    }
+}

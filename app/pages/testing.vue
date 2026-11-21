@@ -355,6 +355,7 @@
             <h1>Temas y Estilos</h1>
             <hr class="my-2" />
             <div class="animations-test">
+                <h2>Animaciones</h2>
                 <ul class="grid">
                     <li v-for="item in animations" :key="item.name" class="card ornamental-border">
                         <div class="stage">
@@ -366,6 +367,41 @@
                         <code>{{ item.name }}</code>
                         <p>{{ item.note }}</p>
                         <UButton size="xs" variant="outline" icon="i-lucide-rotate-ccw" @click="item.runs++">Repetir</UButton>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-5 w-full" />
+            <div class="animations-test">
+                <h2>Interacciones</h2>
+                <ul class="grid">
+                    <li class="card ornamental-border">
+                        <div class="stage">
+                            <div class="sample tilt-demo ornamental-tilt" v-on="tilt">
+                                <UIcon name="i-lucide-sparkles" />
+                            </div>
+                        </div>
+                        <code>useTilt + ornamental-tilt</code>
+                        <p>Se inclina según la posición del puntero sobre la pieza</p>
+                    </li>
+                    <li class="card ornamental-border">
+                        <div ref="parallaxRoot" class="stage parallax">
+                            <span class="layer layer--back" />
+                            <span class="layer layer--mid" />
+                            <span class="layer layer--front" />
+                        </div>
+                        <code>useParallax</code>
+                        <p>Mueve el mouse por la pantalla: cada capa se desplaza distinto</p>
+                    </li>
+                    <li ref="revealRoot" class="card ornamental-border">
+                        <div class="stage reveals">
+                            <span class="sample" data-reveal="0" data-reveal-from="up" />
+                            <span class="sample" data-reveal="150" data-reveal-from="left" />
+                            <span class="sample" data-reveal="300" data-reveal-from="right" />
+                            <span class="sample" data-reveal="450" data-reveal-from="scale" />
+                        </div>
+                        <code>useReveal</code>
+                        <p>Entradas up, left, right y scale con retraso escalonado</p>
+                        <UButton size="xs" variant="outline" icon="i-lucide-rotate-ccw" @click="replay">Repetir</UButton>
                     </li>
                 </ul>
             </div>
@@ -396,7 +432,7 @@
                     <UAlert color="warning" title="Warning Alert" />
                     <UAlert color="error" title="Error Alert" />
                 </div>
-                <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="mt-4 grid gap-8 sm:grid-cols-3">
                     <UFormField label="Input Field">
                         <UInput color="primary" variant="outline" class="w-full" />
                     </UFormField>
@@ -438,6 +474,10 @@ import type { FeatureItem } from '~/components/composites/FeatureCard.vue';
 import type { IconStackItem } from '~/components/composites/IconStack.vue';
 import type { SelectorItem } from '~/components/composites/ItemSelector.vue';
 import type { SignageItem } from '~/components/composites/PhotoFrame.vue';
+import { useParallax } from '~/composables/styles/parallax.ts';
+import { useReveal } from '~/composables/styles/reveal.ts';
+import { useTilt } from '~/composables/styles/tilt.ts';
+
 import { assetsManager } from '~/utils/assets_manager.ts';
 
 // Control y Muestra de Imágenes
@@ -613,17 +653,32 @@ const palettesWithValues = computed(() => {
 
 // Animaciones
 const animations = reactive([
-    { name: 'drop', note: 'Entrada con desplazamiento (desde arriba)', runs: 0 },
-    { name: 'rise', note: 'Entrada con desplazamiento (desde abajo)', runs: 0 },
+    { name: 'rise', note: 'Entrada con desplazamiento', runs: 0 },
+    { name: 'drop', note: 'Caída con rebote', runs: 0 },
     { name: 'spin', note: 'Giro continuo', runs: 0 },
     { name: 'float', note: 'Flotación vertical suave', runs: 0 },
     { name: 'vibration', note: 'Sacudidas laterales rápidas', runs: 0 },
     { name: 'twinkle', note: 'Tintineo con destello', runs: 0 },
     { name: 'waves', note: 'Ondas que se expanden', runs: 0 },
-    { name: 'lift', note: 'Levantamiento suave', runs: 0 },
-    { name: 'upscale', note: 'Aumento de escala', runs: 0 },
-    { name: 'downscale', note: 'Disminución de escala', runs: 0 },
+    { name: 'lift', note: 'Elevación', runs: 0 },
+    { name: 'upscale', note: 'Crece', runs: 0 },
+    { name: 'downscale', note: 'Se encoge', runs: 0 },
+    { name: 'drift', note: 'Deriva vertical (parallax de scroll)', runs: 0 },
+    { name: 'marquee', note: 'Desplazamiento continuo', runs: 0 },
+    { name: 'blink', note: 'Parpadeo', runs: 0 },
+    { name: 'grow', note: 'Crece desde su base', runs: 0 },
+    { name: 'sweep', note: 'Barrido de izquierda a derecha', runs: 0 },
+    { name: 'scene-in', note: 'Aparece subiendo (escena de scroll)', runs: 0 },
+    { name: 'scene-lift', note: 'Sube desde abajo (escena de scroll)', runs: 0 },
+    { name: 'scene-shrink', note: 'De grande a normal (escena de scroll)', runs: 0 },
+    { name: 'scene-level', note: 'Se endereza desde un giro (escena de scroll)', runs: 0 },
+    { name: 'settle', note: 'Parte girada y desplazada, y se alinea', runs: 0 },
 ]);
+const tilt = useTilt();
+const parallaxRoot = useTemplateRef<HTMLElement>('parallaxRoot');
+useParallax(parallaxRoot);
+const revealRoot = useTemplateRef<HTMLElement>('revealRoot');
+const { replay } = useReveal(revealRoot);
 
 // FeatureCard
 const featuresForCard: FeatureItem[] = [
@@ -757,6 +812,13 @@ const signageItem: SignageItem = {
 @use '~/assets/scss/animations/animation_lift.scss';
 @use '~/assets/scss/animations/animation_upscale.scss';
 @use '~/assets/scss/animations/animation_downscale.scss';
+@use '~/assets/scss/animations/animation_drift.scss';
+@use '~/assets/scss/animations/animation_marquee.scss';
+@use '~/assets/scss/animations/animation_blink.scss';
+@use '~/assets/scss/animations/animation_grow.scss';
+@use '~/assets/scss/animations/animation_sweep.scss';
+@use '~/assets/scss/animations/animation_scene.scss';
+@use '~/assets/scss/animations/animation_settle.scss';
 
 .animations-test {
     --duration: 2s;
@@ -835,6 +897,104 @@ const signageItem: SignageItem = {
 
                     &.downscale {
                         animation: downscale var(--duration) ease-in-out infinite;
+                    }
+
+                    &.drift {
+                        animation: drift var(--duration) ease-in-out infinite;
+                    }
+
+                    &.marquee {
+                        animation: marquee var(--duration) ease-in-out infinite;
+                    }
+
+                    &.blink {
+                        animation: blink var(--duration) ease-in-out infinite;
+                    }
+
+                    &.grow {
+                        animation: grow var(--duration) ease-in-out infinite;
+                    }
+
+                    &.sweep {
+                        animation: sweep var(--duration) ease-in-out infinite;
+                    }
+
+                    &.scene-in {
+                        animation: scene-in var(--duration) ease-in-out infinite;
+                    }
+
+                    &.scene-lift {
+                        animation: scene-lift var(--duration) ease-in-out infinite;
+                    }
+
+                    &.scene-shrink {
+                        animation: scene-shrink var(--duration) ease-in-out infinite;
+                    }
+
+                    &.scene-level {
+                        animation: scene-level var(--duration) ease-in-out infinite;
+                    }
+
+                    // En el sitio va ligada al scroll; aquí se reproduce por tiempo y necesita sus variables de partida
+                    &.settle {
+                        --r: -14deg;
+                        --tx: 1.5rem;
+                        --ty: -1rem;
+
+                        animation: settle var(--duration) ease-in-out infinite alternate;
+                    }
+                }
+
+                // Tilt: pieza más grande, con borde y ángulo mayor para que la rotación 3D se note
+                .tilt-demo {
+                    --tilt-angle: 18deg;
+
+                    width: 7rem;
+                    height: 4.5rem;
+                    border: 2px solid var(--ui-primary);
+                }
+
+                // Reveals: cuatro piezas pequeñas en fila
+                &.reveals {
+                    display: flex;
+                    gap: 0.5rem;
+                    justify-content: center;
+
+                    .sample {
+                        width: 2.25rem;
+                        height: 2.25rem;
+                    }
+                }
+
+                // Parallax: tres capas concéntricas que se mueven distinto con --px / --py
+                &.parallax {
+                    position: relative;
+
+                    .layer {
+                        position: absolute;
+                        inset: 0;
+                        margin: auto;
+                        border: 1px solid var(--ui-primary);
+                        border-radius: 50%;
+
+                        &--back {
+                            width: 5.5rem;
+                            height: 5.5rem;
+                            translate: calc(var(--px, 0) * -6px) calc(var(--py, 0) * -4px);
+                        }
+
+                        &--mid {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                            translate: calc(var(--px, 0) * 10px) calc(var(--py, 0) * 7px);
+                        }
+
+                        &--front {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            background: var(--ui-primary);
+                            translate: calc(var(--px, 0) * 22px) calc(var(--py, 0) * 15px);
+                        }
                     }
                 }
             }

@@ -1,0 +1,15 @@
+// Sweep: Un punto recorre su contenedor (position: relative) de izquierda a derecha y se desvanece. | animation: sweep 2.4s linear infinite;
+@keyframes sweep {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}

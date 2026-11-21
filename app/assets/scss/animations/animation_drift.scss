@@ -1,0 +1,13 @@
+// Drift: desplazamiento vertical lineal, pensado para parallax ligado al scroll. |
+//  @supports (animation-timeline: view()) {
+//    elemento { animation: drift linear both; animation-timeline: view(); animation-range: cover; }
+//  }
+@keyframes drift {
+    from {
+        translate: 0 calc(var(--drift, 2rem) * -1);
+    }
+
+    to {
+        translate: 0 var(--drift, 2rem);
+    }
+}

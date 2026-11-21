@@ -1,0 +1,50 @@
+// Scene: piezas que entran, se achican o se enderezan según el avance, ligado al scroll.
+//  @supports (animation-timeline: scroll()) {
+//    .elemento { animation: scene-in linear both; animation-timeline: scroll(nearest); animation-range: 0dvh 50dvh; }
+//  }
+
+// Aparece subiendo desde abajo
+@keyframes scene-in {
+    from {
+        opacity: 0;
+        translate: 0 var(--scene-from, 2rem);
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+// Sube desde abajo sin cambiar la opacidad
+@keyframes scene-lift {
+    from {
+        translate: 0 var(--scene-from, 2rem);
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+// Pasa de grande a su tamaño normal
+@keyframes scene-shrink {
+    from {
+        scale: var(--scene-scale, 1.4);
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+// Se endereza desde un leve giro
+@keyframes scene-level {
+    from {
+        rotate: var(--scene-tilt, -3deg);
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
