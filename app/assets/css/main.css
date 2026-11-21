@@ -190,14 +190,15 @@
 @layer base {
     body {
         font-family: var(--font-base);
+        --section-padding: 5dvh 2dvw 12dvh 2dvw; /* Valores Base */
     }
 
     body:has(.nav-horizontal) {
-        --section-padding: 5dvh 2dvw 10dvh 2dvw;
+        --section-padding: 5dvh 2dvw 18dvh 2dvw; /* +6dvh abajo */
     }
 
     body:has(.nav-vertical) {
-        --section-padding: 5dvh 7dvw 5dvh 2dvw;
+        --section-padding: 5dvh 8dvw 12dvh 2dvw; /* +6dvw derecha */
     }
 
     section {

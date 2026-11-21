@@ -1,20 +1,20 @@
 <template>
     <footer
-        class="bg-background fixed right-0 bottom-0 left-0 flex flex-col items-center justify-between gap-2 p-2 text-[11px] min-[36rem]:flex-row min-[36rem]:gap-4"
+        class="bg-background fixed right-0 bottom-0 left-0 flex flex-col items-center justify-between gap-2 p-2 text-[11px] min-[800px]:flex-row min-[800px]:gap-4"
         :style="{ marginInline: 'clamp(1.25rem, 2dvw, 1.75rem)' }"
     >
         <!-- Copyright Section -->
-        <p class="w-full truncate text-center min-[36rem]:w-auto min-[36rem]:text-left">
+        <p class="w-full truncate text-center min-[800px]:w-auto min-[800px]:text-left">
             v{{ appVersion }} | © {{ new Date().getFullYear() }}
-            <span class="hidden min-[36rem]:inline">by </span>
+            <span class="hidden min-[800px]:inline">by </span>
             <a class="font-medium text-primary" href="https://www.linkedin.com/in/basti%C3%A1ncontreraswasilkowski/" target="_blank" rel="noopener noreferrer">
-                <span class="hidden min-[36rem]:inline">Bastián Contreras Wasilkowski</span>
-                <span class="min-[36rem]:hidden">BFCW</span>.
+                <span class="hidden min-[800px]:inline">Bastián Contreras Wasilkowski</span>
+                <span class="min-[800px]:hidden">BFCW</span>.
             </a>
         </p>
 
         <!-- Controles de Idioma y Theme -->
-        <div class="flex w-full shrink-0 items-center justify-center gap-4 min-[36rem]:w-auto">
+        <div class="flex w-full shrink-0 items-center justify-center gap-4 min-[800px]:w-auto">
             <!-- Language Selector -->
             <div class="flex gap-1">
                 <UDropdownMenu
